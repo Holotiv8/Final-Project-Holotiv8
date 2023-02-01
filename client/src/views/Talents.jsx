@@ -1,25 +1,122 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 
-class DemoCarousel extends Component {
-  render() {
-    return (
-      <Carousel>
-        <div>
-          <img src="https://m.media-amazon.com/images/I/61VY4C9qXDL.jpg" />
-          <p className="legend">Legend 1</p>
+const Talents = () => {
+  return (
+    <div>
+      <section>
+        <div className="title-name">
+          <h1>Our Talents</h1>
         </div>
-        <div>
-          <img src="https://preview.redd.it/0pdtr3rgasv81.png?width=955&format=png&auto=webp&s=664e8eb919962529ee2c02d122b211099d0ffee7" />
-          <p className="legend">Legend 2</p>
+      </section>
+
+      <section>
+        <div className="wrapper">
+          <div className="card-talents">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2021/05/tokino_sora_thumb.png" />
+            <div className="content-talents">
+              <div className="row-talents">
+                <div className="detail-talents">
+                  <span>Natsuiro Matsuri</span>
+                  <p>
+                    “Hey! How are you all doing? It's me, Natsuiro Matsuri!”
+                  </p>
+                </div>
+                <div className="buttons-talents">
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-talents">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2021/05/tokino_sora_thumb.png" />
+            <div className="content-talents">
+              <div className="row-talents">
+                <div className="detail-talents">
+                  <span>Natsuiro Matsuri</span>
+                  <p>
+                    “Hey! How are you all doing? It's me, Natsuiro Matsuri!”
+                  </p>
+                </div>
+                <div className="buttons-talents">
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-talents">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2021/05/tokino_sora_thumb.png" />
+            <div className="content-talents">
+              <div className="row-talents">
+                <div className="detail-talents">
+                  <span>Natsuiro Matsuri</span>
+                  <p>
+                    “Hey! How are you all doing? It's me, Natsuiro Matsuri!”
+                  </p>
+                </div>
+                <div className="buttons-talents">
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-talents">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2021/05/tokino_sora_thumb.png" />
+            <div className="content-talents">
+              <div className="row-talents">
+                <div className="detail-talents">
+                  <span>Natsuiro Matsuri</span>
+                  <p>
+                    “Hey! How are you all doing? It's me, Natsuiro Matsuri!”
+                  </p>
+                </div>
+                <div className="buttons-talents">
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-talents">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2021/05/tokino_sora_thumb.png" />
+            <div className="content-talents">
+              <div className="row-talents">
+                <div className="detail-talents">
+                  <span>Natsuiro Matsuri</span>
+                  <p>
+                    “Hey! How are you all doing? It's me, Natsuiro Matsuri!”
+                  </p>
+                </div>
+                <div className="buttons-talents">
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-talents">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2021/05/tokino_sora_thumb.png" />
+            <div className="content-talents">
+              <div className="row-talents">
+                <div className="detail-talents">
+                  <span>Natsuiro Matsuri</span>
+                  <p>
+                    “Hey! How are you all doing? It's me, Natsuiro Matsuri!”
+                  </p>
+                </div>
+                <div className="buttons-talents">
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </Carousel>
-    );
-  }
-}
+      </section>
+    </div>
+  );
+};
 
-ReactDOM.render(<DemoCarousel />, document.querySelector(".demo-carousel"));
-
-export default DemoCarousel;
+export default Talents;
