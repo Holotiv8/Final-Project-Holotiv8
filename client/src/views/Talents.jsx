@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Footer from "../components/Footer";
 
 const Talents = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <section>
         <div className="title-name">
           <h1>Our Talents</h1>
@@ -115,6 +116,7 @@ const Talents = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
