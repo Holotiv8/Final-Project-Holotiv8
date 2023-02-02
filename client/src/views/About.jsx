@@ -6,15 +6,12 @@ const About = () => {
           <div className="w-[32%] flex flex-col space-y-12 ml-[100px] mb-[100px]">
             <div className="text-gray-600">
               <h2 className="font-semibold text-xl uppercase mt-[100px]">
-                Now Taking Online Orders
+                NIHON NO LIVE GROUP
               </h2>
-              <p className="font-medium text-[17px] font-sans mt-4 text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+              <p className="font-medium text-[17px] font-serif mt-4 text-justify">
+              With over 50,000,000 fans across all their channels,
+              Nihon No Live Group is the all-female talent group that
+              belongs to the Nihon No Live agency production.
               </p>
             </div>
             <div className="flex items-center">
@@ -22,7 +19,7 @@ const About = () => {
                 <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
                   <div className="absolute inset-0 w-3 bg-[#5e7dc3] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                   <span className="relative text-black group-hover:text-white">
-                    Get Started
+                    Our Talents
                   </span>
                 </button>
               </main>
