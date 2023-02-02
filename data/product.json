@@ -1,0 +1,62 @@
+[
+    {
+        "name":"Bantal Risu",
+        "price": 1049000,
+        "description":"Item spesial ulang tahun Ayunda Risu",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/bantalrisu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675251616085"
+    },
+    {
+        "name":"Akrilik Stand Kobo Kanaeru",
+        "price": 224800,
+        "description":"3rd Gen Half-year Anniversary Akrilik Stand - Kobo Kanaeru",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/akrilik_kobo.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675252686432"
+    },
+    {
+        "name":"T-shirt 2nd Anniversary ",
+        "price": 245300,
+        "description":"・T-Shirt - 2nd Anniversary, Ukuran Free Size (Panjang (T-Shirt): 77 cm, lebar T-Shirt: 58 cm, lebar bahu: 54 cm, panjang lengan: 24 cm) ,Ukuran XL Laki-laki Bahan: 100% Kain",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/T-shirt_holoID_2nd_Anniv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675252959906"
+    },
+    {
+        "name":"Boneka Kawai Chiyopi",
+        "price": 449600,
+        "description":"hololive Boneka - Kyawaii Chiyopi, Ukuran: Tinggi 150x Lebar 130 x Diameter 85mm, Bahan: Polyester",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/Boneka_Kawai_chiyopi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675253335448"
+    },
+    {
+        "name":"Sandal Kamar - Feet Care for Everyone! - Anya Melfissa",
+        "price": 524500,
+        "description":"This product is to celebrate the 2nd Anniversary of Anya Melfissa from hololive Indonesia",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/sandal_kamar_anya_melfissa.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675253727567"
+    },
+    {
+        "name":"Summer Festival T-shirt",
+        "price": 479600,
+        "description":"summer festival x atre Akihabara Commemorative Goods Loose-fitting Silhouette T-shirt",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/Summer_Festival_T-Shirt.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675253928639"
+    },
+    {
+        "name":"Tumbler 'Haus Mas?' Kureiji Ollie",
+        "price": 449600,
+        "description":"Item Spesial Perayaan 2 Tahunan Kureiji Ollie dari hololive Indonesia",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/Tumblr_Kureiji_ollie.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675257458741"
+    },
+    {
+        "name":"Boneka Pavolia Reine",
+        "price": 599400,
+        "description":"Item Spesial Perayaan 2 Tahunan Pavolia Reine ",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/boneka_Pavolia_Reine.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675258066022"
+    },
+    {
+        "name":"Tas Selempang Iofi",
+        "price": 1110000,
+        "description":"Tas Selempang - 'Iofi Color', Ukuran: Tas/ Sekitar 18.5 x 13 x 5 cm, Tali/ Panjang 165 cm, Bahan: Polyester",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/tas_selempang_iofi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675258464639"
+    },
+    {
+        "name":"Custom T-Shirt Membership (Black)",
+        "price": 500000,
+        "description":"Item spesial untuk Para Membership ",
+        "mainImg":"https://ik.imagekit.io/ftti7xeyu/Final/custom_T-shirt.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675258842998"
+    }
+]
