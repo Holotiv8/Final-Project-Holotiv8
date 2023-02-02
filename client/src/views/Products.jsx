@@ -5,7 +5,7 @@ const Products = () => {
         <div className="product-nav">
           <div className="product-img-nav">
             <img src="https://images.unsplash.com/photo-1613852348851-df1739db8201?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdoaXRlJTIwdCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80" />
-            <span className="tag-nav">Recomended</span>
+          
           </div>
           <div className="product-listing-nav">
             <p className="info-nav">
@@ -24,90 +24,165 @@ const Products = () => {
         </div>
       </section>
       <section>
-        <div className="gallery-product">
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
+        <div className="container-product">
+          <div className="title-product">
+            <h1>
+              <center>Our Product</center>
+            </h1>
           </div>
+          <div className="product_row">
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
 
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
-          </div>
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
-          </div>
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
 
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
-          </div>
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
-          </div>
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
-          </div>
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
-          </div>
-          <div className="content-product">
-            <img src="https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1GkGIbECF3KVjSZJnq6znHFXaP%2F2019-ONE-PIECE-T-shirt-3D-Men-T-shirt-Anime-Tshirt-Harajuku-Comics-Tops-NARUTO-BLEACH.jpg" />
-            <h3>Product Name</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-            <h6>$100.00</h6>
-            <button className="button-product">Buy Now</button>
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
+
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
+
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
+
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
+
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="main_product">
+              <div className="pro_image">
+                <div className="images_product">
+                  <img src="https://ph-test-11.slatic.net/p/a95a9a283c7ec1950921a38cbd73e3c4.jpg" />
+                </div>
+              </div>
+
+              <div className="content-product">
+                <div className="product-name">
+                  <span>Product Name</span>
+                </div>
+                <div className="price-product">
+                  <span>$20.5</span>
+                </div>
+                <div className="shop-product">
+                  <a href="">
+                    <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
