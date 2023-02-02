@@ -115,6 +115,7 @@
 .container-product{
     width: 1080px;
     margin: auto;
+    height: 0;
 }
 
 .pro_image .images_product img {
@@ -141,8 +142,7 @@
 }
 
 .price-product{
-    display: flex;
-    justify-content: space-between;
+    font-size: 14px;
 }
 
 .shop-product a {
@@ -153,11 +153,19 @@
 
 .product-name {
 margin-bottom: 10px !important;
+display: flex;
+font-size: 15px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+flex-wrap: wrap;
 }
 
 .content-product{
     background: rgb(252, 252, 252);
-    padding: 10px 15px;
+    padding: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    width: 10rem;
 }
 
 .main_product{
