@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Idol.belongsTo(models.Branch)
+      Idol.hasMany(models.Favorite)
     }
   }
   Idol.init({
