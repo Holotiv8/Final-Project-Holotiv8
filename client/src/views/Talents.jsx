@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import Footer from "../components/Footer";
-
+import Footer from "../components/AllFooterPage";
+import AllNavbarComponent from "../components/AllNavbarPage";
 const Talents = () => {
   const [idols, setIdols] = useState([]);
   const [branches, setBranches] = useState([]);
@@ -27,6 +27,9 @@ const Talents = () => {
   }, []);
 
   return (
+    <>
+    <AllNavbarComponent/>
+  
     <div className="flex flex-col min-h-screen">
       <section>
         <div className="title-name">
@@ -92,6 +95,7 @@ const Talents = () => {
       </section>
       <Footer/>
     </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import HomePage from "../views/HomePage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Talents />,
+    element: <HomePage />,
   },
   {
     path: "/products",
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/home",
-    element:<HomePage />
+    path: "/telent",
+    element: <Talents />
   },
 ]);
 

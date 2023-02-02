@@ -5,54 +5,17 @@ import {
   FaCamera,
   FaCompactDisc,
   FaPlay,
+  FaTwitter,
+  FaYoutube,
+  FaFacebook,
 } from "react-icons/fa";
+import NavbarComponent from "../components/NavbarComponent";
+import FooterHomePage from "../components/FooterHomePage";
 
 const HomePage = () => {
   return (
     <div className="w-full px-10 font-display">
-      <section id="Navbar">
-        <div className="flex justify-between py-3 items-center bg-white">
-          <img
-            className="w-14 drop-shadow-lg"
-            src="https://ik.imagekit.io/bintangtopup/finalproject/nihonologo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675326925315"
-            alt="logo"
-          />
-          <div className="flex text-sm gap-5 text-gray-400 font-medium">
-            <a href="#" className="text-blue-500">
-              Top
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              News
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Talent
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Schedule
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Events
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Videos
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Music
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Merch
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Special
-            </a>
-          </div>
-          <div className="">
-            <button className="bg-[#E64848] rounded-lg px-5 py-1.5 text-white">
-              Login
-            </button>
-          </div>
-        </div>
-      </section>
+      <NavbarComponent />
 
       <section id="main_banner" className="mt-16 mb-8">
         <div className="flex items-center justify-between h-full">
@@ -102,7 +65,7 @@ const HomePage = () => {
               </a>
             </div>
             <div>
-              <button className="bg-[#E64848] mt-4 rounded-lg px-4 py-2 text-white text-sm">
+              <button className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
                 Read More
               </button>
             </div>
@@ -156,7 +119,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <button className="bg-[#E64848] mt-4 rounded-lg px-4 py-2 text-white text-sm">
+              <button className="bg-[#D61C4E] hover:bg-[#C21010]  mt-4 rounded-lg px-4 py-2 text-white text-sm">
                 Learn More
               </button>
             </div>
@@ -236,7 +199,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <button className="bg-[#E64848] mt-4 rounded-lg px-4 py-2 text-white text-sm">
+              <button className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
                 Learn More
               </button>
             </div>
@@ -281,7 +244,7 @@ const HomePage = () => {
                 </div>
                 <button
                   type="submit"
-                  class="p-2.5 ml-4 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  class="p-2.5 ml-4 text-sm font-medium text-white bg-[#D61C4E] hover:bg-[#C21010] rounded-lg "
                 >
                   <svg
                     class="w-5 h-5"
@@ -300,7 +263,7 @@ const HomePage = () => {
                 </button>
               </form>
             </div>
-            <a className="flex items-center text-center gap-2 text-base font-medium text-blue-500 hover:underline">
+            <a className="flex items-center text-center gap-2 text-base font-medium text-[#E64848] hover:underline">
               See more question <FaArrowUp className="rotate-45" />
             </a>
           </div>
@@ -329,37 +292,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-    {/* footernya belum fix */}
-      <section id="footer" className="pt-8 pb-2">
-        <div>
-          <div className="flex flex-col items-center gap-3 mb-24">
-            <img
-              className="w-14 drop-shadow-lg"
-              src="https://ik.imagekit.io/bintangtopup/finalproject/nihonologo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675326925315"
-              alt="logo"
-            />
-            <div className="text-2xl font-semibold">Got ideas ? We've got skills</div>
-            <p className="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div className="flex gap-3">
-            <a href="#" className="bg-[#E64848] rounded-md px-5 py-1.5 text-white">
-              Login
-            </a>
-            <a href="#" className="bg-[#E64848] rounded-md px-5 py-1.5 text-white">
-              Login
-            </a>
-            </div>
-          </div>
-            <div className="py-[1px] px-12 rounded-full bg-gray-300"></div>
-          <div className="flex justify-between text-sm mt-2 text-gray-400">
-            <div>© 2023 Wibuuuu. All rights reserved.</div>
-            <div className="flex gap-4">
-              <a href="">Terms</a>
-              <a href="">Privacy</a>
-              <a href="">Cookies</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* footernya belum fix */}
+      <FooterHomePage />
     </div>
   );
 };
