@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function LoginPage() {
 	return (
 		<div className='flex justify-center items-center min-h-screen bg-gradient-to-r from-[#EBEBEB]  to-amber-50 '>
@@ -23,10 +25,14 @@ export default function LoginPage() {
 							<input
 								className='placeholder:text-xs p-[6px] border border-gray-300 rounded-t-md'
 								placeholder='Enter Username or Email Address'
+								name="email"
+                                type='email'
 							></input>
 							<input
-								className='placeholder:text-xs p-[6px] border border-r-2 rounded-b-md'
+								className='placeholder:text-xs p-[6px] border border-gray-300   border-t-0 rounded-b-md'
 								placeholder='Enter Password'
+								name="password"
+                                type='password'
 							></input>
 						</div>
 						<div className=' flex flex-row my-4'>
@@ -53,9 +59,9 @@ export default function LoginPage() {
 							</div>
 						</div>
 						<div className='  text-[10px] font-medium text-slate-400 my-4'>
-							<a href="">
+							<Link to={'/register'}>
 							Create my Nihon no Live account!
-							</a>
+							</Link>
 						</div>
 					</form>
 				</div>
