@@ -22,12 +22,12 @@ class UserController {
 
       const user = await User.findOne({ where: { email } });
       if (!user) {
-        throw { name: "Credential" };
+        throw { name: "InvalidCredentials" };
       }
 
       const validatePassword = comparePassword(password, user.password);
       if (!validatePassword) {
-        throw { name: "Credential" };
+        throw { name: "InvalidCredentials" };
       }
 
       let payload = { id: user.id };

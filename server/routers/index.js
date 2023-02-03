@@ -6,8 +6,8 @@ const userRoutes = require("./userRoutes");
 const favoriteRoutes = require('./favoriteRoutes')
 
 router.use('/idols', idolRoutes)
-router.use('/favorite',favoriteRoutes)
-router.use('/product',productRoutes)
+router.use('/favorites',favoriteRoutes)
+router.use('/products',productRoutes)
 router.use("/users", userRoutes);
 
 module.exports = router;

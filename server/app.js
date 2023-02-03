@@ -16,6 +16,8 @@ if(process.env.NODE_ENV !== 'production') {
   app.use('/', router)
   app.use(errorHandler)
   
-  app.listen(port, () => {
-    console.log(`I LOVE YOU ${port}`)
-  })
+  // app.listen(port, () => {
+  //   console.log(`I LOVE YOU ${port}`)
+  // })
+
+  module.exports= app

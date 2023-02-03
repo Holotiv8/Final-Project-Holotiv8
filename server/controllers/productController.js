@@ -13,6 +13,9 @@ class productController{
         try {
             let {id} = req.params
             let data = await Products.findByPk(id)
+            if (!data) {
+                throw { name: 'Data Not Found' }
+            }
             response.status(200).json(data)
         } catch (error) {
             next(error)

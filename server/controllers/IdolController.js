@@ -54,6 +54,9 @@ class IdolController {
         },
         where: { id },
       });
+      if (!data) {
+        throw { name: 'Data Not Found' }
+    }
       res.status(200).json(data);
     } catch (error) {
       next(error);
