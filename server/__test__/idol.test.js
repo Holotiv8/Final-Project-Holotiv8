@@ -2,6 +2,7 @@ const app = require('../app')
 const request = require('supertest')
 const { sequelize, Idol, Branch, User, Favorite } = require('../models')
 const { hashPassword } = require('../helpers/index')
+const IdolController = require('../controllers/IdolController')
 const queryInterface = sequelize.queryInterface
 let access_token
 
@@ -63,6 +64,16 @@ describe('Feature Read Idol GET /idols/', () => {
         expect(response.status).toBe(200)
         expect(response.body).toBeInstanceOf(Object)
     })
+
+    // test('500 - Fail Read Idols', async () => {
+    //     jest.spyOn(IdolController, "showAll").mockRejectedValue("Internal Server Error")
+    //     const response = await request(app)
+    //         .get('/idols')
+
+    //     expect(response.status).toBe(500)
+    //     expect(response.body).toBe("Internal Server Error")
+    //     expect(response.body).toBeInstanceOf(Object)
+    // })
 
     test('200 - Success Read Idol With Filter', async () => {
         const response = await request(app)

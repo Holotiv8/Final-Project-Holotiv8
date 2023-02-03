@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/21</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/21</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -93,34 +93,34 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = (error, req, res, next) =&gt; {
     let message = 'Internal Server Error'
     let status = 500
@@ -130,20 +130,20 @@
             message = 'Email/Password Invalid'
             status = 401
             break;
-<span class="branch-1 cbranch-no" title="branch not covered" >        case 'SequelizeValidationError':</span>
-<span class="branch-2 cbranch-no" title="branch not covered" >        case 'SequelizeUniqueConstraintError':</span>
-<span class="cstat-no" title="statement not covered" >            message = error.errors[0].message</span>
-<span class="cstat-no" title="statement not covered" >            status = 400</span>
-<span class="cstat-no" title="statement not covered" >            break;</span>
-<span class="branch-3 cbranch-no" title="branch not covered" >        case 'already_subscribed':</span>
-<span class="cstat-no" title="statement not covered" >            message = 'You already a subscriber'</span>
-<span class="cstat-no" title="statement not covered" >            status = 400</span>
-<span class="cstat-no" title="statement not covered" >            break;</span>
-<span class="branch-4 cbranch-no" title="branch not covered" >        case 'Unauthorize':</span>
-<span class="branch-5 cbranch-no" title="branch not covered" >        case 'JsonWebTokenError':</span>
-<span class="cstat-no" title="statement not covered" >            status = 401</span>
-<span class="cstat-no" title="statement not covered" >            message = 'Error Authentication'</span>
-<span class="cstat-no" title="statement not covered" >            break</span>
+        case 'SequelizeValidationError':
+        case 'SequelizeUniqueConstraintError':
+            message = error.errors[0].message
+            status = 400
+            break;
+        // case 'already_subscribed':
+        //     message = 'You already a subscriber'
+        //     status = 400
+        //     break;
+        case 'Unauthorize':
+        case 'JsonWebTokenError':
+            status = 401
+            message = 'Error Authentication'
+            break
         case 'Data Not Found':
             status = 404
             message = 'Data Not Found'
@@ -157,7 +157,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-03T10:12:18.433Z
+                at 2023-02-03T13:39:59.495Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
