@@ -5,31 +5,31 @@ const { Op } = require("sequelize");
 class IdolController {
   static async showAll(req, res, next) {
     const { filter } = req.query;
-        const paramQuerySQL = {
-            include: [
-                {
-                    model: Branch,
-                    attributes: {
-                        exclude: ['createdAt', 'updatedAt']
-                    },
-                }
-            ],
-            attributes: {
-                exclude: ['createdAt', 'updatedAt']
-            },
-            order: [['id', 'asc']]
-        };
+    const paramQuerySQL = {
+      include: [
+        {
+          model: Branch,
+          attributes: {
+            exclude: ["createdAt", "updatedAt"],
+          },
+        },
+      ],
+      attributes: {
+        exclude: ["createdAt", "updatedAt"],
+      },
+      order: [["id", "asc"]],
+    };
 
-        // filtering by category
-        if (filter !== '' && typeof filter !== 'undefined') {
-            const query = filter.branch.split(',').map((item) => ({
-                [Op.eq]: item,
-            }));
+    // filtering by category
+    if (filter !== "" && typeof filter !== "undefined") {
+      const query = filter.branch.split(",").map((item) => ({
+        [Op.eq]: item,
+      }));
 
-            paramQuerySQL.where = {
-                BranchId: { [Op.or]: query },
-            };
-        }
+      paramQuerySQL.where = {
+        BranchId: { [Op.or]: query },
+      };
+    }
     try {
       const data = await Idol.findAll(paramQuerySQL);
       res.status(200).json(data);
@@ -72,11 +72,11 @@ class IdolController {
     }
   }
   static idolSpotify(req, res, next) {
-    let {spotifyId}= req.params
+    let { spotifyId } = req.params;
     const options = {
       method: "GET",
       url: "https://spotify23.p.rapidapi.com/artist_singles/",
-      params: { id: spotifyId , offset: "0", limit: "20" },
+      params: { id: spotifyId, offset: "0", limit: "20" },
       headers: {
         "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
@@ -94,22 +94,21 @@ class IdolController {
       });
   }
   static idolYoutube(req, res, next) {
-    let {youtubeId}= req.params
+    let { youtubeId } = req.params;
     const options = {
-        method: 'GET',
-        url: 'https://youtube138.p.rapidapi.com/channel/videos/',
-        params: {id: youtubeId, filter: 'streams_latest',hl: 'en', gl: 'US'},
-        headers: {
-          'X-RapidAPI-Key': '37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7',
-          'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
-        }
-      };
-      
+      method: "GET",
+      url: "https://youtube138.p.rapidapi.com/channel/videos/",
+      params: { id: youtubeId, filter: "streams_latest", hl: "en", gl: "US" },
+      headers: {
+        "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
+        "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
+      },
+    };
 
     axios
       .request(options)
       .then(function (response) {
-        let videos = response.data.contents
+        let videos = response.data.contents;
         res.status(200).json(videos);
       })
       .catch(function (error) {
@@ -117,22 +116,21 @@ class IdolController {
       });
   }
   static idolLiveYoutube(req, res, next) {
-    let {youtubeId}= req.params
+    let { youtubeId } = req.params;
     const options = {
-        method: 'GET',
-        url: 'https://youtube138.p.rapidapi.com/channel/videos/',
-        params: {id: youtubeId, filter: 'live_now',hl: 'en', gl: 'US'},
-        headers: {
-          'X-RapidAPI-Key': '37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7',
-          'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
-        }
-      };
-      
+      method: "GET",
+      url: "https://youtube138.p.rapidapi.com/channel/videos/",
+      params: { id: youtubeId, filter: "live_now", hl: "en", gl: "US" },
+      headers: {
+        "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
+        "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
+      },
+    };
 
     axios
       .request(options)
       .then(function (response) {
-        let videos = response.data.contents
+        let videos = response.data.contents;
         res.status(200).json(videos);
       })
       .catch(function (error) {
