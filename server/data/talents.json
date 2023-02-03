@@ -11,6 +11,7 @@
         "birthday": "February 15",
         "height": "165 cm",
         "illustrator": "により",
+        "color": "via-violet-400 to-violet-500",
         "BranchId": 1
     },
     {
@@ -25,6 +26,7 @@
         "birthday": "January 15",
         "height": "153 cm",
         "illustrator": "Yatomi",
+        "color": "via-pink-400 to-pink-500",
         "BranchId": 1
     },
     {
@@ -39,6 +41,7 @@
         "birthday": "July 15",
         "height": "150 cm",
         "illustrator": "Yano Mituki",
+        "color": "via-emerald-400 to-emerald-500",
         "BranchId": 1
     },
     {
@@ -53,6 +56,7 @@
         "birthday": "October 13",
         "height": "162 cm",
         "illustrator": "LAM",
+        "color": "via-red-400 to-red-500",
         "BranchId": 1
     },
     {
@@ -67,6 +71,7 @@
         "birthday": "September 9",
         "height": "172 cm",
         "illustrator": "飯田ぽち。",
+        "color": "via-blue-400 to-blue-500",
         "BranchId": 1
     },
     {
@@ -81,6 +86,7 @@
         "birthday": "March 12",
         "height": "147 cm",
         "illustrator": "上倉エク",
+        "color": "via-yellow-400 to-yellow-500",
         "BranchId": 1
     },
     {
@@ -95,6 +101,7 @@
         "birthday": "November 7",
         "height": "155 cm",
         "illustrator": "あるてら",
+        "color": "via-gray-400 to-gray-500",
         "BranchId": 1
     },
     {
@@ -109,6 +116,7 @@
         "birthday": "August 30",
         "height": "173 cm",
         "illustrator": "ヤスダスズヒト",
+        "color": "via-orange-400 to-orange-500",
         "BranchId": 1
     },
     {
@@ -123,6 +131,7 @@
         "birthday": "December 12",
         "height": "150 cm",
         "illustrator": "ぽんかん⑧",
+        "color": "via-blue-400 to-blue-500",
         "BranchId": 1
     },
     {
@@ -137,6 +146,7 @@
         "birthday": "April 4",
         "height": "167 cm",
         "illustrator": "Yukisame",
+        "color": "via-red-400 to-red-500",
         "BranchId": 3
     },
     {
@@ -151,6 +161,7 @@
         "birthday": "July 6",
         "height": "165 cm",
         "illustrator": "huke",
+        "color": "via-orange-400 to-orange-500",
         "BranchId": 3
     },
     {
@@ -165,6 +176,7 @@
         "birthday": "May 20",
         "height": "157 cm",
         "illustrator": "Kuroboshi Kouhaku",
+        "color": "via-indigo-400 to-indigo-500",
         "BranchId": 3
     },
     {
@@ -179,6 +191,7 @@
         "birthday": "June 20",
         "height": "141 cm",
         "illustrator": "Amashiro Natsuki",
+        "color": "via-sky-400 to-sky-500",
         "BranchId": 3
     },
     {
@@ -193,6 +206,7 @@
         "birthday": "January 6",
         "height": "150 cm",
         "illustrator": "nabi",
+        "color": "via-amber-400 to-amber-500",
         "BranchId": 3
     },
     {
@@ -207,6 +221,7 @@
         "birthday": "March 7",
         "height": "166 cm",
         "illustrator": "redjuice",
+        "color": "via-red-400 to-red-500",
         "BranchId": 3
     },
     {
@@ -221,6 +236,7 @@
         "birthday": "May 15",
         "height": "160 cm",
         "illustrator": "Ordan",
+        "color": "via-indigo-400 to-indigo-500",
         "BranchId": 2
     },
     {
@@ -235,6 +251,7 @@
         "birthday": "May 23",
         "height": "154 cm",
         "illustrator": "Kuromaru9",
+        "color": "via-fuchsia-400 to-fuchsia-500",
         "BranchId": 2
     },
     {
@@ -249,6 +266,7 @@
         "birthday": "July 1",
         "height": "168 cm (including heels)",
         "illustrator": "kasokuSato (3D Modeler)",
+        "color": "via-pink-400 to-pink-500",
         "BranchId": 2
     },
     {
@@ -263,6 +281,7 @@
         "birthday": "March 5",
         "height": "152 cm",
         "illustrator": "Tanaka Yuuichi",
+        "color": "via-rose-400 to-rose-500",
         "BranchId": 2
     },
     {
@@ -277,6 +296,7 @@
         "birthday": "March 22",
         "height": "160 cm",
         "illustrator": "Teshina Nari (Makeup charge)",
+        "color": "via-sky-400 to-sky-500",
         "BranchId": 2
     },
     {
@@ -291,6 +311,7 @@
         "birthday": "October 31",
         "height": "154 cm",
         "illustrator": "Ayamy",
+        "color": "via-yellow-400 to-yellow-500",
         "BranchId": 2
     },
     {
@@ -305,6 +326,7 @@
         "birthday": "February 17",
         "height": "162 cm",
         "illustrator": "Azumi Akitake",
+        "color": "via-rose-400 to-rose-500",
         "BranchId": 2
     },
     {
@@ -319,6 +341,7 @@
         "birthday": "August 10",
         "height": "154 cm",
         "illustrator": "Haruyuki",
+        "color": "via-red-400 to-red-500",
         "BranchId": 2
     },
     {
@@ -333,6 +356,7 @@
         "birthday": "October 5",
         "height": "160 cm (including her cowlick)",
         "illustrator": "Nagishiro Mito",
+        "color": "via-cyan-400 to-cyan-500",
         "BranchId": 2
     },
     {
@@ -347,6 +371,7 @@
         "birthday": "July 22",
         "height": "152 cm",
         "illustrator": "Minamura Haruki",
+        "color": "via-amber-400 to-amber-500",
         "BranchId": 2
     },
     {
@@ -361,6 +386,7 @@
         "birthday": "December 1",
         "height": "148 cm",
         "illustrator": "gaou",
+        "color": "via-fuchsia-400 to-fuchsia-500",
         "BranchId": 2
     },
     {
@@ -375,6 +401,7 @@
         "birthday": "December 8",
         "height": "145 cm",
         "illustrator": "Tam-U",
+        "color": "via-purple-400 to-purple-500",
         "BranchId": 2
     },
     {
@@ -389,6 +416,7 @@
         "birthday": "December 13",
         "height": "152 cm",
         "illustrator": "Nana Kagura",
+        "color": "via-rose-400 to-rose-500",
         "BranchId": 2
     },
     {
@@ -403,6 +431,7 @@
         "birthday": "February 14",
         "height": "165 cm",
         "illustrator": "Masuishi Kinoto",
+        "color": "via-rose-400 to-rose-500",
         "BranchId": 2
     },
     {
@@ -417,6 +446,7 @@
         "birthday": "July 2",
         "height": "154 cm",
         "illustrator": "Shigure Ui",
+        "color": "via-green-400 to-green-500",
         "BranchId": 2
     },
     {
@@ -431,6 +461,7 @@
         "birthday": "August 20",
         "height": "165 cm (excluding ears, including heels)",
         "illustrator": "Izumi Sai",
+        "color": "via-red-400 to-red-500",
         "BranchId": 2
     },
     {
@@ -445,6 +476,7 @@
         "birthday": "February 22",
         "height": "152 cm (excluding cowlick)",
         "illustrator": "Kamioka Chiroru",
+        "color": "via-purple-400 to-purple-500",
         "BranchId": 2
     },
     {
@@ -459,6 +491,7 @@
         "birthday": "October 1",
         "height": "156 cm",
         "illustrator": "Fukahire",
+        "color": "via-yellow-400 to-yellow-500",
         "BranchId": 2
     }
 ]
