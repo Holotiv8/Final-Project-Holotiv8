@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom";
 import bgImg from "../assets/sora_pr-img_1-667x1000.png";
+
+
+
 
 export default function Footer() {
 	return (
 		<>
 			<div id='footer' className='ms-auto'>
-				<div className='w-full h-maxflex flex-col'>
-					<div className=' flex justify-center bg-gray-100 h-44 border-t-4 border-blue-100 mt-6'>
+				<div className='w-full h-maxflex flex-col  bg-slate-100 '>
+					<div className=' flex justify-center  h-44 border-t-4 border-blue-100 mt-6'>
 						<div className='grid  content-end font-extralight text-3xl pb-5'>
 							V-TUBER SITE NUMBER 1
 						</div>
@@ -71,14 +75,14 @@ export default function Footer() {
 								</a>
 							</div>
 						</div>
-						<div className='  h-44 p-7 '>
+						<div className='  h-44 p-7 border-l-2 border-l-blue-100'>
 							<div className=' flex flex-col '>
 								<div>Contact</div>
 								<div>
 									<a href=''>
 										<img
 											className='w-auto h-10'
-											src='https://ik.imagekit.io/pfdt0wwx5/final_project/sora_pr-img_1-667x1000.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675250423844'
+											src='https://media.discordapp.net/attachments/1068548204901179526/1070622677515112488/logo_nav2-removebg-preview.png'
 											alt='hololives idol'
 											href=''
 										/>
@@ -89,16 +93,16 @@ export default function Footer() {
 							</div>
 						</div>
 					</div>
-					<div className=' flex flex-col bg-gray-100 p-2 font-bold'>
+					<div className=' flex flex-col  p-2 font-bold'>
 						<a href='' className='flex justify-center'>
 							/\
 						</a>
 						<div className='flex justify-center'>BACK TO TOP</div>
 					</div>
-					<div className=' flex flex-row justify-center gap-6  bg-gray-100 h-24 pt-6 border-t-4 border-blue-100'>
+					<div className=' flex flex-row justify-center gap-6   h-24 pt-6 border-t-4 border-blue-100'>
 						<a href=''>Home</a>
-						<a href=''>About</a>
 						<a href=''>Talent</a>
+						<Link to={'/about'}>About</Link>
 						<a href=''>Merch</a>
 						<a href=''>Brand</a>
 						<a href=''>Legal</a>

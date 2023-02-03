@@ -3,6 +3,7 @@ import Talents from "../views/Talents";
 import Products from "../views/Products";
 import About from "../views/About";
 import HomePage from "../views/HomePage";
+import LoginPage from "../views/LoginPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: "/home",
     element:<HomePage />
   },
+  {
+    path: '/login',
+    element: <LoginPage />
+  }
 ]);
 
 export default router;
