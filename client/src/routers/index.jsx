@@ -5,13 +5,14 @@ import About from "../views/About";
 import HomePage from "../views/HomePage";
 import LoginPage from "../views/LoginPage";
 import RegisterPage from "../views/RegisterPage";
+import Merchandise from "../views/Merchendise";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
   },
   {
-    path: "/products",
+    path: "/products/:id",
     element: <Products />,
   },
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <RegisterPage />
+  },
+  {
+    path: '/products',
+    element: <Merchandise/>
   }
 ]);
 
