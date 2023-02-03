@@ -24,7 +24,8 @@ async function authentication(req, res, next) {
     req.user = {
       id: foundUser.id,
       username: foundUser.username,
-      role: foundUser.role,
+      email: foundUser.email,
+      isSubscribed: foundUser.isSubscribed,
     };
     next();
   } catch (err) {

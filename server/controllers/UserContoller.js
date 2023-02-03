@@ -37,5 +37,20 @@ class UserController {
       next(error);
     }
   }
+
+  static async subscribe(req, res, next) {
+    try {
+      const { id } = req.user;
+      await User.update(
+        {
+          isSubscribed: true,
+        },
+        { where: { id } }
+      );
+      res.status(200).json({ message: "Success updated status" });
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 module.exports = UserController;
