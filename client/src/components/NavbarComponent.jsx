@@ -17,7 +17,7 @@ const NavbarComponent = () => {
             <Link to="#" className="hover:text-blue-500">
               News
             </Link>
-            <Link to="#" className="hover:text-blue-500">
+            <Link to="/talents" className="hover:text-blue-500">
               Talent
             </Link>
             <Link to="#" className="hover:text-blue-500">
@@ -32,7 +32,7 @@ const NavbarComponent = () => {
             <Link to="#" className="hover:text-blue-500">
               Music
             </Link>
-            <Link to="#" className="hover:text-blue-500">
+            <Link to="/products" className="hover:text-blue-500">
               Merch
             </Link>
             <Link to="#" className="hover:text-blue-500">

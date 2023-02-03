@@ -12,29 +12,29 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/products/:id",
-    element: <Products />,
-  },
-  {
     path: "/about",
     element: <About />,
   },
   {
     path: "/talents",
-    element: <Talents />
+    element: <Talents />,
   },
   {
-    path: '/login',
-    element: <LoginPage />
+    path: "/login",
+    element: <LoginPage />,
   },
   {
-    path: '/register',
-    element: <RegisterPage />
+    path: "/register",
+    element: <RegisterPage />,
   },
   {
-    path: '/products',
-    element: <Merchandise/>
-  }
+    path: "/products",
+    element: <Merchandise />,
+  },
+  {
+    path: "/products/:id",
+    element: <Products />,
+  },
 ]);
 
 export default router;

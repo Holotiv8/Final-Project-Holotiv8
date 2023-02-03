@@ -1,7 +1,8 @@
 import React, { Component, useEffect, useState } from "react";
-import ReactDOM from "react-dom";
+
 import Footer from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
+
 const Talents = () => {
   const [idols, setIdols] = useState([]);
   const [branches, setBranches] = useState([]);

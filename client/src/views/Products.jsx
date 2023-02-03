@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import AllFooterPage from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-
+  const { id } = useParams();
+  const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch(`http://localhost:3000/products/${id}`)
       .then((response) => {
+        if (!response.ok) {
+          throw new Error("gaOkNich");
+        }
         return response.json();
       })
       .then((data) => {
-        setProducts(data);
+        setProduct(data);
       });
-  }, []);
-
+  }, [id]);
   return (
     <div>
       <AllNavbarComponent />
@@ -30,7 +31,7 @@ const Products = () => {
             </div>
 
             <div className="product_row">
-              {products.map((el) => {
+              {product.map((el) => {
                 return (
                   <div key={el.id} className="main_product">
                     <div className="pro_image">
@@ -45,11 +46,6 @@ const Products = () => {
                       </div>
                       <div className="price-product">
                         <span>Rp.{el.price}</span>
-                      </div>
-                      <div className="shop-product">
-                        <a href="">
-                          <img src="https://www.pngitem.com/pimgs/m/208-2086269_instagram-shopping-icon-png-transparent-png.png" />
-                        </a>
                       </div>
                     </div>
                   </div>
