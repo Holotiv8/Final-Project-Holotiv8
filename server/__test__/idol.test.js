@@ -10,10 +10,12 @@ beforeAll(async () => {
     branchJSON.forEach(el => {
         el.createdAt = el.updatedAt = new Date()
     })
+    await queryInterface.bulkInsert('Branches', branchJSON, {})
     let idolJSON = require('../data/talents.json')
     idolJSON.forEach(el => {
         el.createdAt = el.updatedAt = new Date()
     })
+    await queryInterface.bulkInsert('Idols', idolJSON, {})
     let dataUser = require('../data/user.json')
     dataUser.forEach(el => {
         el.password = hashPassword(el.password)
@@ -26,8 +28,6 @@ beforeAll(async () => {
     })
     access_token = response.body.access_token
     // await queryInterface.bulkInsert('Users', userJSON, {})
-    await queryInterface.bulkInsert('Branches', branchJSON, {})
-    await queryInterface.bulkInsert('Idols', idolJSON, {})
     await queryInterface.bulkInsert('Favorites', [{ IdolId: 1, UserId: 1, createdAt: new Date(), updatedAt: new Date() }], {})
 })
 
