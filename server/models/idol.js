@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     birthday: DataTypes.STRING,
     height: DataTypes.STRING,
     illustrator: DataTypes.STRING,
+    color: DataTypes.STRING,
     BranchId: DataTypes.INTEGER
   }, {
     sequelize,

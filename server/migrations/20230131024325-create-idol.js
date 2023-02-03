@@ -52,6 +52,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      color: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       BranchId: {
         allowNull: false,
         type: Sequelize.INTEGER,
