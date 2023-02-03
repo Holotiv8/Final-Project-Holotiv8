@@ -1,6 +1,6 @@
 const app = require('../app')
 const request = require('supertest')
-const { sequelize, Products } = require('../models')
+const { sequelize, Products, Images } = require('../models')
 // const { hashPassword } = require('../helpers/index')
 const queryInterface = sequelize.queryInterface
 let access_token
@@ -11,6 +11,11 @@ beforeAll(async () => {
        el.createdAt = el.updatedAt = new Date();
      });
      await queryInterface.bulkInsert('Products', data, {})
+     let dataImage = require("../data/images.json");
+     dataImage.forEach((el) => {
+       el.createdAt = el.updatedAt = new Date();
+     });
+     await queryInterface.bulkInsert('Images', dataImage, {})
     // await queryInterface.bulkInsert('Users', dataUser, {})
     // let response = await request(app).post("/users/login").send({
     //     email : "brian@mail.com", 
@@ -22,6 +27,11 @@ beforeAll(async () => {
 
 afterAll(async () => {
     await Products.destroy({
+        restartIdentity: true,
+        truncate: true,
+        cascade: true
+    })
+    await Images.destroy({
         restartIdentity: true,
         truncate: true,
         cascade: true
