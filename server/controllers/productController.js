@@ -1,4 +1,4 @@
-const {Products} = require ('../models')
+const {Products, Images} = require ('../models')
 
 class productController{
     static async read(req,response,next){
@@ -12,7 +12,7 @@ class productController{
     static async readId(req,response,next){
         try {
             let {id} = req.params
-            let data = await Products.findByPk(id)
+            let data = await Products.findByPk(id,{include:[{model:Images}]})
             if (!data) {
                 throw { name: 'Data Not Found' }
             }
