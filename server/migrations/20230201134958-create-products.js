@@ -21,6 +21,12 @@ module.exports = {
       mainImg: {
         type: Sequelize.TEXT
       },
+      IdolId: {
+        type: Sequelize.INTEGER,
+        references:{model:'Idols',key:'id'},
+        onUpdate:"cascade",
+        onDelete:'cascade'
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
