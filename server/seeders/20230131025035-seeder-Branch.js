@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    let data = require("../../data/branch.json");
+    let data = require("../data/branch.json");
     data.forEach((el) => {
       el.createdAt = el.updatedAt = new Date();
     });

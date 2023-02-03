@@ -7,7 +7,7 @@ router.get('/branches', IdolController.showBranches)
 router.get('/:id', IdolController.showIdolById)
 router.get('/songs/:spotifyId', IdolController.idolSpotify)
 router.get('/video/:youtubeId', IdolController.idolYoutube)
-router.get('/video/:youtubeLiveId', IdolController.idolLiveYoutube)
+router.get('/video/live/:youtubeId', IdolController.idolLiveYoutube)
 
 
 

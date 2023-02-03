@@ -39,6 +39,10 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notEmpty: { msg: "Password is required" },
           notNull: { msg: "Password is required" },
+          len: {
+            args: [5],
+            msg: 'Password Minimal 5 Characters'
+          }
         },
       },
       isSubscribed: DataTypes.BOOLEAN,

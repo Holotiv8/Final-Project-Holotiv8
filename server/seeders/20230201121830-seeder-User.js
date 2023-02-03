@@ -1,5 +1,5 @@
 "use strict";
-const data = require("../../data/user.json");
+const data = require("../data/user.json");
 const { hashPassword } = require("../helpers");
 
 /** @type {import('sequelize-cli').Migration} */
