@@ -40,9 +40,9 @@ const NavbarComponent = () => {
             </Link>
           </div>
           <div className="">
-            <button className="bg-[#D61C4E] rounded-lg px-5 py-1.5 text-sm text-white">
+            <Link to='/login' className="bg-[#D61C4E] rounded-lg px-5 py-1.5 text-sm text-white">
               Login
-            </button>
+            </Link>
           </div>
         </div>
       </section>

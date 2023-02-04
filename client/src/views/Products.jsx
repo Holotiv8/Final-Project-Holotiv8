@@ -1,22 +1,17 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import AllFooterPage from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
+import { fetchDetailProduct } from "../stores/actionCreator/productCreator";
 
 const Products = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState([]);
+  const { product } = useSelector((state) => state.products);
+  const dispatcher = useDispatch();
+
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${id}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("gaOkNich");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setProduct(data);
-      });
+    dispatcher(fetchDetailProduct(id));
   }, [id]);
   return (
     <div>
@@ -26,7 +21,7 @@ const Products = () => {
           <div className="container-product">
             <div className="title-product">
               <h1>
-                <center>Our Product</center>
+                <center>My Product</center>
               </h1>
             </div>
 

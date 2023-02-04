@@ -1,19 +1,16 @@
 import React, { Component, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import AllFooterPage from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
+import { fetchDataProduct } from "../stores/actionCreator/productCreator";
 
 const Merchandise = () => {
-  const [idols, setIdols] = useState([]);
+  const { idols } = useSelector((state) => state.products);
+  const dispatcher = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setIdols(data);
-      });
+    dispatcher(fetchDataProduct());
   }, []);
   return (
     <section>
