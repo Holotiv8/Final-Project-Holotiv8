@@ -1,8 +1,9 @@
-import { FETCH_DATA_BRANCHES, FETCH_DATA_TALENTS } from "../actionType";
+import { FETCH_DATA_BRANCHES, FETCH_DATA_FAVORITES_USER, FETCH_DATA_TALENTS } from "../actionType";
 
 const initialState = {
   idols: [],
   branches: [],
+  favorites: []
 };
 
 const talentReducer = (state = initialState, action) => {
@@ -17,6 +18,12 @@ const talentReducer = (state = initialState, action) => {
         ...state,
         branches: action.payload,
       };
+    case FETCH_DATA_FAVORITES_USER:
+      return {
+        ...state,
+        favorites: action.payload
+      }
+
     default:
       return state;
   }
