@@ -1,6 +1,6 @@
 import AllFooterPage from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
-
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -21,12 +21,14 @@ const About = () => {
             </div>
             <div className="flex items-center">
               <main className="flex items-center justify-center bg-gray-100">
-                <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
-                  <div className="absolute inset-0 w-3 bg-[#5e7dc3] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                  <span className="relative text-black group-hover:text-white">
-                    Our Talents
-                  </span>
-                </button>
+                <Link to={"/talents"}>
+                  <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
+                    <div className="absolute inset-0 w-3 bg-[#5e7dc3] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                    <span className="relative text-black group-hover:text-white">
+                      Our Talents
+                    </span>
+                  </button>
+                </Link>
               </main>
             </div>
           </div>

@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../stores/actionCreator/usersCreator";
 
 const AllNavbarComponent = () => {
+  const dispatcher = useDispatch();
+  const movePage = useNavigate();
+  const handleLogout = (event) => {
+    event.preventDefault();
+    dispatcher(logout());
+    movePage("/");
+  };
   return (
     <section id="Navbar" className="px-10">
       <div className="flex justify-between py-3 items-center bg-white">
@@ -21,8 +31,8 @@ const AllNavbarComponent = () => {
           <Link to="/talents" className="hover:text-blue-500">
             Talent
           </Link>
-          <Link to="#" className="hover:text-blue-500">
-            Schedule
+          <Link to="/about" className="hover:text-blue-500">
+            About
           </Link>
           <Link to="#" className="hover:text-blue-500">
             Events
@@ -40,14 +50,25 @@ const AllNavbarComponent = () => {
             Special
           </Link>
         </div>
-        <div className="">
-          <Link
-            to="/login"
-            className="bg-[#E64848] rounded-lg px-5 py-1.5 text-white"
-          >
-            Login
-          </Link>
-        </div>
+        {localStorage.getItem("access_token") ? (
+          <div className=" flex gap-4">
+            <a
+              onClick={handleLogout}
+              className="bg-[#D61C4E] rounded-lg px-5 py-1.5 text-sm text-white cursor-pointer"
+            >
+              Logout
+            </a>
+          </div>
+        ) : (
+          <div className=" flex gap-4">
+            <Link
+              to="/login"
+              className="bg-[#D61C4E] rounded-lg px-5 py-1.5 text-sm text-white cursor-pointer"
+            >
+              Login
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
