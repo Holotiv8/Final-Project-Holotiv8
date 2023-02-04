@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for server/routers/favoriteRoutes.js</title>
+    <title>Code coverage report for server/routers/paymentRoutes.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">server/routers</a> favoriteRoutes.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">server/routers</a> paymentRoutes.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -77,17 +77,17 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span></td><td class="text"><pre class="prettyprint lang-js">const express = require('express')
-const favoriteController = require('../controllers/favoriteController')
-const authentication = require('../middlewares')
-const router = express.Router()
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require("express");
+const PaymentController = require("../controllers/paymentController");
+const authentication = require("../middlewares");
+const router = express.Router();
 &nbsp;
-router.get('/',authentication,favoriteController.favoriteIdolList)
-router.post('/:IdolId',authentication,favoriteController.addFavoriteIdol)
+router.post("/", authentication, PaymentController.paymentSubscribe);
 &nbsp;
-module.exports=router</pre></td></tr></table></pre>
+module.exports = router;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

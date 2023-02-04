@@ -2,7 +2,6 @@ const app = require('../app')
 const request = require('supertest')
 const { sequelize, Idol, Branch, User, Favorite } = require('../models')
 const { hashPassword } = require('../helpers/index')
-const IdolController = require('../controllers/IdolController')
 const queryInterface = sequelize.queryInterface
 let access_token
 
@@ -30,6 +29,10 @@ beforeAll(async () => {
     access_token = response.body.access_token
     // await queryInterface.bulkInsert('Users', userJSON, {})
     await queryInterface.bulkInsert('Favorites', [{ IdolId: 1, UserId: 1, createdAt: new Date(), updatedAt: new Date() }], {})
+})
+
+beforeEach(() => {
+    jest.restoreAllMocks()
 })
 
 afterAll(async () => {
@@ -65,15 +68,15 @@ describe('Feature Read Idol GET /idols/', () => {
         expect(response.body).toBeInstanceOf(Object)
     })
 
-    // test('500 - Fail Read Idols', async () => {
-    //     jest.spyOn(IdolController, "showAll").mockRejectedValue("Internal Server Error")
-    //     const response = await request(app)
-    //         .get('/idols')
+    test('500 - Fail Read Idols', async () => {
+        jest.spyOn(Idol, "findAll").mockRejectedValue("Internal Server Error")
+        const response = await request(app)
+            .get('/idols')
 
-    //     expect(response.status).toBe(500)
-    //     expect(response.body).toBe("Internal Server Error")
-    //     expect(response.body).toBeInstanceOf(Object)
-    // })
+        expect(response.status).toBe(500)
+        expect(response.body).toHaveProperty("message","Internal Server Error")
+        expect(response.body).toBeInstanceOf(Object)
+    })
 
     test('200 - Success Read Idol With Filter', async () => {
         const response = await request(app)
@@ -156,75 +159,78 @@ describe('Feature Add Favorite Idol POST /favorites/:IdolId', () => {
 
 })
 
-describe('Feature Read Idol Songs GET /idols/songs/:spotifyId', () => {
-    test('200 - Success Read Idols Songs', async () => {
-        // jest.spyOn()
-        const response = {
-            status: 200,
-            body: [
-                {
-                    "releases": {
-                        "items": [
-                            {
-                                "id": "2tnTVBJQqfKUbO2Wf1H6A4",
-                                "uri": "spotify:album:2tnTVBJQqfKUbO2Wf1H6A4",
-                                "name": "NEZUMI Scheme",
-                                "type": "SINGLE",
-                                "date": {
-                                    "year": 2022,
-                                    "isoString": "2022-11-21T00:00:00Z"
-                                },
-                                "coverArt": {
-                                    "sources": [
-                                        {
-                                            "url": "https://i.scdn.co/image/ab67616d00001e020cf4b30083b2bb3155997fe3",
-                                            "width": 300,
-                                            "height": 300
-                                        },
-                                        {
-                                            "url": "https://i.scdn.co/image/ab67616d000048510cf4b30083b2bb3155997fe3",
-                                            "width": 64,
-                                            "height": 64
-                                        },
-                                        {
-                                            "url": "https://i.scdn.co/image/ab67616d0000b2730cf4b30083b2bb3155997fe3",
-                                            "width": 640,
-                                            "height": 640
-                                        }
-                                    ]
-                                },
-                                "playability": {
-                                    "playable": true,
-                                    "reason": "PLAYABLE"
-                                },
-                                "sharingInfo": {
-                                    "shareId": "7V2q9X1OQ5e_a2Omq0B3Hw",
-                                    "shareUrl": "https://open.spotify.com/album/2tnTVBJQqfKUbO2Wf1H6A4?si=7V2q9X1OQ5e_a2Omq0B3Hw"
-                                },
-                                "tracks": {
-                                    "totalCount": 1
-                                }
-                            }
-                        ]
-                    }
-                },
-            ]
-        }
+// describe('Feature Read Idol Songs GET /idols/songs/:spotifyId', () => {
+//     test('200 - Success Read Idols Songs', async () => {
+//         // jest.spyOn()
+//         // const response = {
+//         //     status: 200,
+//         //     body: [
+//         //         {
+//         //             "releases": {
+//         //                 "items": [
+//         //                     {
+//         //                         "id": "2tnTVBJQqfKUbO2Wf1H6A4",
+//         //                         "uri": "spotify:album:2tnTVBJQqfKUbO2Wf1H6A4",
+//         //                         "name": "NEZUMI Scheme",
+//         //                         "type": "SINGLE",
+//         //                         "date": {
+//         //                             "year": 2022,
+//         //                             "isoString": "2022-11-21T00:00:00Z"
+//         //                         },
+//         //                         "coverArt": {
+//         //                             "sources": [
+//         //                                 {
+//         //                                     "url": "https://i.scdn.co/image/ab67616d00001e020cf4b30083b2bb3155997fe3",
+//         //                                     "width": 300,
+//         //                                     "height": 300
+//         //                                 },
+//         //                                 {
+//         //                                     "url": "https://i.scdn.co/image/ab67616d000048510cf4b30083b2bb3155997fe3",
+//         //                                     "width": 64,
+//         //                                     "height": 64
+//         //                                 },
+//         //                                 {
+//         //                                     "url": "https://i.scdn.co/image/ab67616d0000b2730cf4b30083b2bb3155997fe3",
+//         //                                     "width": 640,
+//         //                                     "height": 640
+//         //                                 }
+//         //                             ]
+//         //                         },
+//         //                         "playability": {
+//         //                             "playable": true,
+//         //                             "reason": "PLAYABLE"
+//         //                         },
+//         //                         "sharingInfo": {
+//         //                             "shareId": "7V2q9X1OQ5e_a2Omq0B3Hw",
+//         //                             "shareUrl": "https://open.spotify.com/album/2tnTVBJQqfKUbO2Wf1H6A4?si=7V2q9X1OQ5e_a2Omq0B3Hw"
+//         //                         },
+//         //                         "tracks": {
+//         //                             "totalCount": 1
+//         //                         }
+//         //                     }
+//         //                 ]
+//         //             }
+//         //         },
+//         //     ]
+//         // }
+//         const response = await request(app)
+//         .get('/idols/songs/3PLJjPD8KDRzaEdznJT16j')
 
-        expect(response.status).toBe(200)
-        expect(response.body).toBeInstanceOf(Array)
-    })
 
-    // test('404 - Failed Read Specific Idol', async () => {
-    //     const response = await request(app)
-    //         .get('/idols/100')
+//         expect(response.status).toBe(200)
+//         expect(response.body).toBeInstanceOf(Array)
+//     })
 
-    //     expect(response.status).toBe(404)
-    //     expect(response.body).toBeInstanceOf(Object)
-    //     expect(response.body).toHaveProperty('message', 'Data Not Found')
-    // })
+//     // test('404 - Failed Read Specific Idol', async () => {
+//     //     const response = await request(app)
+//     //         .get('/idols/100')
 
-})
+//     //     expect(response.status).toBe(404)
+//     //     expect(response.body).toBeInstanceOf(Object)
+//     //     expect(response.body).toHaveProperty('message', 'Data Not Found')
+//     // })
+
+// })
 
 describe('Feature Read Idol Youtube GET /idols/video/:youtubeId', () => {
     test('200 - Success Read Idols Youtube Video', async () => {
