@@ -19,7 +19,6 @@ class UserController {
   static async login(req, res, next) {
     try {
       const { email, password } = req.body;
-
       const user = await User.findOne({ where: { email } });
       if (!user) {
         throw { name: "Credential" };
