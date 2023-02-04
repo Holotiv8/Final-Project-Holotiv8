@@ -6,6 +6,7 @@ import HomePage from "../views/HomePage";
 import LoginPage from "../views/LoginPage";
 import RegisterPage from "../views/RegisterPage";
 import Merchandise from "../views/Merchendise";
+import FavoritePage from "../views/FavoritePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
     path: "/products/:id",
     element: <Products />,
   },
+  {
+    path: '/favorite',
+    element: <FavoritePage/>
+  }
 ]);
 
 export default router;
