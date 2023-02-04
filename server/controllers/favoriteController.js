@@ -60,6 +60,19 @@ class favoriteController{
             next(error)
         }
     }
+    static async deleteFav(req,response,next){
+        try {
+            const {id}=req.params
+            let data = await Favorite.findByPk(id)
+            if(!data){
+                throw{name:"Data Not Found"}
+            }
+            await Favorite.destroy({where:{id}})
+            response.status(200).json({message:"Success Delete Ur Talent From Favorite List"})
+        } catch (error) {
+            next(error)
+        }
+    }
 }
 
 module.exports=favoriteController
