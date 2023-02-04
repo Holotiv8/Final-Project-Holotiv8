@@ -1,9 +1,11 @@
 import React, { Component, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 import Footer from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import {
+  addFavorite,
   fetchDataBranches,
   fetchDataTalents,
 } from "../stores/actionCreator/talentsCreator";
@@ -11,6 +13,7 @@ import {
 const Talents = () => {
   const { idols, branches } = useSelector((state) => state.idols);
   const dispatcher = useDispatch();
+  let navigate = useNavigate();
 
   useEffect(() => {
     dispatcher(fetchDataTalents());
@@ -19,6 +22,11 @@ const Talents = () => {
   useEffect(() => {
     dispatcher(fetchDataBranches());
   }, []);
+
+  function handleAddFavorite(IdolId) {
+    dispatcher(addFavorite(IdolId));
+    navigate("/");
+  }
 
   return (
     <>
@@ -69,7 +77,7 @@ const Talents = () => {
                             }}
                           />
                         </a>
-                        <a>
+                        <a onClick={() => handleAddFavorite(el.id)}>
                           <img
                             src="https://icon-library.com/images/love-icon-png/love-icon-png-9.jpg"
                             style={{
