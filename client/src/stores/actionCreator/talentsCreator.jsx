@@ -51,3 +51,24 @@ export const fetchDataBranches = () => {
       });
   };
 };
+
+export const addFavorite = (IdolId) => {
+  return (dispatch, getState) => {
+    fetch(`http://localhost:3000/favorites/${IdolId}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        access_token: localStorage.getItem("access_token"),
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("notOk");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+  };
+};
