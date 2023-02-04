@@ -25,8 +25,8 @@ const HomePage = () => {
               <span className="font-bold"> Hokkaido, Japan</span>
             </div>
             <div className="text-5xl font-bold w-10/12">
-              <span className="text-blue-500">Explore</span> and{" "}
-              <span className="text-blue-500">enjoy</span> your vacantion in{" "}
+              <span className="text-blue-500">Lorem</span> and{" "}
+              <span className="text-blue-500">lorem</span> lorem lorem in{" "}
               <span className="text-blue-500">Japan!</span>
             </div>
             <div className="text-gray-400 w-8/12">

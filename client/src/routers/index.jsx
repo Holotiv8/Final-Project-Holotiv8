@@ -7,6 +7,7 @@ import LoginPage from "../views/LoginPage";
 import RegisterPage from "../views/RegisterPage";
 import Merchandise from "../views/Merchendise";
 import FavoritePage from "../views/FavoritePage";
+import DetailPage from "../views/DetailPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: '/favorite',
     element: <FavoritePage/>
+  },
+  {
+    path: "/detail/:id",
+    element: <DetailPage />
   }
 ]);
 

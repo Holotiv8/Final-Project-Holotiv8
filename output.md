@@ -54,7 +54,7 @@ Live Stream Now (ada)
             "width": 336
           }
         ],
-        "title": "【Random Talk + Donation Reading】KIMONO? HUEHUEHEHEHEHEHEHE.【Kaela Kovalskia / hololiveID】",
+        "title": "Random Talk + Donation Reading】KIMONO? HUEHUEHEHEHEHEHEHE.【Kaela Kovalskia / hololiveID】",
         "videoId": "6D3vofUyUPk"
       }
     }
