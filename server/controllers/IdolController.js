@@ -1,6 +1,7 @@
 const { Idol, Branch } = require("../models");
 const axios = require("axios");
 const { Op } = require("sequelize");
+const  spotifyFunction  = require("../helpers/spotify");
 
 class IdolController {
   static async showAll(req, res, next) {
@@ -74,27 +75,15 @@ class IdolController {
       next(error);
     }
   }
-  static idolSpotify(req, res, next) {
+  static async idolSpotify(req, res, next) {
     let { spotifyId } = req.params;
-    const options = {
-      method: "GET",
-      url: "https://spotify23.p.rapidapi.com/artist_singles/",
-      params: { id: spotifyId, offset: "0", limit: "20" },
-      headers: {
-        "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
-        "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
-      },
-    };
-
-    axios
-      .request(options)
-      .then(function (response) {
-        let songs = response.data.data.artist.discography.singles.items;
-        res.status(200).json(songs);
-      })
-      .catch(function (error) {
-        next(error);
-      });
+    try {
+      const songs= await spotifyFunction(spotifyId)
+      res.status(200).json(songs);
+    } catch (error) {
+      console.log(error,'<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+      next(error)
+    }
   }
   static idolYoutube(req, res, next) {
     let { youtubeId } = req.params;
