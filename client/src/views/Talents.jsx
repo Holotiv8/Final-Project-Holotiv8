@@ -1,30 +1,23 @@
 import React, { Component, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import Footer from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
+import {
+  fetchDataBranches,
+  fetchDataTalents,
+} from "../stores/actionCreator/talentsCreator";
 
 const Talents = () => {
-  const [idols, setIdols] = useState([]);
-  const [branches, setBranches] = useState([]);
+  const { idols, branches } = useSelector((state) => state.idols);
+  const dispatcher = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:3000/idols")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setIdols(data);
-      });
+    dispatcher(fetchDataTalents());
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/idols/branches")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setBranches(data);
-      });
+    dispatcher(fetchDataBranches());
   }, []);
 
   return (
