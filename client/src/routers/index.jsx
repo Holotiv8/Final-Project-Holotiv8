@@ -3,6 +3,7 @@ import Talents from "../views/Talents";
 import Products from "../views/Products";
 import About from "../views/About";
 import HomePage from "../views/HomePage";
+import DetailPage from "../views/DetailPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: "/telent",
     element: <Talents />
   },
+  {
+    path: "/detail/:id",
+    element: <DetailPage />
+  }
 ]);
 
 export default router;
