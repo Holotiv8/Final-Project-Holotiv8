@@ -105,6 +105,27 @@ describe('Feature Read Idol GET /idols/', () => {
 
 })
 
+describe('Feature Read Branches GET /idols/branches', () => {
+    test('200 - Success Read Branches', async () => {
+        const response = await request(app)
+            .get('/idols/branches')
+
+        expect(response.status).toBe(200)
+        expect(response.body).toBeInstanceOf(Object)
+    })
+
+    test('500 - Fail Read Idols', async () => {
+        jest.spyOn(Branch, "findAll").mockRejectedValue("Internal Server Error")
+        const response = await request(app)
+            .get('/idols/branches')
+
+        expect(response.status).toBe(500)
+        expect(response.body).toHaveProperty("message","Internal Server Error")
+        expect(response.body).toBeInstanceOf(Object)
+    })
+
+})
+
 describe('Feature Read Favorite Idol GET /favorites', () => {
     test('200 - Success Read Favorite Idol', async () => {
         const response = await request(app)
@@ -232,70 +253,70 @@ describe('Feature Add Favorite Idol POST /favorites/:IdolId', () => {
 
 // })
 
-describe('Feature Read Idol Youtube GET /idols/video/:youtubeId', () => {
-    test('200 - Success Read Idols Youtube Video', async () => {
-        const response = {
-            status: 200,
-            body: [
-                {
-                  "type": "video",
-                  "video": {
-                    "badges": [],
-                    "isLiveNow": false,
-                    "lengthSeconds": 8548,
-                    "movingThumbnails": [
-                      {
-                        "height": 180,
-                        "url": "https://i.ytimg.com/an_webp/VyUt8HOmB9c/mqdefault_6s.webp?du=3000&sqp=CIG0354G&rs=AOn4CLCtksP70kgp5_SCbxfWeE2B2UNaUg",
-                        "width": 320
-                      }
-                    ],
-                    "publishedTimeText": "Streamed 3 hours ago",
-                    "stats": {
-                      "views": 84249
-                    },
-                    "thumbnails": [
-                      {
-                        "height": 94,
-                        "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAaGiXkA6qvoiHdmWIWA0BjXM0qKw",
-                        "width": 168
-                      },
-                      {
-                        "height": 110,
-                        "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDVqysxlWkD6TwEWqE860P1gFrEkA",
-                        "width": 196
-                      },
-                      {
-                        "height": 138,
-                        "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcik2I-BEZv2wmIvBjtDeeT1r7DA",
-                        "width": 246
-                      },
-                      {
-                        "height": 188,
-                        "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDk1RLHcDpDd4kmyNe531jnFpTcLg",
-                        "width": 336
-                      }
-                    ],
-                    "title": "【GeoGuessr】Let's guess a place!【holoID】",
-                    "videoId": "VyUt8HOmB9c"
-                  }
-                },
-            ]
-        }
+// describe('Feature Read Idol Youtube GET /idols/video/:youtubeId', () => {
+//     test('200 - Success Read Idols Youtube Video', async () => {
+//         const response = {
+//             status: 200,
+//             body: [
+//                 {
+//                   "type": "video",
+//                   "video": {
+//                     "badges": [],
+//                     "isLiveNow": false,
+//                     "lengthSeconds": 8548,
+//                     "movingThumbnails": [
+//                       {
+//                         "height": 180,
+//                         "url": "https://i.ytimg.com/an_webp/VyUt8HOmB9c/mqdefault_6s.webp?du=3000&sqp=CIG0354G&rs=AOn4CLCtksP70kgp5_SCbxfWeE2B2UNaUg",
+//                         "width": 320
+//                       }
+//                     ],
+//                     "publishedTimeText": "Streamed 3 hours ago",
+//                     "stats": {
+//                       "views": 84249
+//                     },
+//                     "thumbnails": [
+//                       {
+//                         "height": 94,
+//                         "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAaGiXkA6qvoiHdmWIWA0BjXM0qKw",
+//                         "width": 168
+//                       },
+//                       {
+//                         "height": 110,
+//                         "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDVqysxlWkD6TwEWqE860P1gFrEkA",
+//                         "width": 196
+//                       },
+//                       {
+//                         "height": 138,
+//                         "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcik2I-BEZv2wmIvBjtDeeT1r7DA",
+//                         "width": 246
+//                       },
+//                       {
+//                         "height": 188,
+//                         "url": "https://i.ytimg.com/vi/VyUt8HOmB9c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDk1RLHcDpDd4kmyNe531jnFpTcLg",
+//                         "width": 336
+//                       }
+//                     ],
+//                     "title": "【GeoGuessr】Let's guess a place!【holoID】",
+//                     "videoId": "VyUt8HOmB9c"
+//                   }
+//                 },
+//             ]
+//         }
 
-        expect(response.status).toBe(200)
-        expect(response.body).toBeInstanceOf(Array)
-    })
-    // test('404 - Failed Read Specific Idol', async () => {
-    //     const response = await request(app)
-    //         .get('/idols/100')
+//         expect(response.status).toBe(200)
+//         expect(response.body).toBeInstanceOf(Array)
+//     })
+//     // test('404 - Failed Read Specific Idol', async () => {
+//     //     const response = await request(app)
+//     //         .get('/idols/100')
 
-    //     expect(response.status).toBe(404)
-    //     expect(response.body).toBeInstanceOf(Object)
-    //     expect(response.body).toHaveProperty('message', 'Data Not Found')
-    // })
+//     //     expect(response.status).toBe(404)
+//     //     expect(response.body).toBeInstanceOf(Object)
+//     //     expect(response.body).toHaveProperty('message', 'Data Not Found')
+//     // })
 
-})
+// })
 
 describe('Feature Read Idol Youtube GET /idols/video/live/:youtubeId', () => {
     test('200 - Success Read Idols Youtube Video', async () => {
