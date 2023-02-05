@@ -214,6 +214,7 @@
 .pro_image .images_product img {
     height: 250px;
     width: 200px;
+    transition: 0.2s;
 
 }
 
