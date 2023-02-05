@@ -2,8 +2,9 @@ import NavbarComponent from "../components/NavbarComponent";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchFavorites } from "../stores/actionCreator/talentsCreator";
+
 import FavoriteCard from "../components/FavoriteCard";
+import { fetchFavorites } from "../stores/actionCreator/talentsCreator";
 
 export default function FavoritePage() {
   let favorites = useSelector((state) => state.idols.favorites);
