@@ -1,3 +1,4 @@
+const { Op } = require('sequelize')
 const { Favorite, Branch, Idol } = require('../models')
 
 class favoriteController{
