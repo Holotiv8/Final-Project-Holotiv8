@@ -73,8 +73,8 @@ export const addFavorite = (IdolId) => {
         return response.json();
       })
       .then((data) => {
-        fetchFavorites();
-        console.log(data);
+        dispatch(fetchFavorites());
+        // console.log(data);
       });
   };
 };
@@ -138,47 +138,48 @@ export const fetchDataDetailIdol = (id) => {
           "Content-Type": "application/json",
         },
       });
-  
+
       if (!response.ok) {
         throw new Error("notOk");
       }
-  
+
       const idolData = await response.json();
       console.log(idolData, "ini videoooooooooooooooooooooooooooo");
 
+      const videoResponse = await fetch(
+        `http://localhost:3000/idols/video/${idolData.youtubeId}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-  
-      const videoResponse = await fetch(`http://localhost:3000/idols/video/${idolData.youtubeId}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-  
       if (!videoResponse.ok) {
         throw new Error("notOk");
       }
 
-  
       const video = await videoResponse.json();
-      idolData.video = video
+      idolData.video = video;
 
+      if (idolData.spotifyId !== "") {
+        const songsResponse = await fetch(
+          `http://localhost:3000/idols/songs/${idolData.spotifyId}`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
-      if(idolData.spotifyId !== ""){
-        const songsResponse = await fetch(`http://localhost:3000/idols/songs/${idolData.spotifyId}`, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-    
         if (!songsResponse.ok) {
           throw new Error("notOk");
         }
-    
+
         const songs = await songsResponse.json();
         // console.log(songs,'ini dari creatorrrrrrrrrrrrrrrr')
-        idolData.songs = songs
+        idolData.songs = songs;
       }
-
 
       dispatch(actionSetDetailIdol(idolData));
     } catch (error) {
@@ -186,4 +187,3 @@ export const fetchDataDetailIdol = (id) => {
     }
   };
 };
-

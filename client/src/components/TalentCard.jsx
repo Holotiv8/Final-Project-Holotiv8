@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { addFavorite } from "../stores/actionCreator/talentsCreator";
 
 const TalentCard = ({ el }) => {
+  const dispatcher = useDispatch();
+  let navigate = useNavigate();
+
+  function handleAddFavorite(IdolId) {
+    dispatcher(addFavorite(IdolId));
+    navigate("/favorites");
+  }
   return (
     <div className="card-talents" key={el.id}>
       <img src={el.profileImage} />
