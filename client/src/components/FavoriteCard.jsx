@@ -5,15 +5,14 @@ import { useDispatch } from "react-redux";
 import { deleteFavorite } from "../stores/actionCreator/talentsCreator";
 
 export default function FavoriteCard({ favorites }) {
-  // console.log(favorites, "<< dari card fav");
   const dispatch = useDispatch();
-
+  
   return (
     <div
-      className={`group flex flex-col justify-between  rounded-lg  relative w-[245px] h-[373px] bg-gradient-to-r from-white ${favorites.color} shadow-lg    text-lg block overflow-hidden transition-all duration-500 `}
+      className={`group flex flex-col justify-between  rounded-lg  relative w-[245px] h-[373px] bg-gradient-to-r from-white ${favorites.color} shadow-lg text-lg block overflow-hidden transition-all duration-500 `}
     >
       <div className=" flex justify-end pr-2 gap-2 z-40 pt-2  ">
-        <Link to={""} className="flex w-max   cursor-pointer">
+        <Link to={`/detail/${favorites.Favorites[0].IdolId}`} className="flex w-max   cursor-pointer">
           <TfiAlignRight className="" />
         </Link>
         <a
