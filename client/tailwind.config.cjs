@@ -4,7 +4,8 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      display:['Poppins', 'sans-serif']
+      display:['Poppins', 'sans-serif'],
+      Montserrat:['Montserrat', 'sans-serif'],
     },
   },
   plugins: [],
