@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for server/helpers/spotify.js</title>
+    <title>Code coverage report for server/helpers/youtubeLive.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">server/helpers</a> spotify.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">server/helpers</a> youtubeLive.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -80,9 +80,7 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -101,23 +99,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span></td><td class="text"><pre class="prettyprint lang-js">const axios = require("axios");
 &nbsp;
-&nbsp;
-const spotifyFunction = <span class="fstat-no" title="function not covered" >as</span>ync (spotifyId) =&gt; {
-    const options = <span class="cstat-no" title="statement not covered" >{</span>
-      method: "GET",
-      url: "https://spotify23.p.rapidapi.com/artist_singles/",
-      params: { id: spotifyId, offset: "0", limit: "20" },
-      headers: {
-        "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
-        "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
-      },
-    };
+const youtubeLiveFunction = <span class="fstat-no" title="function not covered" >as</span>ync (youtubeId) =&gt; {
+  const options = <span class="cstat-no" title="statement not covered" >{</span>
+    method: "GET",
+    url: "https://youtube138.p.rapidapi.com/channel/videos/",
+    params: { id: youtubeId, filter: "live_now", hl: "en", gl: "US" },
+    headers: {
+      "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
+      "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
+    },
+  };
     const {data} = <span class="cstat-no" title="statement not covered" >await axios</span>
     .request(options)
-<span class="cstat-no" title="statement not covered" >    return data.data.artist.discography.singles.items</span>
+<span class="cstat-no" title="statement not covered" >    return data.contents</span>
 }
 &nbsp;
-module.exports = spotifyFunction;</pre></td></tr></table></pre>
+module.exports = youtubeLiveFunction</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

@@ -1,7 +1,9 @@
 const { Idol, Branch } = require("../models");
 const axios = require("axios");
 const { Op } = require("sequelize");
-const  spotifyFunction  = require("../helpers/spotify");
+const spotifyFunction = require("../helpers/spotify");
+const youtubeFunction  = require("../helpers/youtube");
+const youtubeLiveFunction = require("../helpers/youtubeLive");
 
 class IdolController {
   static async showAll(req, res, next) {
@@ -56,8 +58,8 @@ class IdolController {
         where: { id },
       });
       if (!data) {
-        throw { name: 'Data Not Found' }
-    }
+        throw { name: "Data Not Found" };
+      }
       res.status(200).json(data);
     } catch (error) {
       next(error);
@@ -78,56 +80,30 @@ class IdolController {
   static async idolSpotify(req, res, next) {
     let { spotifyId } = req.params;
     try {
-      const songs= await spotifyFunction(spotifyId)
+      const songs = await spotifyFunction(spotifyId);
       res.status(200).json(songs);
     } catch (error) {
-      console.log(error,'<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
-      next(error)
+      next(error);
     }
   }
-  static idolYoutube(req, res, next) {
+  static async idolYoutube(req, res, next) {
     let { youtubeId } = req.params;
-    const options = {
-      method: "GET",
-      url: "https://youtube138.p.rapidapi.com/channel/videos/",
-      params: { id: youtubeId, filter: "streams_latest", hl: "en", gl: "US" },
-      headers: {
-        "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
-        "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
-      },
-    };
-
-    axios
-      .request(options)
-      .then(function (response) {
-        let videos = response.data.contents;
-        res.status(200).json(videos);
-      })
-      .catch(function (error) {
-        next(error);
-      });
+    try {
+      const videos = await youtubeFunction(youtubeId);
+      res.status(200).json(videos);
+    } catch (error) {
+      next(error);
+    }
   }
-  static idolLiveYoutube(req, res, next) {
+  static async idolLiveYoutube(req, res, next) {
     let { youtubeId } = req.params;
-    const options = {
-      method: "GET",
-      url: "https://youtube138.p.rapidapi.com/channel/videos/",
-      params: { id: youtubeId, filter: "live_now", hl: "en", gl: "US" },
-      headers: {
-        "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
-        "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
-      },
-    };
 
-    axios
-      .request(options)
-      .then(function (response) {
-        let videos = response.data.contents;
-        res.status(200).json(videos);
-      })
-      .catch(function (error) {
-        next(error);
-      });
+    try {
+      const videos = await youtubeLiveFunction(youtubeId);
+      res.status(200).json(videos);
+    } catch (error) {
+      next(error);
+    }
   }
 }
 

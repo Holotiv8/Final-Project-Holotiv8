@@ -1,6 +1,7 @@
 module.exports = (error, req, res, next) => {
     let message = 'Internal Server Error'
     let status = 500
+    console.log(error)
     switch (error.name) {
         case 'InvalidCredentials':
             message = 'Email/Password Invalid'

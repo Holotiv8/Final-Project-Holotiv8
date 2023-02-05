@@ -1,7 +1,7 @@
 const app = require("../app");
 const request = require("supertest");
 
-jest.mock("../helpers/youtube", () => {
+jest.mock("../helpers/youtubeLive", () => {
   return jest.fn((_) => {
     return [
       {
@@ -51,10 +51,10 @@ jest.mock("../helpers/youtube", () => {
   });
 });
 
-describe("Feature Read Idol Youtube GET /idols/video/:youtubeId", () => {
-  test("200 - Success Read Idols Youtube Video", async () => {
+describe("Feature Read Idol Live Youtube GET /idols/video/live/:youtubeId", () => {
+  test("200 - Success Read Idols Live Youtube Video", async () => {
     const response = await request(app).get(
-      "/idols/video/UCP0BspO_AMEe3aQqqpo89Dg"
+      "/idols/video/live/UCP0BspO_AMEe3aQqqpo89Dg"
     );
 
     expect(response.status).toBe(200);
