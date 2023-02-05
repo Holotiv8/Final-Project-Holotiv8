@@ -1,4 +1,8 @@
-import { FETCH_DATA_BRANCHES, FETCH_DATA_FAVORITES_USER, FETCH_DATA_TALENTS } from "../actionType";
+import {
+  FETCH_DATA_BRANCHES,
+  FETCH_DATA_FAVORITES_USER,
+  FETCH_DATA_TALENTS,
+} from "../actionType";
 
 export const actionSetTalents = (payload) => {
   return {
@@ -74,46 +78,46 @@ export const addFavorite = (IdolId) => {
 };
 
 export function fetchFavorites() {
-  return async(dispatch) => {
-    try{
-      const data = await fetch('http://localhost:3000/favorites/', {
+  return async (dispatch) => {
+    try {
+      const data = await fetch("http://localhost:3000/favorites", {
         headers: {
           "Content-Type": "application/json",
           access_token: localStorage.getItem("access_token"),
-        }
-      })
-      const convert = await data.json()
+        },
+      });
+      const convert = await data.json();
 
       dispatch({
         type: FETCH_DATA_FAVORITES_USER,
-        payload: convert
-      })
-    } catch(err) {
-      console.log(err)
+        payload: convert,
+      });
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 }
 
 export function deleteFavorite(id) {
-  return async(dispatch) => {
-    try{
+  return async (dispatch) => {
+    try {
       const data = await fetch(`http://localhost:3000/favorites/${id}`, {
-        method: 'DELETE',
+        method: "DELETE",
         headers: {
           "Content-Type": "application/json",
           access_token: localStorage.getItem("access_token"),
-        }
-      })
+        },
+      });
 
-      const convert = await data.json()
-      dispatch(fetchFavorites())
-      if(!data.ok) {
-        throw convert
+      const convert = await data.json();
+      dispatch(fetchFavorites());
+      if (!data.ok) {
+        throw convert;
       }
 
-      return convert.message
-    } catch(err) {
-      console.log(err)
+      return convert.message;
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 }
