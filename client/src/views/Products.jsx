@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import AllFooterPage from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import { fetchDetailProduct } from "../stores/actionCreator/productCreator";
+import ProductCard from "../components/ProductCard";
 
 const Products = () => {
   const { id } = useParams();
@@ -27,24 +28,7 @@ const Products = () => {
 
             <div className="product_row">
               {product.map((el) => {
-                return (
-                  <div key={el.id} className="main_product">
-                    <div className="pro_image">
-                      <div className="images_product">
-                        <img src={el.mainImg} />
-                      </div>
-                    </div>
-
-                    <div className="content-product">
-                      <div className="product-name">
-                        <span>{el.name}</span>
-                      </div>
-                      <div className="price-product">
-                        <span>Rp.{el.price}</span>
-                      </div>
-                    </div>
-                  </div>
-                );
+                return <ProductCard key={el.id} el={el} />;
               })}
             </div>
 

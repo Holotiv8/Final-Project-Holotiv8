@@ -34,8 +34,8 @@ const AllNavbarComponent = () => {
           <Link to="/about" className="hover:text-blue-500">
             About
           </Link>
-          <Link to="#" className="hover:text-blue-500">
-            Events
+          <Link to="/favorites" className="hover:text-blue-500">
+            Favorites
           </Link>
           <Link to="#" className="hover:text-blue-500">
             Videos

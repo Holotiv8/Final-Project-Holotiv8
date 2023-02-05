@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { deleteFavorite } from "../stores/actionCreator/talentsCreator";
 
 export default function FavoriteCard({ favorites }) {
-  console.log(favorites, "<< dari card fav");
+  // console.log(favorites, "<< dari card fav");
   const dispatch = useDispatch();
 
   return (

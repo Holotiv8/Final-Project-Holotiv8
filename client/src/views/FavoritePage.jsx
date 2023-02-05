@@ -15,7 +15,9 @@ export default function FavoritePage() {
   return (
     <div className="w-full px-10">
       <NavbarComponent />
-      <div className="text-7xl font-extrabold p-4 mb-6">Favorite Talents</div>
+      <div className="text-4xl text-center font-extrabold p-4 mb-6">
+        Favorite Talents
+      </div>
       <div className="  grid grid-cols-4 gap-11 justify-items-center  ">
         {favorites.map((favorites) => {
           return <FavoriteCard key={favorites.id} favorites={favorites} />;

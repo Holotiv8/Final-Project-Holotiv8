@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 import Footer from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import {
@@ -9,6 +8,7 @@ import {
   fetchDataBranches,
   fetchDataTalents,
 } from "../stores/actionCreator/talentsCreator";
+import TalentCard from "../components/TalentCard";
 
 const Talents = () => {
   const [active, setActive] = useState("Hololive Indonesia");
@@ -68,44 +68,7 @@ const Talents = () => {
             {idols
               .filter((el) => el.BranchId === activeId)
               .map((el) => {
-                return (
-                  <div className="card-talents" key={el.id}>
-                    <img src={el.profileImage} />
-                    <div className="content-talents">
-                      <div className="row-talents">
-                        <div className="detail-talents">
-                          <span>{el.name}</span>
-                          <p>
-                            “Hey, {el.fanName}! How are you all doing? It's me,{" "}
-                            {el.name}”
-                          </p>
-                        </div>
-                        <div className="buttons-talents">
-                          <Link to={`/detail/${el.id}`}>
-                            <img
-                              src="https://www.freeiconspng.com/thumbs/details-icon/view-details--icon--download-free-icons-0.jpg"
-                              style={{
-                                width: "50px",
-                                cursor: "pointer",
-                                float: "left",
-                              }}
-                            />
-                          </Link>
-                          <a onClick={() => handleAddFavorite(el.id)}>
-                            <img
-                              src="https://icon-library.com/images/love-icon-png/love-icon-png-9.jpg"
-                              style={{
-                                width: "30px",
-                                cursor: "pointer",
-                                marginTop: "10px",
-                              }}
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
+                return <TalentCard key={el.id} el={el} />;
               })}
           </div>
         </section>
