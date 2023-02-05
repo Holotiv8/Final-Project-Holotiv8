@@ -27,7 +27,7 @@ const Talents = () => {
 
   function handleAddFavorite(IdolId) {
     dispatcher(addFavorite(IdolId));
-    navigate("/");
+    navigate("/favorites");
   }
 
   function handleActive(value, valueId) {

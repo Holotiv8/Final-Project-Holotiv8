@@ -34,17 +34,17 @@ const router = createBrowserRouter([
     element: <Merchandise />,
   },
   {
+    path: "/favorites",
+    element: <FavoritePage />,
+  },
+  {
     path: "/products/:id",
     element: <Products />,
   },
   {
-    path: '/favorites',
-    element: <FavoritePage/>
-  },
-  {
     path: "/detail/:id",
-    element: <DetailPage />
-  }
+    element: <DetailPage />,
+  },
 ]);
 
 export default router;

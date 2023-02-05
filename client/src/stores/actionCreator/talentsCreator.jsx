@@ -72,6 +72,7 @@ export const addFavorite = (IdolId) => {
         return response.json();
       })
       .then((data) => {
+        fetchFavorites();
         console.log(data);
       });
   };
