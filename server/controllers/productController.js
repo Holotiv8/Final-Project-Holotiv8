@@ -22,7 +22,7 @@ class productController{
             let data = await Products.findAll({
                 where: {IdolId: id}
             })
-            if (!data) {
+            if (!data.length) {
                 throw { name: 'Data Not Found' }
             }
             response.status(200).json(data)

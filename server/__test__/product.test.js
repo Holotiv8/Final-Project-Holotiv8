@@ -30,6 +30,10 @@ beforeAll(async () => {
     // // await queryInterface.bulkInsert('Users', userJSON, {})
 })
 
+beforeEach(() => {
+    jest.restoreAllMocks()
+})
+
 afterAll(async () => {
     await Idol.destroy({
         restartIdentity: true,
@@ -55,7 +59,7 @@ describe('Feature Read Product GET /products/', () => {
 
     test('200 - Success Read Specific Product', async () => {
         const response = await request(app)
-            .get('/products/5')
+            .get('/products/9')
 
         expect(response.status).toBe(200)
         expect(response.body).toBeInstanceOf(Object)
@@ -69,5 +73,16 @@ describe('Feature Read Product GET /products/', () => {
         expect(response.body).toBeInstanceOf(Object)
         expect(response.body).toHaveProperty('message', 'Data Not Found')
     })
+
+    test('500 - Fail Read Products', async () => {
+        jest.spyOn(Idol, "findAll").mockRejectedValue("Internal Server Error")
+        const response = await request(app)
+            .get('/products')
+
+        expect(response.status).toBe(500)
+        expect(response.body).toHaveProperty("message","Internal Server Error")
+        expect(response.body).toBeInstanceOf(Object)
+    })
+
 
 })

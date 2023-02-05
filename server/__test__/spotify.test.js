@@ -60,8 +60,6 @@ describe('Feature Read Idol Songs GET /idols/songs/:spotifyId', () => {
         const response = await request(app)
         .get('/idols/songs/3PLJjPD8KDRzaEdznJT16j')
 
-        console.log(response.body, '>>>>>>>>>>>>>>>>>>>>')
-
         expect(response.status).toBe(200)
         expect(response.body).toBeInstanceOf(Array)
     })
