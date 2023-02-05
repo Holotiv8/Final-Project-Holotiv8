@@ -4,7 +4,7 @@ function SpofyCard(el) {
   return (
     <>
     <a href={object.sharingInfo.shareUrl}>
-      <div className="card bg-white w-[200px] h-full m-2 rounded-lg shadow-lg">
+      <div className="card bg-white w-[200px] h-[250px] m-2 rounded-lg shadow-lg">
         <div className="object-centertop" >
           <img
             className="p-2" w

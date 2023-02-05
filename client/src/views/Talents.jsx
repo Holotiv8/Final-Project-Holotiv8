@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-
+import { Link } from "react-router-dom";
 import Footer from "../components/AllFooterPage";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import {
@@ -81,7 +81,7 @@ const Talents = () => {
                           </p>
                         </div>
                         <div className="buttons-talents">
-                          <a>
+                          <Link to={`/detail/${el.id}`}>
                             <img
                               src="https://www.freeiconspng.com/thumbs/details-icon/view-details--icon--download-free-icons-0.jpg"
                               style={{
@@ -90,7 +90,7 @@ const Talents = () => {
                                 float: "left",
                               }}
                             />
-                          </a>
+                          </Link>
                           <a onClick={() => handleAddFavorite(el.id)}>
                             <img
                               src="https://icon-library.com/images/love-icon-png/love-icon-png-9.jpg"

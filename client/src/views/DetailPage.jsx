@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {fetchDataDetailIdol} from "../stores/actionCreator/talentsCreator";
+import { useParams } from 'react-router-dom';
 import AllNavbarComponent from "../components/AllNavbarPage";
 import AllFooterPage from "../components/AllFooterPage";
 import Carousel from "../components/Carousel";
@@ -9,10 +10,11 @@ import Carousel from "../components/Carousel";
 const DetailPage = () => {
   const { oneIdol } = useSelector((state) => state.idols);
   const dispatcher = useDispatch();
+  const {id} = useParams()
   const [isLoading, setIsLoading] = useState(true);
   const fetchOneIdol = async () => {
     try {
-      await dispatcher(fetchDataDetailIdol(12))
+      await dispatcher(fetchDataDetailIdol(id))
     } catch (error) {
     }
     finally{
@@ -74,9 +76,9 @@ const DetailPage = () => {
       </section>
 
       {/* <section id="youtube" class/Name=""> */}
-      <Carousel title={"VIDEOS"} backround={"bg-sky-800"} type="youtube" content={oneIdol.video}/>
+      <Carousel title={"VIDEOS"} backround={"bg-gradient-to-r from-white via-red-300 to-red-600"} type="youtube" content={oneIdol.video} bg={'https://cdn.discordapp.com/attachments/1062556608078544946/1071756478727340082/IMG_2152.jpg'}/>
       {
-        oneIdol.spotifyId ? <Carousel title={"MUSIC"} backround={"bg-sky-400"} type="spotify" content={oneIdol.songs}/> : "" 
+        oneIdol.spotifyId ? <Carousel title={"MUSIC"} backround={"bg-gradient-to-r from-white via-cyan-400 to-cyan-600"} type="spotify" content={oneIdol.songs}/> : "" 
       }
       
 

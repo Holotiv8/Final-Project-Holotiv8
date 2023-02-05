@@ -6,7 +6,7 @@ function YoutubeCard(video) {
   return (
     <>
     <a href={`https://youtu.be/${object.videoId}`}>
-      <div className="card bg-white w-[200px] h-full m-2 rounded-lg shadow-lg font-display">
+      <div className="card bg-white w-[200px] h-[245px] m-2 rounded-lg shadow-lg font-display">
         <div className="top">
           <img
             className="object-cover p-2"
@@ -16,7 +16,7 @@ function YoutubeCard(video) {
         </div>
         <div className="bottom flex flex-col gap-3 justify-center items-start p-3 ">
           <div className="flex justify-between text-xs w-full text-gray-500">
-            <div>{object.publishedTimeText.split('Streamed')}</div>
+            <div>{object.publishedTimeText?.split('Streamed')}</div>
             <div className="flex items-center gap-1"><FaRegEye/>{object.stats.views}</div>
           </div>
           <div className="title font-semibold text-xs ">
