@@ -90,7 +90,9 @@ const DetailPage = () => {
           {/* <section id="youtube" class/Name=""> */}
           <Carousel
             title={"VIDEOS"}
-            backround={"bg-gradient-to-r from-white via-red-300 to-red-600"}
+            backround={
+              "bg-[url('https://cdn.discordapp.com/attachments/1062556608078544946/1071782772374503435/df03fe11-4120-4c1f-8146-cfab5fcb571b.jpg')]"
+            }
             type="youtube"
             content={oneIdol.video}
             bg={
