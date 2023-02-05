@@ -2,6 +2,8 @@ import {
   FETCH_DATA_BRANCHES,
   FETCH_DATA_FAVORITES_USER,
   FETCH_DATA_TALENTS,
+  FETCH_DATA_TALENTS,
+  FETCH_DETAIL_TELENS,
 } from "../actionType";
 
 export const actionSetTalents = (payload) => {
@@ -122,3 +124,67 @@ export function deleteFavorite(id) {
     }
   };
 }
+export const actionSetDetailIdol = (payload) => {
+  return {
+    type: FETCH_DETAIL_TELENS,
+    payload,
+  };
+};
+
+export const fetchDataDetailIdol = (id) => {
+  return async (dispatch, getState) => {
+    try {
+      const response = await fetch(`http://localhost:3000/idols/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error("notOk");
+      }
+  
+      const idolData = await response.json();
+      console.log(idolData, "ini videoooooooooooooooooooooooooooo");
+
+
+  
+      const videoResponse = await fetch(`http://localhost:3000/idols/video/${idolData.youtubeId}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+  
+      if (!videoResponse.ok) {
+        throw new Error("notOk");
+      }
+
+  
+      const video = await videoResponse.json();
+      idolData.video = video
+
+
+      if(idolData.spotifyId !== ""){
+        const songsResponse = await fetch(`http://localhost:3000/idols/songs/${idolData.spotifyId}`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+    
+        if (!songsResponse.ok) {
+          throw new Error("notOk");
+        }
+    
+        const songs = await songsResponse.json();
+        // console.log(songs,'ini dari creatorrrrrrrrrrrrrrrr')
+        idolData.songs = songs
+      }
+
+
+      dispatch(actionSetDetailIdol(idolData));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+};
+

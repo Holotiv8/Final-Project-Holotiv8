@@ -2,12 +2,14 @@ import {
   FETCH_DATA_BRANCHES,
   FETCH_DATA_FAVORITES_USER,
   FETCH_DATA_TALENTS,
+  FETCH_DETAIL_TELENS
 } from "../actionType";
 
 const initialState = {
   idols: [],
   branches: [],
   favorites: [],
+  oneIdol: {}
 };
 
 const talentReducer = (state = initialState, action) => {
@@ -28,6 +30,12 @@ const talentReducer = (state = initialState, action) => {
         favorites: action.payload,
       };
 
+      case FETCH_DETAIL_TELENS:
+        // console.log(action.payload,'masuk  siniiiiii')
+      return {
+        ...state,
+        oneIdol: action.payload,
+      };
     default:
       return state;
   }

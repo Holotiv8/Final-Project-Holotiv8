@@ -5,6 +5,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			display: ["Poppins", "sans-serif"],
+      Montserrat:['Montserrat', 'sans-serif']
 		},
     extend: {
       animation: { shine: "shine 1s" },
