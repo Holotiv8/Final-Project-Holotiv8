@@ -1,16 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-	
+
 	theme: {
 		fontFamily: {
 			display: ["Poppins", "sans-serif"],
-      Montserrat:['Montserrat', 'sans-serif']
+			Montserrat: ["Montserrat", "sans-serif"],
 		},
-    extend: {
-      animation: { shine: "shine 1s" },
-      keyframes: { shine: { "100%": { left: "125%" } } },
-    },
+		extend: {
+			animation: { shine: "shine 1s" },
+			keyframes: { shine: { "100%": { left: "125%" } } },
+		},
 	},
 	plugins: [],
 };
