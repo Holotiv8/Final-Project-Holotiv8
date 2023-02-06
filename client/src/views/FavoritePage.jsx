@@ -8,6 +8,8 @@ import { fetchFavorites } from "../stores/actionCreator/talentsCreator";
 
 export default function FavoritePage() {
   let favorites = useSelector((state) => state.idols.favorites);
+  const username = localStorage.getItem('username')
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,7 +19,7 @@ export default function FavoritePage() {
     <div className="w-full px-10">
       <NavbarComponent />
       <div className="text-4xl text-center font-extrabold p-4 mb-6">
-        Favorite Talents
+        Favorite {username} Talents
       </div>
       <div className="  grid grid-cols-4 gap-11 justify-items-center mb-6 ">
         {favorites.map((favorites) => {

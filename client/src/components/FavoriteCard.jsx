@@ -7,9 +7,11 @@ import { deleteFavorite } from "../stores/actionCreator/talentsCreator";
 export default function FavoriteCard({ favorites }) {
   const dispatch = useDispatch();
 
+
   function handleDelete(id) {
     dispatch(deleteFavorite(id));
   }
+
 
   return (
     <div
