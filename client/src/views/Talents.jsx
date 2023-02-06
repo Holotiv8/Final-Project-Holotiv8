@@ -43,14 +43,14 @@ const Talents = () => {
         </section>
 
         <section>
-          <div class=" flex items-center rounded-md shadow-sm justify-center mt-[50px] mb-[50px]">
+          <div class=" flex items-center gap-2 rounded-md shadow-sm justify-center mt-[50px] mb-[50px]">
             {branches.map((el) => {
               return (
                 <button
                   key={el.id}
                   onClick={() => handleActive(el.from, el.id)}
                   style={active === el.from ? activeStyle : {}}
-                  class="text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 rounded-l-lg font-medium px-4 py-2 inline-flex space-x-1 items-center"
+                  class="text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 font-medium px-4 py-2 inline-flex space-x-1 items-center"
                 >
                   <span>{el.from}</span>
                 </button>
