@@ -24,7 +24,7 @@ export default function LoginPage() {
             }
             
             let convert = await data.json();
-
+			console.log(convert,'+++++++++++++++')
             localStorage.setItem("access_token", convert.access_token);
             localStorage.setItem("username", convert.username);
             localStorage.setItem("isSubscribed", convert.isSubscribed);

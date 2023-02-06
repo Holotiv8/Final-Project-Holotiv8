@@ -107,7 +107,7 @@ const DetailPage = () => {
       </section>
 
       {/* <section id="youtube" class/Name=""> */}
-      {/* <Carousel
+      <Carousel
         title={"VIDEOS"}
         backround={
           "bg-[url('https://cdn.discordapp.com/attachments/1062556608078544946/1071782772374503435/df03fe11-4120-4c1f-8146-cfab5fcb571b.jpg')]"
@@ -127,7 +127,7 @@ const DetailPage = () => {
         />
       ) : (
         ""
-      )} */}
+      )}
 
       <section
         id="data"

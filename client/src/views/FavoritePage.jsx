@@ -50,7 +50,7 @@ export default function FavoritePage() {
 					}}
 					className='group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg drop-shadow-md '
 				>
-					<div class='absolute inset-0 w-3 bg-[#2E91CB] transition-all duration-[680ms] ease-out group-hover:w-full'></div>
+					<div class='absolute inset-0 w-3 bg-blue-500 transition-all duration-[680ms] ease-out group-hover:w-full'></div>
 					<span class='relative text-black group-hover:text-white'>
 						All Hololive Talent
 					</span>
@@ -64,7 +64,7 @@ export default function FavoritePage() {
 							}}
 							className='group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg drop-shadow-md'
 						>
-							<div class='absolute inset-0 w-3 bg-[#2E91CB] transition-all duration-[680ms] ease-out group-hover:w-full'></div>
+							<div class='absolute inset-0 w-3 bg-blue-500 transition-all duration-[680ms] ease-out group-hover:w-full'></div>
 							<span class='relative text-black group-hover:text-white'>
 								{e.from}
 							</span>
