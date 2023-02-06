@@ -9,7 +9,7 @@ export default function FavoriteCard({ favorites }) {
 
   return (
     <div
-      className={`group flex flex-col justify-between  rounded-lg  relative w-[245px] h-[373px] bg-gradient-to-r from-white ${favorites.color} shadow-lg text-lg block overflow-hidden transition-all duration-500 `}
+      className={`group flex flex-col justify-between  rounded-lg  relative w-[245px] h-[373px] bg-gradient-to-t from-white ${favorites.color}  drop-shadow-2xl text-lg block overflow-hidden transition-all duration-500 `}
     >
       <div className=" flex justify-end pr-2 gap-2 z-40 pt-2  ">
         <Link to={`/detail/${favorites.Favorites[0].IdolId}`} className="flex w-max   cursor-pointer">
