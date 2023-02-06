@@ -115,10 +115,10 @@ const HomePage = () => {
               service work!
             </div>
             <div className="text-gray-400">
-              Enjoy a more enjoyable video streaming experience with Nihon No
-              Live, the best place to watch and share your creativity! Promote
-              your best videos now and feel the benefits as a famous Nihon No
-              Live creator.
+              Nihon is the best place to watch and share your creativity. Enjoy
+              a more video streaming experience with us! Promote your best
+              videos now and feel the benefits as a famous Nihonor (Nihon No
+              Live creator).
             </div>
 
             <div>
@@ -132,36 +132,36 @@ const HomePage = () => {
               <div className="text-white w-7 h-7 flex justify-center items-center rounded-md bg-blue-500">
                 <FaCamera />
               </div>
-              <div className="font-medium">Book a destination</div>
+              <div className="font-medium">Watch live stream talents</div>
               <div className="text-gray-400 w-8/12 text-sm">
-                Order in advance, don't warry, it not complicated
+                You can watch live streaming with our best talents
               </div>
             </div>
             <div className="rounded-xl p-4 bg-white drop-shadow-md flex flex-col gap-3">
               <div className="text-white w-7 h-7 flex justify-center items-center rounded-md bg-blue-500">
                 <FaCompactDisc />
               </div>
-              <div className="font-medium">Book a destination</div>
+              <div className="font-medium">Listen to music our talent</div>
               <div className="text-gray-400 w-8/12 text-sm">
-                Order in advance, don't warry, it not complicated
+                you can listen to a lot of original music
               </div>
             </div>
             <div className="rounded-xl p-4 bg-white drop-shadow-md flex flex-col gap-3">
               <div className="text-white w-7 h-7 flex justify-center items-center rounded-md bg-blue-500">
                 <FaPlay />
               </div>
-              <div className="font-medium">Book a destination</div>
+              <div className="font-medium">Watching videos our talents</div>
               <div className="text-gray-400 w-8/12 text-sm">
-                Order in advance, don't warry, it not complicated
+               You can enjoy lots of your favorite talent videos
               </div>
             </div>
             <div className="rounded-xl p-4 bg-white drop-shadow-md flex flex-col gap-3">
               <div className="text-white w-7 h-7 flex justify-center items-center rounded-md bg-blue-500">
                 <FaRegBookmark />
               </div>
-              <div className="font-medium">Book a destination</div>
+              <div className="font-medium">Add favorite our talents</div>
               <div className="text-gray-400 w-8/12 text-sm">
-                Order in advance, don't warry, it not complicated
+                You can add talent to favorites
               </div>
             </div>
           </div>
@@ -196,9 +196,9 @@ const HomePage = () => {
               Lorem ipsum dolor sit amet consectetur.
             </div>
             <div className="text-gray-400">
-              Unlimited creativity, Nihon No Live brings it to your screen!
-              Discover new Nihoners with unique abilities and don't miss the
-              chance to interact with them.
+              Nihon brings unlimited creativity to your screen! Discover new
+              Vtubers with unique abilities and don't miss the chance to
+              interact with our talent.
             </div>
 
             <div>

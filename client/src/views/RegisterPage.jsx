@@ -7,7 +7,6 @@ export default function RegisterPage() {
         email: '',
         password: '',
         username: '',
-        phoneNumber: '',
         address: ''
     }
 
@@ -64,7 +63,7 @@ export default function RegisterPage() {
 								Nihon no Live
 							</div>
 						</div>
-						<div className='min-w-max  gap-[3px]  flex flex-col'>
+						<div className='min-w-max  gap-[10px]  flex flex-col'>
 							<input
 								className='placeholder:text-xs p-[6px] border border-gray-300 rounded'
 								placeholder='Username'
@@ -91,14 +90,6 @@ export default function RegisterPage() {
 							></input>
 							<input
 								className='placeholder:text-xs p-[6px] border border-gray-300  rounded'
-								placeholder='Phone Number'
-                                name="phoneNumber"
-                                type='number'
-								value={inputForm.phoneNumber}
-								onChange={handleRegister}
-							></input>
-							<input
-								className='placeholder:text-xs p-[6px] border border-gray-300  rounded'
 								placeholder='Address'
                                 name="address"
                                 type='text'
@@ -114,7 +105,7 @@ export default function RegisterPage() {
 								SUBMIT
 							</button>
 							<div className=' flex ml-3  text-[10px] font-medium text-slate-400 h-[33px] w-[200x] justify-center items-center'>
-								<Link to={'/login'}>Already have account, Click here</Link>
+								<Link to={'/login'}>Already have account,  <span className="text-blue-500"> Click here </span></Link>
 							</div>
 						</div>
 					</form>

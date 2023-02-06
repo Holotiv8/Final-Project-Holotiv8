@@ -31,7 +31,7 @@ class UserController {
 
       let payload = { id: user.id };
       const access_token = createToken(payload);
-      res.status(200).json({ access_token, username: user.username });
+      res.status(200).json({ access_token, username: user.username, isSubscribed:user.isSubscribed });
     } catch (error) {
       next(error);
     }

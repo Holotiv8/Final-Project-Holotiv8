@@ -27,6 +27,7 @@ export default function LoginPage() {
 
             localStorage.setItem("access_token", convert.access_token);
             localStorage.setItem("username", convert.username);
+            localStorage.setItem("isSubscribed", convert.isSubscribed);
             
             navigate("/");
         } catch (err) {
@@ -118,8 +119,8 @@ export default function LoginPage() {
 							</div>
 						</div>
 						<div className='  text-[10px] font-medium text-slate-400 my-4'>
-							<Link to={"/register"}>
-								Create my Nihon no Live account!
+							<Link to={"/register"} >
+								Create my <span className="text-blue-500"> Nihon no Live account! </span>
 							</Link>
 						</div>
 					</form>
