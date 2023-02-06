@@ -30,9 +30,10 @@ const HomePage = () => {
               <span className="text-blue-500">Japan!</span>
             </div>
             <div className="text-gray-400 w-8/12">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-              cum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, sapiente.
+              Nihon no Live is a company paving the way for a new era in the
+              entertainment industry by combining cutting-edge technology and
+              exceptional talent to deliver a stunning virtual experience to
+              viewers worldwide.
             </div>
             <div className="flex gap-2">
               <a href="#">
@@ -114,8 +115,10 @@ const HomePage = () => {
               service work!
             </div>
             <div className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-              cum. Lorem ipsum dolor
+              Enjoy a more enjoyable video streaming experience with Nihon No
+              Live, the best place to watch and share your creativity! Promote
+              your best videos now and feel the benefits as a famous Nihon No
+              Live creator.
             </div>
 
             <div>
@@ -193,9 +196,9 @@ const HomePage = () => {
               Lorem ipsum dolor sit amet consectetur.
             </div>
             <div className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-              cum. Lorem ipsum dolor Lorem ipsum dolor sit. Lorem ipsum dolor
-              sit amet consectetur.
+              Unlimited creativity, Nihon No Live brings it to your screen!
+              Discover new Nihoners with unique abilities and don't miss the
+              chance to interact with them.
             </div>
 
             <div>
