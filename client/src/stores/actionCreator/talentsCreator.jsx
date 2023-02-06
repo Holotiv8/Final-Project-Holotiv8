@@ -79,50 +79,53 @@ export const addFavorite = (IdolId) => {
   };
 };
 
-export function fetchFavorites() {
-  return async (dispatch) => {
-    try {
-      const data = await fetch("http://localhost:3000/favorites", {
-        headers: {
-          "Content-Type": "application/json",
-          access_token: localStorage.getItem("access_token"),
-        },
-      });
-      const convert = await data.json();
-
-      dispatch({
-        type: FETCH_DATA_FAVORITES_USER,
-        payload: convert,
-      });
-    } catch (err) {
-      console.log(err);
-    }
+export const actionSetFavorites = (payload) => {
+  return {
+    type: FETCH_DATA_FAVORITES_USER,
+    payload,
   };
-}
+};
 
-export function deleteFavorite(id) {
-  return async (dispatch) => {
-    try {
-      const data = await fetch(`http://localhost:3000/favorites/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          access_token: localStorage.getItem("access_token"),
-        },
+export const fetchFavorites = () => {
+  return (dispatch, getState) => {
+    fetch("http://localhost:3000/favorites", {
+      headers: {
+        "Content-Type": "application/json",
+        access_token: localStorage.getItem("access_token"),
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("notOk");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        dispatch(actionSetFavorites(data));
       });
-
-      const convert = await data.json();
-      dispatch(fetchFavorites());
-      if (!data.ok) {
-        throw convert;
-      }
-
-      return convert.message;
-    } catch (err) {
-      console.log(err);
-    }
   };
-}
+};
+
+export const deleteFavorite = (id) => {
+  return (dispatch, getState) => {
+    fetch(`http://localhost:3000/favorites/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        access_token: localStorage.getItem("access_token"),
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("notOk");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        dispatch(fetchFavorites());
+      });
+  };
+};
 export const actionSetDetailIdol = (payload) => {
   return {
     type: FETCH_DETAIL_TELENS,
