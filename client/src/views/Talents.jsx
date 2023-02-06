@@ -43,7 +43,7 @@ const Talents = () => {
         </section>
 
         <section>
-          <div class=" flex items-center rounded-md shadow-sm justify-center mt-[50px] mb-[50px]">
+          <div class="flex items-center rounded-md shadow-sm justify-center mt-[50px] mb-[50px]">
             {branches.map((el) => {
               return (
                 <button
