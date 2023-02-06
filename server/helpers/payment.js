@@ -1,4 +1,3 @@
-// const axios = require("axios");
 const midtransClient = require("midtrans-client");
 
 
@@ -13,7 +12,7 @@ const midtransFunction = async (user) => {
       transaction_details: {
         order_id:
           "YOUR-ORDERID-" + Math.floor(1000000 + Math.random() * 9000000),
-        gross_amount: 60000,
+        gross_amount: 59999,
       },
       credit_card: {
         secure: true,

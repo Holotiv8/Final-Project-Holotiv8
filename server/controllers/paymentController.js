@@ -10,7 +10,7 @@ class PaymentController {
       }
 
       let midtransToken= await midtransFunction(user);
-      await User.update({isSubscribed : true}, {where: {id:req.user.id}})
+      // await User.update({isSubscribed : true}, {where: {id:req.user.id}})
       res.status(200).json(midtransToken);
     } catch (error) {
       next(error);
