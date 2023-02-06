@@ -1,5 +1,4 @@
 const { User } = require("../models");
-const midtransClient = require("midtrans-client");
 const midtransFunction = require("../helpers/payment");
 
 class PaymentController {
@@ -10,7 +9,8 @@ class PaymentController {
         throw { name: "already_subscribed" };
       }
 
-      let midtransToken= await midtransFunction(user)
+      let midtransToken= await midtransFunction(user);
+      await User.update({isSubscribed : true}, {where: {id:req.user.id}})
       res.status(200).json(midtransToken);
     } catch (error) {
       next(error);
