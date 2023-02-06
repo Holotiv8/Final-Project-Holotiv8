@@ -25,9 +25,6 @@ const AllNavbarComponent = () => {
           <Link to="#" className="text-blue-500">
             Top
           </Link>
-          <Link to="#" className="hover:text-blue-500">
-            News
-          </Link>
           <Link to="/talents" className="hover:text-blue-500">
             Talent
           </Link>

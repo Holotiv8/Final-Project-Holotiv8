@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import store from "./stores";
 const App = () => {
   return (
-    <Provider store={store}>
+    <Provider store={store} className="font-display">
       <RouterProvider router={router} />
     </Provider>
   );
