@@ -7,25 +7,25 @@ import { deleteFavorite } from "../stores/actionCreator/talentsCreator";
 export default function FavoriteCard({ favorites }) {
   const dispatch = useDispatch();
 
-
-  function handleDelete(id) {
-    dispatch(deleteFavorite(id));
-  }
-
   return (
     <div
       className={`group flex flex-col justify-between  rounded-lg  relative w-[245px] h-[373px] bg-gradient-to-r from-white ${favorites.color} shadow-lg text-lg block overflow-hidden transition-all duration-500 `}
     >
       <div className=" flex justify-end pr-2 gap-2 z-40 pt-2  ">
-        <Link
-          to={`/detail/${favorites.Favorites[0].IdolId}`}
-          className="flex w-max   cursor-pointer"
-        >
+        <Link to={`/detail/${favorites.Favorites[0].IdolId}`} className="flex w-max   cursor-pointer">
           <TfiAlignRight className="" />
         </Link>
         <a
           className="flex w-max  cursor-pointer"
-          onClick={() => handleDelete(favorites.id)}
+          onClick={() => {
+            dispatch(deleteFavorite(favorites.id))
+              .then((data) => {
+                console.log(data);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }}
         >
           <RiChatDeleteLine />
         </a>
