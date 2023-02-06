@@ -6,7 +6,7 @@ import { deleteFavorite } from "../stores/actionCreator/talentsCreator";
 
 export default function FavoriteCard({ favorites }) {
   const dispatch = useDispatch();
-  
+
   return (
     <div
       className={`group flex flex-col justify-between  rounded-lg  relative w-[245px] h-[373px] bg-gradient-to-r from-white ${favorites.color} shadow-lg text-lg block overflow-hidden transition-all duration-500 `}
