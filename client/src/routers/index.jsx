@@ -8,6 +8,8 @@ import RegisterPage from "../views/RegisterPage";
 import Merchandise from "../views/Merchendise";
 import FavoritePage from "../views/FavoritePage";
 import DetailPage from "../views/DetailPage";
+import HomeLiveStreaming from "../pages/home";
+import RoomPage from "../pages/room";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
   {
     path: "/detail/:id",
     element: <DetailPage />,
+  },
+  {
+    path: "/live",
+    element: <HomeLiveStreaming />,
+  },
+  {
+    path: "/room/",
+    element: <RoomPage />,
   },
 ]);
 
