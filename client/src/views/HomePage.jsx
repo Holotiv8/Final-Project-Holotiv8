@@ -39,21 +39,21 @@ const HomePage = () => {
               <a href="#">
                 <img
                   className="w-7 rounded-full"
-                  src="https://hololive.hololivepro.com/wp-content/uploads/2022/03/3_%E3%81%93%E3%81%BC%E3%83%BB%E3%81%8B%E3%81%AA%E3%81%88%E3%82%8B.png"
+                  src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/ayunda_risu_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090978835"
                   alt="telent_img"
                 />
               </a>
               <a href="#">
                 <img
                   className="w-7 rounded-full"
-                  src="https://hololive.hololivepro.com/wp-content/uploads/2022/03/3_%E3%81%93%E3%81%BC%E3%83%BB%E3%81%8B%E3%81%AA%E3%81%88%E3%82%8B.png"
+                  src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/pavolia_reine_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090978026"
                   alt="telent_img"
                 />
               </a>
               <a href="#">
                 <img
                   className="w-7 rounded-full"
-                  src="https://hololive.hololivepro.com/wp-content/uploads/2022/03/3_%E3%81%93%E3%81%BC%E3%83%BB%E3%81%8B%E3%81%AA%E3%81%88%E3%82%8B.png"
+                  src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/robocosan_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090973462"
                   alt="telent_img"
                 />
               </a>
