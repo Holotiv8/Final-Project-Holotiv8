@@ -64,16 +64,18 @@ class favoriteController {
   }
   static async deleteFav(req, response, next) {
     try {
-      const { id } = req.params;
-      let data = await Favorite.findByPk(id);
+      const { IdolId } = req.params;
+
+      let data = await Favorite.findOne({ where: { IdolId } });
       if (!data) {
         throw { name: "Data Not Found" };
       }
-      await Favorite.destroy({ where: { id } });
+      await Favorite.destroy({ where: { IdolId } });
       response
         .status(200)
         .json({ message: "Success Delete Ur Talent From Favorite List" });
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
