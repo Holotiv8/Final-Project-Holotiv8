@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { login } from "../stores/actionCreator/usersCreator";
 
 export default function LoginPage() {
-	let navigate = useNavigate();
+	const dispatch = useDispatch()
+	const navigate = useNavigate();
 
     const initialValue = {
         email: "",
@@ -11,29 +15,6 @@ export default function LoginPage() {
 
     const [inputForm, setInputForm] = useState(initialValue);
 
-    async function login(body) {
-        try {
-            let data = await fetch(`http://localhost:3000/users/login`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(body),
-            });
-            
-            if (!data.ok) {
-                throw new Error('Something went wrong');
-            }
-            
-            let convert = await data.json();
-			console.log(convert,'+++++++++++++++')
-            localStorage.setItem("access_token", convert.access_token);
-            localStorage.setItem("username", convert.username);
-            localStorage.setItem("isSubscribed", convert.isSubscribed);
-            
-            navigate("/");
-        } catch (err) {
-            console.error(err);
-        }
-    }
 
     function handleLogin(val) {
         let data = {
@@ -57,7 +38,14 @@ export default function LoginPage() {
                 className='flex flex-col w-[250px] '
                 onSubmit={(e) => {
                     e.preventDefault();
-                    login(inputForm);
+                    dispatch(login(inputForm))
+						.then((data) => {
+							navigate("/");
+							toast.success(`${data}`)
+						})
+						.catch((err) => {
+							toast.error(`${err.message}`)
+						})
                 }}
             >
 						<div className='ml-1 py-5 text-[#3b82f6] '>
