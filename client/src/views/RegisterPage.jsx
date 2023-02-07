@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { register } from "../stores/actionCreator/usersCreator";
 
 export default function RegisterPage() {
     const navigate = useNavigate()
+	const dispatch = useDispatch()
     const initialValue = {
         email: '',
         password: '',
@@ -12,23 +16,6 @@ export default function RegisterPage() {
 
     const [inputForm, setInputForm] = useState(initialValue)
 
-    async function register(body) {
-        try {
-            let data = await fetch('http://localhost:3000/users/register', {
-                method: 'POST',
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(body)
-            })
-
-            if (!data.ok) {
-                throw new Error('failed register from server')
-            }
-
-			navigate('/login')
-        } catch (err) {
-            console.log(err);
-        }
-    }
 
 	function handleRegister(val) {
 		let data = {
@@ -52,7 +39,14 @@ export default function RegisterPage() {
 					<form className='flex flex-col w-[250px] '
 						onSubmit={(e) => {
 							e.preventDefault()
-							register(inputForm)
+							dispatch(register(inputForm))
+								.then((data) => {
+									toast.success(`successfully register with email ${data}`)
+									navigate('/login')
+								})
+								.catch((err) => {
+									toast.error(`${err.message}`)
+								})
 						}}
 					>
 						<div className='ml-1 py-5 text-[#3b82f6] '>
