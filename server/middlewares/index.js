@@ -11,9 +11,9 @@ async function authentication(req, res, next) {
 
     const payload = verifyToken(access_token);
 
-    // if (!payload) {
-    //   throw { name: "JsonWebTokenError" };
-    // }
+    if (!payload) {
+      throw { name: "JsonWebTokenError" };
+    }
 
     const foundUser = await User.findByPk(payload.id);
 
