@@ -9,6 +9,7 @@ import {
   FaYoutube,
   FaFacebook,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import NavbarComponent from "../components/NavbarComponent";
 import FooterHomePage from "../components/FooterHomePage";
 
@@ -17,17 +18,17 @@ const HomePage = () => {
     <div className="w-full px-10 font-display">
       <NavbarComponent />
 
-      <section id="main_banner" className="mt-16 mb-8">
+      <section id="main_banner" className="mt-16 mb-8 font-Montserrat">
         <div className="flex items-center justify-between h-full">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-2 text-sm w-6/12 text-blue-500">
               <FaMapMarkerAlt />
               <span className="font-bold"> Jakarta, Indonesia</span>
             </div>
-            <div className="text-5xl font-bold w-10/12">
-              <span className="text-blue-500">Virtualy</span> Connected{" "}
-              <span className="text-blue-500">lorem</span> lorem lorem in{" "}
-              <span className="text-blue-500">Japan!</span>
+            <div className="text-4xl font-bold w-8/12">Bring
+              <span className="text-blue-500"> new colors</span> and {" "}
+              <span className="text-blue-500">happiness</span> {" "}
+              to <span className="text-blue-500">your</span> world!
             </div>
             <div className="text-gray-400 w-8/12">
               Nihon no Live is a company paving the way for a new era in the
@@ -66,9 +67,9 @@ const HomePage = () => {
               </a>
             </div>
             <div>
-              <button className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
-                Read More
-              </button>
+              <Link to="/talents" className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
+                See Talends
+              </Link>
             </div>
           </div>
           {/* <div className="w-6/12 bg-sky-500"> */}
@@ -110,9 +111,9 @@ const HomePage = () => {
         <div className="flex justify-between">
           <div className="flex flex-col w-4/12 gap-6">
             <div className=" text-4xl font-bold">
-              <span className="text-blue-500">How does our</span>
+              <span className="text-blue-500">What features</span>
               <br />
-              service work!
+              we offer !
             </div>
             <div className="text-gray-400">
               Nihon is the best place to watch and share your creativity. Enjoy
@@ -122,9 +123,9 @@ const HomePage = () => {
             </div>
 
             <div>
-              <button className="bg-[#D61C4E] hover:bg-[#C21010]  mt-4 rounded-lg px-4 py-2 text-white text-sm">
-                Learn More
-              </button>
+              <Link to="/" className="bg-[#D61C4E] hover:bg-[#C21010]  mt-4 rounded-lg px-4 py-2 text-white text-sm">
+                Subscribed
+              </Link>
             </div>
           </div>
           <div className="w-6/12 grid grid-cols-2 gap-4">
@@ -168,11 +169,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="galeri">
-        <p className="font-bold text-3xl text-center items-center my-16">
+      <section id="galeri" className="mt-28 bg">
+        {/* <p className="font-bold text-3xl text-center items-center my-16">
           <span className="text-blue-500">Features</span> that we provide for
           you
-        </p>
+        </p> */}
         <div className="flex justify-between items-center my-8">
           <div className="flex items-end gap-3 w-8/12">
             <img
@@ -193,7 +194,7 @@ const HomePage = () => {
           </div>
           <div className="flex flex-col w-5/12 gap-6">
             <div className=" text-3xl font-bold">
-              Lorem ipsum dolor sit amet consectetur.
+            <span className="text-blue-500">Enjoy</span> lots of interesting videos from <span className="text-blue-500">talents</span>
             </div>
             <div className="text-gray-400">
               Nihon brings unlimited creativity to your screen! Discover new
@@ -202,9 +203,9 @@ const HomePage = () => {
             </div>
 
             <div>
-              <button className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
-                Learn More
-              </button>
+              <Link to="/detail/1" className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
+                Detail
+              </Link>
             </div>
           </div>
         </div>
@@ -272,24 +273,21 @@ const HomePage = () => {
           </div>
           <div className="w-6/12 flex flex-col gap-6">
             <div className="flex flex-col gap-2 bg-white rounded-xl shadow-md p-2">
-              <p className="font-medium">Lorem ipsum dolor sit amet.</p>
+              <p className="font-medium">Payment failed</p>
               <div className="text-gray-400 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium ipsam dolores possimus voluptate ab similique.
+              To overcome failed payments, make sure you enter the correct payment number
               </div>
             </div>
             <div className="flex flex-col gap-2 bg-white rounded-xl shadow-md p-2">
-              <p className="font-medium">Lorem ipsum dolor sit amet.</p>
+              <p className="font-medium">Failed to join livestream</p>
               <div className="text-gray-400 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium ipsam dolores possimus voluptate ab similique.
+              To overcome failing to join live, make sure the url or room code is correct and you have subscribed
               </div>
             </div>
             <div className="flex flex-col gap-2 bg-white rounded-xl shadow-md p-2">
-              <p className="font-medium">Lorem ipsum dolor sit amet.</p>
+              <p className="font-medium">Cannot register account</p>
               <div className="text-gray-400 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium ipsam dolores possimus voluptate ab similique.
+              To overcome failed registration, make sure you register using a different email or have never been registered with nihon no liv e
               </div>
             </div>
           </div>
