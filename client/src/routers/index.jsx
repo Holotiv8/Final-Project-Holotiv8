@@ -10,6 +10,7 @@ import FavoritePage from "../views/FavoritePage";
 import DetailPage from "../views/DetailPage";
 import HomeLiveStreaming from "../pages/home";
 import RoomPage from "../pages/room";
+import PageNotFound from "../views/PageNotFound";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/room/",
     element: <RoomPage />,
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   },
 ]);
 
