@@ -1,6 +1,6 @@
 const { User } = require("../models");
-const midtransClient = require("midtrans-client");
 const midtransFunction = require("../helpers/payment");
+const { sendEmailSubs } = require("../helpers/nodemailer");
 
 class PaymentController {
   static async paymentSubscribe(req, res, next) {
@@ -10,7 +10,8 @@ class PaymentController {
         throw { name: "already_subscribed" };
       }
 
-      let midtransToken= await midtransFunction(user)
+      sendEmailSubs(user.email);
+      let midtransToken = await midtransFunction(user);
       res.status(200).json(midtransToken);
     } catch (error) {
       next(error);

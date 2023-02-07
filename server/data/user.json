@@ -3,6 +3,9 @@
         "username": "brianrr",
         "email": "brian@mail.com",
         "password": "brian123",
-        "isSubscribed": "false"
+        "isSubscribed": "false",
+        "role": "Admin",
+        "isValid": false,
+        "uniqueString": "12345678"
     }
 ]

@@ -26,6 +26,16 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         allowNull: false,
       },
+      role: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      isValid: {
+        type: Sequelize.BOOLEAN,
+      },
+      uniqueString: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

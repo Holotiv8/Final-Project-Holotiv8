@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasMany(models.Favorite)
+      User.hasMany(models.Favorite);
     }
   }
   User.init(
@@ -41,11 +41,14 @@ module.exports = (sequelize, DataTypes) => {
           notNull: { msg: "Password is required" },
           len: {
             args: [5],
-            msg: 'Password Minimal 5 Characters'
-          }
+            msg: "Password Minimal 5 Characters",
+          },
         },
       },
       isSubscribed: DataTypes.BOOLEAN,
+      role: DataTypes.STRING,
+      isValid: DataTypes.BOOLEAN,
+      uniqueString: DataTypes.STRING,
     },
     {
       sequelize,
@@ -55,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
   User.beforeCreate((user) => {
     user.password = hashPassword(user.password);
     user.isSubscribed = false;
+    user.role = "Audience";
   });
   return User;
 };
