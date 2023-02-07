@@ -13,10 +13,12 @@ const Talents = () => {
   const [active, setActive] = useState("Hololive Indonesia");
   const [activeId, setActiveId] = useState(1);
   const { idols, branches } = useSelector((state) => state.idols);
+  const [loading, isLoading] = useState(true);
   const dispatcher = useDispatch();
 
   useEffect(() => {
     dispatcher(fetchDataTalents());
+    isLoading(false);
   }, []);
 
   useEffect(() => {
@@ -31,6 +33,17 @@ const Talents = () => {
 
   const activeStyle = { backgroundColor: "rgb(86, 153, 225)", color: "white" };
 
+  if (loading) {
+    return (
+      <div class="flex items-center justify-center min-h-screen">
+        <div
+          style={{ "border-top-color": "transparent" }}
+          class="w-8 h-8 border-4 border-blue-200 rounded-full animate-spin"
+        ></div>
+        <p class="ml-2">Processing...</p>
+      </div>
+    );
+  }
   return (
     <>
       <AllNavbarComponent />
