@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section>
+    <section className="font-display">
       <AllNavbarComponent />
       <div className="loading-normal tracking-normal text-white bg-white h-screen">
         <div className="container flex flex-row justify-between items-center py-16">
@@ -23,7 +23,7 @@ const About = () => {
               <main className="flex items-center justify-center bg-gray-100">
                 <Link to={"/talents"}>
                   <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
-                    <div className="absolute inset-0 w-3 bg-[#5e7dc3] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                    <div className="absolute inset-0 w-3 bg-blue-500 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                     <span className="relative text-black group-hover:text-white">
                       Our Talents
                     </span>
@@ -37,79 +37,178 @@ const About = () => {
           </div>
         </div>
       </div>
-
+{/* 
       <div className="header-about-respon">
         <h1>Hear What Our Members Say</h1>
-      </div>
+      </div> */}
 
-      <div className="container-about-respon">
-        <div className="card-about-respon card-1">
-          <img src="https://images.unsplash.com/photo-1496347015999-56459d63a30a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <p className="name-about-respon"> Brian Rizki</p>
-          <p className="job-about-respon"> BE Developer</p>
+      <section id="comment" class="mt-24">
+        <div class="flex flex-col items-center mb-12">
+          <h2 class="font-semibold text-3xl">Review</h2>
+          <span class="py-0.5 px-12 rounded-full bg-blue-500"></span>
         </div>
-        <div className="card-about-respon card-2">
-          <img src="https://images.unsplash.com/photo-1496347015999-56459d63a30a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <p className="name-about-respon"> Brian Rizki</p>
-          <p className="job-about-respon"> BE Developer</p>
+
+        <div class="grid grid-cols-3 relative top-1/3">
+          <div
+            class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300"
+          >
+            <div class="relative flex gap-4">
+              <img
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/user-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672032577008"
+                class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
+                alt=""
+                loading="lazy"
+              />
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                  <p
+                    class="relative text-xl whitespace-nowrap truncate overflow-hidden"
+                  >
+                   Mamang Rival
+                  </p>
+                </div>
+                <p class="text-gray-500 text-sm">9 Januari 2022, 14:08 PM</p>
+              </div>
+            </div>
+            <p class="mt-2 text-blue-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, a consequatur perferendis dolore accusantium consectetur ab delectus earum iste incidunt.
+            </p>
+          </div>
+
+          <div
+            class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300"
+          >
+            <div class="relative flex gap-4">
+              <img
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/user-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672032578577"
+                class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
+                alt=""
+                loading="lazy"
+              />
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                  <p
+                    class="relative text-xl whitespace-nowrap truncate overflow-hidden"
+                  >
+                    mamang brian
+                  </p>
+                </div>
+                <p class="text-gray-500 text-sm">10 Januari 2023, 10:09 PM</p>
+              </div>
+            </div>
+            <p class="mt-2 text-blue-700">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit ipsam fuga quia, ad repudiandae placeat tempore molestiae rem recusandae doloribus!
+            </p>
+          </div>
+
+          <div
+            class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300"
+          >
+            <div class="relative flex gap-4">
+              <img
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/user-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672032577634"
+                class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
+                alt=""
+                loading="lazy"
+              />
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                  <p
+                    class="relative text-xl whitespace-nowrap truncate overflow-hidden"
+                  >
+                  mamang
+                  </p>
+                </div>
+                <p class="text-gray-500 text-sm">1 Januari 2023, 20:12 PM</p>
+              </div>
+            </div>
+            <p class="mt-2 text-blue-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nihil sit ut porro at explicabo maxime odio qui provident ducimus!
+            </p>
+          </div>
+
+
+          {/* review */}
+
+          <div
+            class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300"
+          >
+            <div class="relative flex gap-4">
+              <img
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/user-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672032577008"
+                class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
+                alt=""
+                loading="lazy"
+              />
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                  <p
+                    class="relative text-xl whitespace-nowrap truncate overflow-hidden"
+                  >
+                   Mamang Rival
+                  </p>
+                </div>
+                <p class="text-gray-500 text-sm">9 Januari 2022, 14:08 PM</p>
+              </div>
+            </div>
+            <p class="mt-2 text-blue-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, a consequatur perferendis dolore accusantium consectetur ab delectus earum iste incidunt.
+            </p>
+          </div>
+
+          <div
+            class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300"
+          >
+            <div class="relative flex gap-4">
+              <img
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/user-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672032578577"
+                class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
+                alt=""
+                loading="lazy"
+              />
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                  <p
+                    class="relative text-xl whitespace-nowrap truncate overflow-hidden"
+                  >
+                    mamang brian
+                  </p>
+                </div>
+                <p class="text-gray-500 text-sm">10 Januari 2023, 10:09 PM</p>
+              </div>
+            </div>
+            <p class="mt-2 text-blue-700">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit ipsam fuga quia, ad repudiandae placeat tempore molestiae rem recusandae doloribus!
+            </p>
+          </div>
+
+          <div
+            class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300"
+          >
+            <div class="relative flex gap-4">
+              <img
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/user-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672032577634"
+                class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
+                alt=""
+                loading="lazy"
+              />
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                  <p
+                    class="relative text-xl whitespace-nowrap truncate overflow-hidden"
+                  >
+                  mamang
+                  </p>
+                </div>
+                <p class="text-gray-500 text-sm">1 Januari 2023, 20:12 PM</p>
+              </div>
+            </div>
+            <p class="mt-2 text-blue-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nihil sit ut porro at explicabo maxime odio qui provident ducimus!
+            </p>
+          </div>
         </div>
-        <div className="card-about-respon card-3">
-          <img src="https://images.unsplash.com/photo-1496347015999-56459d63a30a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <p className="name-about-respon"> Brian Rizki</p>
-          <p className="job-about-respon"> BE Developer</p>
-        </div>
-        <div className="card-about-respon card-1">
-          <img src="https://images.unsplash.com/photo-1496347015999-56459d63a30a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <p className="name-about-respon"> Brian Rizki</p>
-          <p className="job-about-respon"> BE Developer</p>
-        </div>
-        <div className="card-about-respon card-2">
-          <img src="https://images.unsplash.com/photo-1496347015999-56459d63a30a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <p className="name-about-respon"> Brian Rizki</p>
-          <p className="job-about-respon"> BE Developer</p>
-        </div>
-        <div className="card-about-respon card-3">
-          <img src="https://images.unsplash.com/photo-1496347015999-56459d63a30a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <p className="name-about-respon"> Brian Rizki</p>
-          <p className="job-about-respon"> BE Developer</p>
-        </div>
-      </div>
+      </section>
 
       <AllFooterPage />
     </section>

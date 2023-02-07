@@ -79,7 +79,7 @@ const AllNavbarComponent = () => {
 
 
   return (
-    <section id="Navbar" className="px-10">
+    <section id="Navbar" className="px-10 font-Montserrat">
       <div className="flex justify-between py-3 items-center bg-white">
         <Link to="/">
           <img
@@ -88,10 +88,7 @@ const AllNavbarComponent = () => {
             alt="logo"
           />
         </Link>
-        <div className="flex text-sm gap-5 text-gray-400 font-medium">
-          <Link to="#" className="text-blue-500">
-            Top
-          </Link>
+        <div className="flex text-sm gap-5 text-gray-400 font-semibold">
           <Link to="/talents" className="hover:text-blue-500">
             Talent
           </Link>
