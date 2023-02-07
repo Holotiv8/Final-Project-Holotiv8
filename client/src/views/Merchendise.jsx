@@ -13,14 +13,13 @@ const Merchandise = () => {
     dispatcher(fetchDataProduct());
   }, []);
   return (
-    <section>
+    <section className="font-display">
       <AllNavbarComponent />
       <div className="row-merch">
         {idols.map((el) => {
           return <MerchandiseCard key={el.id} el={el} />;
         })}
       </div>
-
       <AllFooterPage />
     </section>
   );
