@@ -68,7 +68,7 @@ const HomePage = () => {
             </div>
             <div>
               <Link to="/talents" className="bg-[#D61C4E] hover:bg-[#C21010] mt-4 rounded-lg px-4 py-2 text-white text-sm">
-                See Talends
+                See Talents
               </Link>
             </div>
           </div>

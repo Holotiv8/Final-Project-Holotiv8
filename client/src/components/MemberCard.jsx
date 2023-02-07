@@ -1,9 +1,8 @@
 import { FaRegEye } from "react-icons/fa";
 
-function YoutubeCard(video) {
-  console.log(video,"ini videoooooooooooooooooo")
-  let object = video.videos.data.video 
-  // console.log(object.thumbnails[3].url,'ini data vidiesssssssssss')
+function MemberCard(videos) {
+  console.log(videos.videos.video,'ini videooooooooooooooooooo')
+  let object = videos.videos.video
   return (
     <>
     <a href={`https://youtu.be/${object.videoId}`}>
@@ -30,4 +29,4 @@ function YoutubeCard(video) {
     </>
   );
 }
-export default YoutubeCard;
+export default MemberCard;

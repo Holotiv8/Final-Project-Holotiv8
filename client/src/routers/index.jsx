@@ -10,6 +10,7 @@ import FavoritePage from "../views/FavoritePage";
 import DetailPage from "../views/DetailPage";
 import HomeLiveStreaming from "../pages/home";
 import RoomPage from "../pages/room";
+import MemberPage from "../views/MemberPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "/detail/:id",
     element: <DetailPage />,
+  },
+  {
+    path: "/membership",
+    element: <MemberPage />
   },
   {
     path: "/live",

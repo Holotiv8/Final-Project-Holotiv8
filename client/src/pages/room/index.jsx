@@ -67,7 +67,7 @@ export default function RoomPage() {
     serverSecret,
     "VtlVf",
     randomID(5),
-    randomID(5)
+    `Your Name ${randomID(5)}` 
   );
   // const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
   //   appID,
