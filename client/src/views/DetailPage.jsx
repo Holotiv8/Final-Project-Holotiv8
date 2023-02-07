@@ -1,7 +1,8 @@
 import React, { Component, useEffect, useState } from "react";
 import cx from "classnames";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchDataDetailIdol } from "../stores/actionCreator/talentsCreator";
+// offline API
+// import { fetchDataDetailIdol } from "../stores/actionCreator/talentsCreator";
 import { useParams } from "react-router-dom";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import AllFooterPage from "../components/AllFooterPage";
@@ -106,7 +107,8 @@ const DetailPage = () => {
         </div>
       </section>
 
-      {/* <section id="youtube" class/Name=""> */}
+
+      {/* NYALAIN BIAR GK ERROR */}
       {/* <Carousel
         title={"VIDEOS"}
         backround={
@@ -129,7 +131,7 @@ const DetailPage = () => {
         ""
       )} */}
 
-      <section
+      {/* <section
         id="data"
         className="py-16 bg-gradient-to-b h-screen from-sky-400 via-sky-400 to-white font-display"
       >
@@ -151,7 +153,7 @@ const DetailPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* </section> */}
       <AllFooterPage />
     </>

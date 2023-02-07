@@ -67,7 +67,7 @@ const NavbarComponent = () => {
       onSuccess: (result) => {
         setShowModal(false);
         updateStatus();
-        navigate("/about");
+        navigate("/membership");
         console.log("Transaction success:", result);
       },
       onPending: (result) => {
@@ -94,7 +94,7 @@ const NavbarComponent = () => {
   return (
     <section id="Navbar" className="font-Montserrat">
       <div className="flex justify-between py-3 items-center bg-white">
-      <Link to="/">
+        <Link to="/">
           <img
             className="w-14 drop-shadow-lg"
             src="https://ik.imagekit.io/bintangtopup/finalproject/nihonologo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675326925315"
@@ -111,18 +111,22 @@ const NavbarComponent = () => {
           <Link to="/favorites" className="hover:text-blue-500">
             Favorites
           </Link>
-          <Link to="#" className="hover:text-blue-500">
+          {/* <Link to="#" className="hover:text-blue-500">
             Videos
           </Link>
           <Link to="#" className="hover:text-blue-500">
             Music
-          </Link>
+          </Link> */}
           <Link to="/products" className="hover:text-blue-500">
             Merch
           </Link>
-          <Link to="#" className="hover:text-blue-500">
-            Special
-          </Link>
+          {localStorage.getItem("isSubscribed") === "true" ? (
+            <Link to="/membership" className="hover:text-blue-500">
+              Member
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
         {localStorage.getItem("access_token") ? (
           <div className="flex gap-4">
@@ -158,7 +162,10 @@ const NavbarComponent = () => {
 
         {showModal ? (
           <>
-            <div id="price" className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div
+              id="price"
+              className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 {/*content*/}
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -224,8 +231,14 @@ const NavbarComponent = () => {
                     </div>
                     <div className="w-4/12 rounded-xl p-4 bg-gradient-to-b from-sky-400 via-sky-400 to-white shadow-xl  ">
                       <div className="font-bold text-xl">Price</div>
-                      <img className="w-36 translate-x-6 drop-shadow-2xl" src="https://ik.imagekit.io/Holotiv8/Final_Project/Detail/kobo_kanaeru_detail.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675091176285" alt="" />
-                      <div className="text-2xl font-semibold mt-6 ">Rp.59.<span className="text-base">999</span></div>
+                      <img
+                        className="w-36 translate-x-6 drop-shadow-2xl"
+                        src="https://ik.imagekit.io/Holotiv8/Final_Project/Detail/kobo_kanaeru_detail.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675091176285"
+                        alt=""
+                      />
+                      <div className="text-2xl font-semibold mt-6 ">
+                        Rp.59.<span className="text-base">999</span>
+                      </div>
                     </div>
                   </div>
                   {/*footer*/}
@@ -244,7 +257,12 @@ const NavbarComponent = () => {
                   >
                     Save Changes
                   </button> */}
-                    <button onClick={handlePayment} className="font-bold text-sm">PAY</button>
+                    <button
+                      onClick={handlePayment}
+                      className="font-bold text-sm"
+                    >
+                      PAY
+                    </button>
                   </div>
                 </div>
               </div>

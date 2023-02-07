@@ -12,6 +12,7 @@ import HomeLiveStreaming from "../pages/home";
 import RoomPage from "../pages/room";
 import PageNotFound from "../views/PageNotFound";
 import Verify from "../views/Verify";
+import MemberPage from "../views/MemberPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/detail/:id",
     element: <DetailPage />,
+  },
+  {
+    path: "/membership",
+    element: <MemberPage />
   },
   {
     path: "/live",
