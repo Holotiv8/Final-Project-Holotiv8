@@ -5,7 +5,7 @@
         "password": "brian123",
         "isSubscribed": "false",
         "role": "Admin",
-        "isValid": false,
+        "isValid": true,
         "uniqueString": "12345678"
     }
 ]

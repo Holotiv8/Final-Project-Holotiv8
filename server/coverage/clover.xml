@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675659146962" clover="3.2.0">
-  <project timestamp="1675659146962" name="All files">
-    <metrics statements="309" coveredstatements="291" conditionals="47" coveredconditionals="41" methods="41" coveredmethods="37" elements="397" coveredelements="369" complexity="0" loc="309" ncloc="309" packages="6" files="25" classes="25"/>
+<coverage generated="1675760082072" clover="3.2.0">
+  <project timestamp="1675760082072" name="All files">
+    <metrics statements="362" coveredstatements="330" conditionals="56" coveredconditionals="44" methods="49" coveredmethods="44" elements="467" coveredelements="418" complexity="0" loc="362" ncloc="362" packages="6" files="27" classes="27"/>
     <package name="server">
       <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="0" coveredmethods="0"/>
-      <file name="app.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\app.js">
+      <file name="app.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\app.js">
         <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="cond" truecount="1" falsecount="1"/>
         <line num="2" count="13" type="stmt"/>
@@ -23,8 +23,8 @@
       </file>
     </package>
     <package name="server.controllers">
-      <metrics statements="122" coveredstatements="121" conditionals="22" coveredconditionals="21" methods="17" coveredmethods="17"/>
-      <file name="IdolController.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\controllers\IdolController.js">
+      <metrics statements="141" coveredstatements="129" conditionals="26" coveredconditionals="22" methods="18" coveredmethods="17"/>
+      <file name="IdolController.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\controllers\IdolController.js">
         <metrics statements="42" coveredstatements="42" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -69,35 +69,53 @@
         <line num="105" count="1" type="stmt"/>
         <line num="110" count="13" type="stmt"/>
       </file>
-      <file name="UserContoller.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\controllers\UserContoller.js">
-        <metrics statements="25" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="UserContoller.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\controllers\UserContoller.js">
+        <metrics statements="43" coveredstatements="32" conditionals="8" coveredconditionals="5" methods="4" coveredmethods="3"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="9" type="stmt"/>
-        <line num="20" count="8" type="stmt"/>
-        <line num="21" count="8" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="23" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
-        <line num="28" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="32" count="5" type="stmt"/>
-        <line num="33" count="5" type="stmt"/>
-        <line num="34" count="5" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="55" count="13" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="9" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="8" type="stmt"/>
+        <line num="45" count="8" type="stmt"/>
+        <line num="46" count="8" type="stmt"/>
+        <line num="47" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="51" count="6" type="stmt"/>
+        <line num="52" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="56" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="83" count="13" type="stmt"/>
       </file>
-      <file name="favoriteController.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\controllers\favoriteController.js">
+      <file name="favoriteController.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\controllers\favoriteController.js">
         <metrics statements="31" coveredstatements="31" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -131,8 +149,8 @@
         <line num="79" count="1" type="stmt"/>
         <line num="84" count="13" type="stmt"/>
       </file>
-      <file name="paymentController.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\controllers\paymentController.js">
-        <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="paymentController.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\controllers\paymentController.js">
+        <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
         <line num="3" count="13" type="stmt"/>
@@ -141,11 +159,12 @@
         <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="10" count="0" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="20" count="13" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="13" type="stmt"/>
       </file>
-      <file name="productController.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\controllers\productController.js">
+      <file name="productController.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\controllers\productController.js">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="13" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -163,21 +182,45 @@
       </file>
     </package>
     <package name="server.helpers">
-      <metrics statements="33" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
-      <file name="index.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\helpers\index.js">
+      <metrics statements="62" coveredstatements="49" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="11"/>
+      <file name="index.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\index.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
-        <line num="4" count="13" type="stmt"/>
         <line num="5" count="13" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="13" type="stmt"/>
-        <line num="9" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
         <line num="11" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
       </file>
-      <file name="payment.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\helpers\payment.js">
-        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="nodemailer.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\nodemailer.js">
+        <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="82" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="92" count="13" type="stmt"/>
+      </file>
+      <file name="payment.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\payment.js">
+        <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -185,16 +228,18 @@
         <line num="26" count="0" type="stmt"/>
         <line num="29" count="11" type="stmt"/>
       </file>
-      <file name="spotify.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\helpers\spotify.js">
-        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="11" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="19" count="11" type="stmt"/>
+      <file name="randomString.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\randomString.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="80" type="stmt"/>
+        <line num="6" count="80" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
       </file>
-      <file name="youtube.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\helpers\youtube.js">
+      <file name="spotify.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\spotify.js">
         <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -203,7 +248,16 @@
         <line num="14" count="0" type="stmt"/>
         <line num="17" count="11" type="stmt"/>
       </file>
-      <file name="youtubeLive.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\helpers\youtubeLive.js">
+      <file name="youtube.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\youtube.js">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+      </file>
+      <file name="youtubeLive.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\helpers\youtubeLive.js">
         <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -214,32 +268,35 @@
       </file>
     </package>
     <package name="server.middlewares">
-      <metrics statements="36" coveredstatements="33" conditionals="11" coveredconditionals="10" methods="2" coveredmethods="2"/>
-      <file name="errorHandler.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\middlewares\errorHandler.js">
-        <metrics statements="21" coveredstatements="18" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <metrics statements="39" coveredstatements="33" conditionals="12" coveredconditionals="10" methods="2" coveredmethods="2"/>
+      <file name="errorHandler.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\middlewares\errorHandler.js">
+        <metrics statements="24" coveredstatements="18" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="28" type="stmt"/>
         <line num="3" count="28" type="stmt"/>
         <line num="4" count="28" type="stmt"/>
-        <line num="5" count="28" type="cond" truecount="6" falsecount="1"/>
-        <line num="7" count="3" type="stmt"/>
+        <line num="6" count="28" type="cond" truecount="6" falsecount="2"/>
         <line num="8" count="3" type="stmt"/>
         <line num="9" count="3" type="stmt"/>
-        <line num="12" count="9" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
         <line num="13" count="9" type="stmt"/>
         <line num="14" count="9" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="23" count="3" type="stmt"/>
-        <line num="25" count="4" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
         <line num="26" count="4" type="stmt"/>
         <line num="27" count="4" type="stmt"/>
-        <line num="29" count="28" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="28" type="stmt"/>
       </file>
-      <file name="index.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\middlewares\index.js">
+      <file name="index.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\middlewares\index.js">
         <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -259,8 +316,8 @@
       </file>
     </package>
     <package name="server.models">
-      <metrics statements="53" coveredstatements="52" conditionals="10" coveredconditionals="7" methods="14" coveredmethods="14"/>
-      <file name="branch.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\models\branch.js">
+      <metrics statements="54" coveredstatements="53" conditionals="10" coveredconditionals="7" methods="14" coveredmethods="14"/>
+      <file name="branch.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\models\branch.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="13" type="stmt"/>
         <line num="5" count="13" type="stmt"/>
@@ -268,7 +325,7 @@
         <line num="17" count="13" type="stmt"/>
         <line num="23" count="13" type="stmt"/>
       </file>
-      <file name="favorite.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\models\favorite.js">
+      <file name="favorite.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\models\favorite.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="13" type="stmt"/>
         <line num="5" count="13" type="stmt"/>
@@ -277,7 +334,7 @@
         <line num="18" count="13" type="stmt"/>
         <line num="25" count="13" type="stmt"/>
       </file>
-      <file name="idol.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\models\idol.js">
+      <file name="idol.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\models\idol.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="13" type="stmt"/>
         <line num="5" count="13" type="stmt"/>
@@ -285,9 +342,9 @@
         <line num="15" count="13" type="stmt"/>
         <line num="16" count="13" type="stmt"/>
         <line num="19" count="13" type="stmt"/>
-        <line num="37" count="13" type="stmt"/>
+        <line num="38" count="13" type="stmt"/>
       </file>
-      <file name="index.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\models\index.js">
+      <file name="index.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\models\index.js">
         <metrics statements="21" coveredstatements="20" conditionals="10" coveredconditionals="7" methods="3" coveredmethods="3"/>
         <line num="3" count="13" type="stmt"/>
         <line num="4" count="13" type="stmt"/>
@@ -311,7 +368,7 @@
         <line num="41" count="13" type="stmt"/>
         <line num="43" count="13" type="stmt"/>
       </file>
-      <file name="products.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\models\products.js">
+      <file name="products.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\models\products.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="13" type="stmt"/>
         <line num="5" count="13" type="stmt"/>
@@ -319,22 +376,23 @@
         <line num="17" count="13" type="stmt"/>
         <line num="27" count="13" type="stmt"/>
       </file>
-      <file name="user.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\models\user.js">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="user.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\models\user.js">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="2" count="13" type="stmt"/>
         <line num="3" count="13" type="stmt"/>
         <line num="4" count="13" type="stmt"/>
         <line num="13" count="13" type="stmt"/>
         <line num="16" count="13" type="stmt"/>
-        <line num="55" count="13" type="stmt"/>
-        <line num="56" count="2" type="stmt"/>
-        <line num="57" count="2" type="stmt"/>
-        <line num="59" count="13" type="stmt"/>
+        <line num="58" count="13" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="13" type="stmt"/>
       </file>
     </package>
     <package name="server.routers">
-      <metrics statements="51" coveredstatements="51" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="favoriteRoutes.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\routers\favoriteRoutes.js">
+      <metrics statements="52" coveredstatements="52" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="favoriteRoutes.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\routers\favoriteRoutes.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -345,7 +403,7 @@
         <line num="8" count="13" type="stmt"/>
         <line num="10" count="13" type="stmt"/>
       </file>
-      <file name="idolRoutes.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\routers\idolRoutes.js">
+      <file name="idolRoutes.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\routers\idolRoutes.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -358,7 +416,7 @@
         <line num="10" count="13" type="stmt"/>
         <line num="14" count="13" type="stmt"/>
       </file>
-      <file name="index.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\routers\index.js">
+      <file name="index.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\routers\index.js">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -374,7 +432,7 @@
         <line num="13" count="13" type="stmt"/>
         <line num="15" count="13" type="stmt"/>
       </file>
-      <file name="paymentRoutes.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\routers\paymentRoutes.js">
+      <file name="paymentRoutes.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\routers\paymentRoutes.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -383,7 +441,7 @@
         <line num="6" count="13" type="stmt"/>
         <line num="8" count="13" type="stmt"/>
       </file>
-      <file name="productRoutes.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\routers\productRoutes.js">
+      <file name="productRoutes.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\routers\productRoutes.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -392,8 +450,8 @@
         <line num="6" count="13" type="stmt"/>
         <line num="8" count="13" type="stmt"/>
       </file>
-      <file name="userRoutes.js" path="C:\Users\lenovo\OneDrive\Documents\Hactive\phase3\Final\Final-Project-Holotiv8\server\routers\userRoutes.js">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="userRoutes.js" path="D:\Brian\Hacktiv8\Phase 3\Nihon-no-Live-Client-\server\routers\userRoutes.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
         <line num="3" count="13" type="stmt"/>
@@ -401,7 +459,8 @@
         <line num="6" count="13" type="stmt"/>
         <line num="7" count="13" type="stmt"/>
         <line num="8" count="13" type="stmt"/>
-        <line num="10" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
       </file>
     </package>
   </project>
