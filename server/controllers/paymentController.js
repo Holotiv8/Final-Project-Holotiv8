@@ -1,6 +1,6 @@
 const { User } = require("../models");
 const midtransFunction = require("../helpers/payment");
-const { sendEmailSubs } = require("../helpers/nodemailer");
+const {sendEmailSubs} = require("../helpers/nodemailerSubs");
 
 class PaymentController {
   static async paymentSubscribe(req, res, next) {

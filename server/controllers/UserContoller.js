@@ -1,7 +1,7 @@
 const { User } = require("../models");
 const { comparePassword, createToken } = require("../helpers");
 const randString = require("../helpers/randomString");
-const { sendEmail } = require("../helpers/nodemailer");
+const {sendEmail}  = require("../helpers/nodemailer");
 
 class UserController {
   static async register(req, res, next) {
