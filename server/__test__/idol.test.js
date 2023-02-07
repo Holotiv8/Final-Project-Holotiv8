@@ -27,7 +27,6 @@ beforeAll(async () => {
         password: "brian123"
     })
     access_token = response.body.access_token
-    // await queryInterface.bulkInsert('Users', userJSON, {})
     await queryInterface.bulkInsert('Favorites', [{ IdolId: 1, UserId: 1, createdAt: new Date(), updatedAt: new Date() }], {})
 })
 
@@ -166,7 +165,7 @@ describe('Feature Read Favorite Idol GET /favorites', () => {
     test('401 - Failed Read Favorite Idol Unauthorize', async () => {
         const response = await request(app)
             .get('/favorites')
-            .set('access_token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjc1NTg2MjI2fQ.HeJdWwGSpy7Yt01MIdqTIjYKQ6o9AKMznHQd7i8XltA')
+            .set('access_token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NH0.VkoNZBAKUBmHfl2pSblWu_RxX0LGyYkKgbBYRiSHR84')
 
         expect(response.status).toBe(401)
         expect(response.body).toBeInstanceOf(Object)

@@ -37,6 +37,13 @@ describe('Feature Login User POST /users/login', () => {
         expect(response.body).toBeInstanceOf(Object)
     })
 
+    test('302 - Success veify', async () => {
+        const response = await request(app)
+            .get('/users/verify/12345678')
+
+        expect(response.status).toBe(302)
+    })
+
     test('400 - Failed Login - Email/Password Required', async () => {
         let input = {
             email: '',
@@ -77,5 +84,19 @@ describe('Feature Login User POST /users/login', () => {
         expect(response.status).toBe(401)
         expect(response.body).toBeInstanceOf(Object)
         expect(response.body).toHaveProperty('message', 'Email/Password Invalid')
+    })
+
+    test('400 - Failed Login - Verify Your Account', async () => {
+        let input = {
+            email: 'bintang@mail.com',
+            password: 'bintang123',
+        }
+        const response = await request(app)
+            .post('/users/login')
+            .send(input)
+
+        expect(response.status).toBe(400)
+        expect(response.body).toBeInstanceOf(Object)
+        expect(response.body).toHaveProperty('message', 'Verify Your Account')
     })
 })

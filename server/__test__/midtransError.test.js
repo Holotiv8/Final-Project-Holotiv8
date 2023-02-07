@@ -3,6 +3,7 @@ const request = require('supertest')
 const { sequelize, User } = require('../models')
 const queryInterface = sequelize.queryInterface
 const { hashPassword } = require('../helpers/index')
+const sendEmailObj= require('../helpers/nodemailerSubs')
 let access_token
 
 
@@ -20,6 +21,10 @@ beforeAll(async () => {
     access_token = response.body.access_token
 })
 
+beforeEach(() => {
+    jest.restoreAllMocks()
+})
+
 afterAll(async () => {
     await User.destroy({
         restartIdentity: true,
@@ -35,8 +40,15 @@ jest.mock("../helpers/payment", () => {
     })
 })
 
+// jest.mock("../helpers/nodemailerSubs", () => {
+//     return jest.fn((_)=>{
+//         return Promise.resolve('success')
+//     })
+// })
+
 describe('Feature Failed Generate Token Midtrans /payments', () => {
     test('500 - Failed Failed Generate Token', async () => {
+        jest.spyOn(sendEmailObj, "sendEmailSubs").mockReturnValue("Error")
         const response = await request(app)
             .post('/payments')
             .set('access_token', access_token)
