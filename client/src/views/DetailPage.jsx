@@ -107,7 +107,7 @@ const DetailPage = () => {
         </div>
       </section>
 
-      {/* <section id="youtube" class/Name=""> */ }
+
       {/* NYALAIN BIAR GK ERROR */}
       {/* <Carousel
         title={"VIDEOS"}
