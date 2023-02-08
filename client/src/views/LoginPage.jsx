@@ -30,12 +30,12 @@ export default function LoginPage() {
 					<div className='flex justify-center w-[260px]'>
 						<img
 							src='https://ik.imagekit.io/pfdt0wwx5/final_project/sora_pr-img_1-667x1000.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675250423844'
-							className=' scale-150 pl-6 pb-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-120 hover:mt-5'
+							className=' scale-150 pl-6 pb-10     transform hover:translate-y-5 hover:duration-700 '
 							alt=''
 						/>
 					</div>
 					<form
-                className='flex flex-col w-[250px] '
+                className='flex flex-col w-[250px] z-10 '
                 onSubmit={(e) => {
                     e.preventDefault();
                     dispatch(login(inputForm))
@@ -79,9 +79,7 @@ export default function LoginPage() {
 							>
 								LOG IN
 							</button>
-							<div className=' text-[10px] font-medium flex w-40 pr-6 text-slate-400  justify-center items-center  '>
-								<a href=''>Forgot password?</a>
-							</div>
+							
 						</div>
 						<div className='  text-[10px] font-medium text-slate-400 my-4'>
 							<Link to={"/register"} >

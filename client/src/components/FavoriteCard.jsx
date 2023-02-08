@@ -3,6 +3,7 @@ import { RiChatDeleteLine } from "react-icons/Ri";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteFavorite } from "../stores/actionCreator/talentsCreator";
+import { toast } from "react-toastify";
 
 export default function FavoriteCard({ favorites }) {
   const dispatch = useDispatch();
@@ -19,12 +20,7 @@ export default function FavoriteCard({ favorites }) {
           className="flex w-max  cursor-pointer"
           onClick={() => {
             dispatch(deleteFavorite(favorites.id))
-              .then((data) => {
-                console.log(data);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
+            toast.success(`successfully deleted your favorite`)
           }}
         >
           <RiChatDeleteLine />

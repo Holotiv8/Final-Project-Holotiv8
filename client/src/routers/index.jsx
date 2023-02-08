@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, redirect } from "react-router-dom";
 import Talents from "../views/Talents";
 import Products from "../views/Products";
 import About from "../views/About";
@@ -24,11 +24,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/talents",
-    element: <Talents />,
+    element: <Talents />
   },
   {
     path: "/login",
     element: <LoginPage />,
+    loader: () => {
+      if(localStorage.access_token) {
+        return redirect('/')
+      }
+      return null
+    }
   },
   {
     path: "/register",
@@ -41,6 +47,12 @@ const router = createBrowserRouter([
   {
     path: "/favorites",
     element: <FavoritePage />,
+    loader: () => {
+      if(!localStorage.access_token) {
+        return redirect('/login')
+      }
+      return null
+    }
   },
   {
     path: "/products/:id",
