@@ -20,7 +20,7 @@ const NavbarComponent = () => {
   };
 
   const activeStlye = {
-    color: "rgb(86, 153, 225)",
+    color: "#3b82f6"
   };
   /// PAYMENT ///
 

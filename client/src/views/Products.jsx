@@ -28,6 +28,8 @@ const Products = () => {
       </div>
     );
   }
+
+  // console.log(product[0]?.Idol.name,'<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
   return (
     <div className="font-display">
       <AllNavbarComponent />
@@ -35,8 +37,9 @@ const Products = () => {
         <section>
           <div className="container-product bg-slate-800">
             <div className="title-product">
+              <img className="rounded-full translate-x-[310%] translate-y-[10%]" width={150} src={product[0]?.Idol.profileImage} alt="" />
               <h1>
-                <center className="font-display">Talent's Products</center>
+                <center className="font-display text-3xl">{product[0]?.Idol.name}'s Products</center>
               </h1>
             </div>
 
@@ -45,7 +48,7 @@ const Products = () => {
                 return <ProductCard key={el.id} el={el} />;
               })}
             </div>
-              <div className="mt-20">
+              <div className="my-16">
                <AllFooterHomePage />
               </div>
           </div>

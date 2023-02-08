@@ -47,6 +47,7 @@ export const fetchDetailProduct = (id) => {
         return response.json();
       })
       .then((data) => {
+        console.log(data,"||||||||||||||||||||||||||||||||||||||||")
         dispatch(actionSetProductDetail(data));
       });
   };
