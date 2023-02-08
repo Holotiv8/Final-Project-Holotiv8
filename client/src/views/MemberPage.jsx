@@ -186,13 +186,14 @@ const MemberPage = () => {
       </section>
 
       {/* COUNT DOWN */}
-
-      <div id="schecdule" className="w-10/12 my-16 font-display">
-        <ScrollbarHide />
-        <div className="flex flex-col items-center mb-12 ml-44">
+      <div className="flex flex-col items-center mb-12 translate-x-[-1%] mt-11">
           <h2 className=" font-semibold text-5xl">Schedule</h2>
           <span className="py-0.5 mt-2 px-[105px] rounded-full bg-blue-500"></span>
         </div>
+      <div id="schecdule" className="w-10/12 mb-16 font-display">
+        <ScrollbarHide />
+       
+        
         <div
           id="schecdule_stream"
           className="bg-gray-800 relative flex flex-col mx-28 rounded-2xl drop-shadow-2xl h-[500px] w-full p-16 overflow-scroll shadow-inner"
@@ -224,7 +225,7 @@ const MemberPage = () => {
                 />
                 <div>
                   <div>
-                      Lats Pew Pew ?【Shirakami Fubuki】
+                      Lets Pew Pew ?【Shirakami Fubuki】
                   </div>
                   <div className="flex gap-2 mb-3 items-center mt-3">
                     <img
