@@ -24,17 +24,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/talents",
-    element: <Talents />
+    element: <Talents />,
   },
   {
     path: "/login",
     element: <LoginPage />,
     loader: () => {
-      if(localStorage.access_token) {
-        return redirect('/')
+      if (localStorage.access_token) {
+        return redirect("/");
       }
-      return null
-    }
+      return null;
+    },
   },
   {
     path: "/register",
@@ -48,11 +48,11 @@ const router = createBrowserRouter([
     path: "/favorites",
     element: <FavoritePage />,
     loader: () => {
-      if(!localStorage.access_token) {
-        return redirect('/login')
+      if (!localStorage.access_token) {
+        return redirect("/login");
       }
-      return null
-    }
+      return null;
+    },
   },
   {
     path: "/products/:id",
@@ -64,15 +64,33 @@ const router = createBrowserRouter([
   },
   {
     path: "/membership",
-    element: <MemberPage />
+    element: <MemberPage />,
+    loader: () => {
+      if (!localStorage.access_token) {
+        return redirect("/login");
+      }
+      return null;
+    },
   },
   {
     path: "/live",
     element: <HomeLiveStreaming />,
+    loader: () => {
+      if (!localStorage.access_token) {
+        return redirect("/login");
+      }
+      return null;
+    },
   },
   {
     path: "/room/",
     element: <RoomPage />,
+    loader: () => {
+      if (!localStorage.access_token) {
+        return redirect("/login");
+      }
+      return null;
+    },
   },
   {
     path: "/users/verify/:uniqueString",
