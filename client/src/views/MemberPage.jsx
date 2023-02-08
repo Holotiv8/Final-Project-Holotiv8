@@ -196,7 +196,7 @@ const MemberPage = () => {
         
         <div
           id="schecdule_stream"
-          className="bg-gray-800 relative flex flex-col mx-28 rounded-2xl drop-shadow-2xl h-[500px] w-full p-16 overflow-scroll shadow-inner"
+          className="bg-gray-800 relative flex flex-col translate-x-[10%] rounded-2xl drop-shadow-2xl h-[500px] w-full p-16 overflow-scroll shadow-inner"
         >
           <ol className="relative border-l border-gray-200">
             <li className="mb-10 ml-6">
