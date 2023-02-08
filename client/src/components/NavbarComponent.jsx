@@ -23,7 +23,7 @@ const NavbarComponent = () => {
   useEffect(() => {
     const fetchSnapToken = async () => {
       try {
-        if (localStorage.getItem("access_token")) {
+        if (localStorage.getItem("access_token") && localStorage.getItem("isSubscribed") == "false") {
           const response = await fetch("http://localhost:3000/payments", {
             method: "POST",
             headers: {

@@ -60,7 +60,7 @@ class UserController {
 
       let payload = { id: user.id };
       const access_token = createToken(payload);
-      res.status(200).json({ access_token, username: user.username, isSubscribed: user.isSubscribed });
+      res.status(200).json({ access_token, username: user.username, isSubscribed: user.isSubscribed, role: user.role });
     } catch (error) {
       next(error);
     }

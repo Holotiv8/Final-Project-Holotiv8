@@ -16,8 +16,8 @@ const AllFooterPage = () => {
                 src="https://ik.imagekit.io/bintangtopup/finalproject/nihonologo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675326925315"
                 alt="logo"
               />
-              <div className="">
-                Lorem ipsum dolor sit, amet consectetur adipisicing.
+               <div className="">
+                Pondok Indah, Jakarta 12310 <br /> © 2023 Nihon No Live.
               </div>
               <div className="flex gap-4 text-lg">
                 <a href="#">
@@ -31,24 +31,24 @@ const AllFooterPage = () => {
                 </a>
               </div>
             </div>
-            <div className="w-2/6 flex flex-col gap-4">
-              <h1 className="font-semibold">Resources</h1>
-              <a href="#">Lorem,ipsum</a>
-              <a href="#">Lorem,ipsum</a>
-              <a href="#">Lorem,ipsum</a>
-              <a href="#">Lorem,ipsum</a>
+            <div className="w-2/6 ml-14 flex flex-col gap-4">
+              <h1 className="font-semibold">Services</h1>
+              <a href="#">Members</a>
+              <a href="#">Live Stream</a>
+              <a href="#">Video</a>
+              <a href="#">Music</a>
             </div>
             <div className="w-2/6 flex flex-col gap-4">
               <h1 className="font-semibold">About us</h1>
-              <a href="#">Lorem,ipsum</a>
-              <a href="#">Lorem,ipsum</a>
-              <a href="#">Lorem,ipsum</a>
-              <a href="#">Lorem,ipsum</a>
+              <a href="#">Blog</a>
+              <a href="#">Twitter</a>
+              <a href="#">Youtube</a>
+              <a href="#">Whatsapp</a>
             </div>
           </div>
           <div className="w-4/12 flex flex-col gap-2 mr-36">
-            <div className="text-lg font-bold">Subscribe to new Newsletter</div>
-            <div className="text-xs text-gray-400">What are you waiting for ? Order and our progress!</div>
+          <div className="text-lg font-bold">Get the latest information</div>
+            <div className="text-xs text-gray-400">We will send you the latest information via the email you sent</div>
             <form class="flex items-center">
                 <label for="simple-search" class="sr-only">
                   Search
@@ -65,7 +65,7 @@ const AllFooterPage = () => {
                   type="submit"
                   class="p-2.5 ml-4 text-xs text-white rounded-lg border bg-[#D61C4E] hover:bg-[#C21010]"
                 >
-                  Subscribe now
+                  send email
                 </button>
               </form>
           </div>

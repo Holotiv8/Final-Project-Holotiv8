@@ -36,7 +36,7 @@ const Products = () => {
           <div className="container-product">
             <div className="title-product">
               <h1>
-                <center>My Product</center>
+                <center>Talent's Products</center>
               </h1>
             </div>
 

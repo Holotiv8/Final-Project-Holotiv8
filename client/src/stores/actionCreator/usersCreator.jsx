@@ -21,6 +21,7 @@ export function login(body) {
 			localStorage.setItem("access_token", convert.access_token);
 			localStorage.setItem("username", convert.username);
 			localStorage.setItem("isSubscribed", convert.isSubscribed);
+			localStorage.setItem("role", convert.role);
 
 			return `Hi ${convert.username} you're successfully Sign In`;
 		} catch (err) {

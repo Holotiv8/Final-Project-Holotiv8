@@ -147,7 +147,7 @@ export const fetchDataDetailIdol = (id) => {
       }
 
       const idolData = await response.json();
-      console.log(idolData, "ini videoooooooooooooooooooooooooooo");
+      console.log(idolData, "ini idollllllllllllllllllllllllllllll");
 
       const videoLiveResponse = await fetch(
         `http://localhost:3000/idols/video/live/${idolData.youtubeId}`,
