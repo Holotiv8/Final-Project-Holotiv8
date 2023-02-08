@@ -127,19 +127,28 @@ const MemberPage = () => {
       <section id="coundwond" className="">
         {/* <div>username, </div> */}
         <div className="flex flex-col items-center translate-x-[-1%] ">
-        <h1 class="text-3xl text-blue-500 text-center mb-3 font-normal font-display">Hi {localStorage.getItem("username")}, {localStorage.getItem("role") == "Admin" ? " your stream will start in" : "Live streaming will start in"}</h1>
+          <h1 class="text-3xl text-blue-500 text-center mb-3 font-normal font-display">
+            Hi {localStorage.getItem("username")},{" "}
+            {localStorage.getItem("role") == "Admin"
+              ? " your stream will start in"
+              : "Live streaming will start in"}
+          </h1>
           <div className="text-6xl text-center flex w-full items-center justify-center">
             <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="days">
                 {days}
               </div>
-              <div className="font-mono uppercase text-sm leading-none">Days</div>
+              <div className="font-mono uppercase text-sm leading-none">
+                Days
+              </div>
             </div>
             <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="hours">
                 {hours}
               </div>
-              <div className="font-mono uppercase text-sm leading-none">Hours</div>
+              <div className="font-mono uppercase text-sm leading-none">
+                Hours
+              </div>
             </div>
             <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="minutes">
@@ -158,18 +167,21 @@ const MemberPage = () => {
               </div>
             </div>
           </div>
-          {localStorage.getItem("role") == "Admin" ? ( <Link
+          {localStorage.getItem("role") == "Admin" ? (
+            <Link
               to="/room"
               className="bg-[#D61C4E] rounded-lg px-6 py-1.5 mt-12 text-base text-white cursor-pointer"
             >
               Go Live
-            </Link>):(<Link
+            </Link>
+          ) : (
+            <Link
               to="/room?roomID=VtlVf&role=Audience"
               className="bg-[#D61C4E] rounded-lg px-6 py-1.5 mt-12 text-base text-white cursor-pointer"
             >
               Watch Stream
-            </Link>)}
-           
+            </Link>
+          )}
         </div>
       </section>
 
@@ -487,7 +499,10 @@ const MemberPage = () => {
           <span className="py-0.5 mt-2 px-[190px] rounded-full bg-blue-500"></span>
         </div>
 
-        <div id="videos_carousel" className="bg-gray-500">
+        <div
+          id="videos_carousel"
+          className="bg-[url('https://cdn.discordapp.com/attachments/1032216384941342741/1072849481101475860/IMG_2198.jpg')]"
+        >
           <div className={`relative h-[320px] pt-9`}>
             <div className="absolute right-0 translate-y-[-60%] ">
               <>
@@ -510,13 +525,13 @@ const MemberPage = () => {
               id="video_youtube"
               className="carousel p-4 flex items-start justify-start self-start overflow-x-auto scroll-smooth  scrollbar-hide"
             >
-              {oneIdol.map((el) =>{
-          return (
-          <div>
-            <MemberCard videos={el}/>
-          </div>
-          )
-        })}
+              {oneIdol.map((el) => {
+                return (
+                  <div>
+                    <MemberCard videos={el} />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
