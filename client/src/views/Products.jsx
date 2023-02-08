@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import AllFooterPage from "../components/AllFooterPage";
+import AllFooterHomePage from "../components/AllFooterPage"
 import AllNavbarComponent from "../components/AllNavbarPage";
 import { fetchDetailProduct } from "../stores/actionCreator/productCreator";
 import ProductCard from "../components/ProductCard";
@@ -33,7 +33,7 @@ const Products = () => {
       <AllNavbarComponent />
       <div>
         <section>
-          <div className="container-product">
+          <div className="container-product bg-slate-800">
             <div className="title-product">
               <h1>
                 <center className="font-display">Talent's Products</center>
@@ -45,8 +45,9 @@ const Products = () => {
                 return <ProductCard key={el.id} el={el} />;
               })}
             </div>
-
-            <AllFooterPage />
+              <div className="mt-20">
+               <AllFooterHomePage />
+              </div>
           </div>
         </section>
       </div>
