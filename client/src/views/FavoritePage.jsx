@@ -38,45 +38,50 @@ export default function FavoritePage() {
 		}
 	}
 	return (
-		<div className='w-full px-10'>
-			<NavbarComponent />
-			<div className='text-4xl text-center font-extrabold p-4 mb-6'>
+    <div className="w-full px-10">
+      <NavbarComponent />
+      {/* <div className='text-4xl text-center font-extrabold p-4 mb-6'>
 				{username} Favorite Talents
-			</div>
-			<div className='flex justify-center font-semibold text-lg gap-3 mb-6 '>
-				<button
-					onClick={() => {
-						handleActive("All Hololive Talent", 0);
-					}}
-					className='group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg drop-shadow-md '
-				>
-					<div class='absolute inset-0 w-3 bg-blue-500 transition-all duration-[680ms] ease-out group-hover:w-full'></div>
-					<span class='relative text-black group-hover:text-white'>
-						All Hololive Talent
-					</span>
-				</button>
-				{branches.map((e) => {
-					return (
-						<button
-							key={e.id}
-							onClick={() => {
-								handleActive(e.from, e.id);
-							}}
-							className='group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg drop-shadow-md'
-						>
-							<div class='absolute inset-0 w-3 bg-blue-500 transition-all duration-[680ms] ease-out group-hover:w-full'></div>
-							<span class='relative text-black group-hover:text-white'>
-								{e.from}
-							</span>
-						</button>
-					);
-				})}
-			</div>
-			<div className='  grid grid-cols-4 gap-11 justify-items-center mb-6 '>
-				{dataFavorites.map((favorites) => {
-					return <FavoriteCard key={favorites.id} favorites={favorites} />;
-				})}
-			</div>
-		</div>
-	);
+			</div> */}
+
+      <div class="flex flex-col items-center mb-12">
+        <h2 class="title-name font-semibold text-lg">Favorite Talents</h2>
+        <span class="py-0.5 mt-2 px-[200px]  rounded-full bg-blue-500"></span>
+      </div>
+      <div className="flex justify-center font-semibold text-lg gap-3 mb-6 ">
+        <button
+          onClick={() => {
+            handleActive("All Hololive Talent", 0);
+          }}
+          className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg drop-shadow-md "
+        >
+          <div class="absolute inset-0 w-3 bg-blue-500 transition-all duration-[680ms] ease-out group-hover:w-full"></div>
+          <span class="relative text-black group-hover:text-white">
+            All Hololive Talent
+          </span>
+        </button>
+        {branches.map((e) => {
+          return (
+            <button
+              key={e.id}
+              onClick={() => {
+                handleActive(e.from, e.id);
+              }}
+              className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg drop-shadow-md"
+            >
+              <div class="absolute inset-0 w-3 bg-blue-500 transition-all duration-[680ms] ease-out group-hover:w-full"></div>
+              <span class="relative text-black group-hover:text-white">
+                {e.from}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <div className="  grid grid-cols-4 gap-11 justify-items-center mb-6 ">
+        {dataFavorites.map((favorites) => {
+          return <FavoriteCard key={favorites.id} favorites={favorites} />;
+        })}
+      </div>
+    </div>
+  );
 }
