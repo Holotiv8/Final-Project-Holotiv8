@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
-    <Provider store={store} className="font-display">
+    <Provider store={store} className="font-Montserrat">
       <ToastContainer 
                          position="bottom-left"
                          autoClose={1700}

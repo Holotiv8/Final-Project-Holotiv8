@@ -7,7 +7,7 @@ import {
 
 const FooterHomePage = () => {
     return(
-        <section id="footer" className="pt-8 pb-8">
+        <section id="footer" className="pt-8 pb-8 font-display">
       <div className="py-[1px] px-12 rounded-full bg-blue-300 mb-9"></div>
         <div className="flex items-start justify-between">
           <div className="w-6/12 text-xs flex items-center">

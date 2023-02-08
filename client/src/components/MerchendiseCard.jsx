@@ -9,9 +9,13 @@ const MerchandiseCard = ({ el }) => {
 
       <div className="textright-merch">
         <h3>{el.name}</h3>
+<<<<<<< HEAD
         <p className="font-Montserrat text-xs">
           From {el.fanName}! Please click my image to see my product
         </p>
+=======
+        <p className="font-display text-xs">From {el.fanName}! Please click my image to see my product</p>
+>>>>>>> finisting_client_3
       </div>
     </div>
   );

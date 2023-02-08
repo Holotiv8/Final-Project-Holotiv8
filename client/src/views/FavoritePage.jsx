@@ -38,15 +38,15 @@ export default function FavoritePage() {
 		}
 	}
 	return (
-    <div className="w-full px-10">
+    <div className="w-full px-10 font-display">
       <NavbarComponent />
       {/* <div className='text-4xl text-center font-extrabold p-4 mb-6'>
 				{username} Favorite Talents
 			</div> */}
 
       <div class="flex flex-col items-center mb-12">
-        <h2 class="title-name font-semibold text-lg">Favorite Talents</h2>
-        <span class="py-0.5 mt-2 px-[200px]  rounded-full bg-blue-500"></span>
+        <h2 class="font-display text-5xl font-semibold">Favorite Talents</h2>
+        <span class="py-0.5 px-[200px]  rounded-full bg-blue-500"></span>
       </div>
       <div className="flex justify-center font-semibold text-lg gap-3 mb-6 ">
         <button

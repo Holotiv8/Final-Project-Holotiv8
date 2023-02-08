@@ -44,8 +44,8 @@ const About = () => {
 
       <section id="comment" class="mt-24">
         <div class="flex flex-col items-center mb-12">
-          <h2 class="title-name font-semibold text-3xl">Review</h2>
-          <span class="py-0.5 mt-2 px-20  rounded-full bg-blue-500"></span>
+          <h2 class="text-5xl font-semibold">Review</h2>
+          <span class="py-0.5 px-[90px]  rounded-full bg-blue-500"></span>
         </div>
 
         <div class="grid grid-cols-3 relative top-1/3">

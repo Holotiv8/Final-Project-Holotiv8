@@ -15,7 +15,7 @@ import FooterHomePage from "../components/FooterHomePage";
 
 const HomePage = () => {
   return (
-    <div className="w-full px-10 font-display">
+    <div className="w-full px-10 font-Montserrat">
       <NavbarComponent />
 
       <section id="main_banner" className="mt-16 mb-8 font-Montserrat">
@@ -108,9 +108,9 @@ const HomePage = () => {
       </section>
 
       <section id="service" className="my-16">
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           <div className="flex flex-col w-4/12 gap-6">
-            <div className=" text-4xl font-bold">
+            <div className=" text-4xl font-bold font-Montserrat">
               <span className="text-blue-500">What features</span>
               <br />
               we offer !
