@@ -32,16 +32,16 @@ export default function RegisterPage() {
 					<div className='flex justify-center w-[260px]'>
 						<img
 							src='https://ik.imagekit.io/pfdt0wwx5/final_project/fubuki.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675411394939'
-							className='scale-150 pl-6 pb-10'
+							className='scale-150 pl-6 pb-10  transform hover:translate-y-5 hover:duration-700 '
 							alt=''
 						/>
 					</div>
-					<form className='flex flex-col w-[250px] '
+					<form className='flex flex-col w-[250px] z-10 '
 						onSubmit={(e) => {
 							e.preventDefault()
 							dispatch(register(inputForm))
 								.then((data) => {
-									toast.success(`successfully register with email ${data}`)
+									toast.success(`Please check your email ${data} to verify account`)
 									navigate('/login')
 								})
 								.catch((err) => {
