@@ -7,7 +7,7 @@ export const logout = () => {
 export function login(body) {
 	return async () => {
 		try {
-			let data = await fetch(`http://localhost:3000/users/login`, {
+			let data = await fetch(`http://122.248.218.60/users/login`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(body),
@@ -33,7 +33,7 @@ export function login(body) {
 export function register(body) {
 	return async () => {
 		try {
-			let data = await fetch("http://localhost:3000/users/register", {
+			let data = await fetch("http://122.248.218.60/users/register", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(body),

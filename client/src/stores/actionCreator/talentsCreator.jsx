@@ -14,7 +14,7 @@ export const actionSetTalents = (payload) => {
 
 export const fetchDataTalents = () => {
   return (dispatch, getState) => {
-    fetch("http://localhost:3000/idols", {
+    fetch("http://122.248.218.60/idols", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,7 +40,7 @@ export const actionSetBranches = (payload) => {
 
 export const fetchDataBranches = () => {
   return (dispatch, getState) => {
-    fetch("http://localhost:3000/idols/branches", {
+    fetch("http://122.248.218.60/idols/branches", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -59,7 +59,7 @@ export const fetchDataBranches = () => {
 
 export const addFavorite = (IdolId) => {
   return (dispatch, getState) => {
-    fetch(`http://localhost:3000/favorites/${IdolId}`, {
+    fetch(`http://122.248.218.60/favorites/${IdolId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export const actionSetFavorites = (payload) => {
 
 export const fetchFavorites = () => {
   return (dispatch, getState) => {
-    fetch("http://localhost:3000/favorites", {
+    fetch("http://122.248.218.60/favorites", {
       headers: {
         "Content-Type": "application/json",
         access_token: localStorage.getItem("access_token"),
@@ -108,7 +108,7 @@ export const fetchFavorites = () => {
 
 export const deleteFavorite = (id) => {
   return (dispatch, getState) => {
-    fetch(`http://localhost:3000/favorites/${id}`, {
+    fetch(`http://122.248.218.60/favorites/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -136,7 +136,7 @@ export const actionSetDetailIdol = (payload) => {
 export const fetchDataDetailIdol = (id) => {
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(`http://localhost:3000/idols/${id}`, {
+      const response = await fetch(`http://122.248.218.60/idols/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -150,7 +150,7 @@ export const fetchDataDetailIdol = (id) => {
       console.log(idolData, "ini idollllllllllllllllllllllllllllll");
 
       const videoLiveResponse = await fetch(
-        `http://localhost:3000/idols/video/live/${idolData.youtubeId}`,
+        `http://122.248.218.60/idols/video/live/${idolData.youtubeId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -166,7 +166,7 @@ export const fetchDataDetailIdol = (id) => {
       idolData.videoLive = videoLive;
 
       const videoResponse = await fetch(
-        `http://localhost:3000/idols/video/${idolData.youtubeId}`,
+        `http://122.248.218.60/idols/video/${idolData.youtubeId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -183,7 +183,7 @@ export const fetchDataDetailIdol = (id) => {
 
       if (idolData.spotifyId !== "") {
         const songsResponse = await fetch(
-          `http://localhost:3000/idols/songs/${idolData.spotifyId}`,
+          `http://122.248.218.60/idols/songs/${idolData.spotifyId}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -211,7 +211,7 @@ export const fectMembersVideo = () => {
   return async (dispatch, getState) => {
     try {
       const videoResponse = await fetch(
-        `http://localhost:3000/idols/video/UCJFZiqLMntJufDCHc6bQixg`,
+        `http://122.248.218.60/idols/video/UCJFZiqLMntJufDCHc6bQixg`,
         {
           headers: {
             "Content-Type": "application/json",

@@ -9,7 +9,7 @@ export const actionSetProduct = (payload) => {
 
 export const fetchDataProduct = () => {
   return (dispatch, getState) => {
-    fetch("http://localhost:3000/products", {
+    fetch("http://122.248.218.60/products", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -35,7 +35,7 @@ export const actionSetProductDetail = (payload) => {
 
 export const fetchDetailProduct = (id) => {
   return (dispatch) => {
-    fetch(`http://localhost:3000/products/${id}`, {
+    fetch(`http://122.248.218.60/products/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },
