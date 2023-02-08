@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../stores/actionCreator/usersCreator";
 import { FaBookmark, FaCamera, FaCompactDisc, FaPlay } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const NavbarComponent = () => {
   const { pathname } = useLocation();
@@ -15,6 +16,7 @@ const NavbarComponent = () => {
     event.preventDefault();
     dispatcher(logout());
     movePage("/");
+    toast.success('Successfully Logout')
   };
 
   const activeStlye = {
