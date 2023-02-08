@@ -37,7 +37,7 @@ describe('Feature Login User POST /users/login', () => {
         expect(response.body).toBeInstanceOf(Object)
     })
 
-    test('302 - Success veify', async () => {
+    test('302 - Success verify', async () => {
         const response = await request(app)
             .get('/users/verify/12345678')
 

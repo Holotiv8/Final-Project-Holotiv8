@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon bin/www",
     "start": "node bin/www",
-    "test": "jest --detectOpenHandles --coverage --setTimeout=1000 --forceExit"
+    "test": "jest --detectOpenHandles --coverage --setTimeout=1000"
   },
   "keywords": [],
   "author": "",

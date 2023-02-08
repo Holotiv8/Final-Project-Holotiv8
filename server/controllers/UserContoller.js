@@ -33,7 +33,7 @@ class UserController {
       }
       user.isValid = true;
       await user.save();
-      // res.redirect("https://youtube.com");
+      res.redirect("https://youtube.com");
       res.status(200).json({ message: "Success Register" });
     } catch (error) {
       next(error);
