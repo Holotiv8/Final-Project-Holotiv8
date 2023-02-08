@@ -22,8 +22,8 @@ beforeAll(async () => {
         })
         access_token = response.body.access_token
         let response2 = await request(app).post("/users/login").send({
-            email : "kobo@mail.com", 
-            password: "kobo123"
+            email : "fubuki@mail.com", 
+            password: "fubuki123"
         })
         access_token2 = response2.body.access_token
         

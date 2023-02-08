@@ -9,9 +9,9 @@
         "uniqueString": "12345678"
     },
     {
-        "username": "Kobo Kanaeru",
-        "email": "kobo@mail.com",
-        "password": "kobo123",
+        "username": "Shirakami Fubuki",
+        "email": "fubuki@mail.com",
+        "password": "fubuki123",
         "isSubscribed": true,
         "role": "Admin",
         "isValid": true,
