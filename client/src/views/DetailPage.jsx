@@ -120,7 +120,9 @@ const DetailPage = () => {
       {oneIdol.spotifyId ? (
         <Carousel
           title={"MUSIC"}
-          backround={"bg-gradient-to-r from-white via-cyan-400 to-cyan-600"}
+          backround={
+            "bg-[url('https://cdn.discordapp.com/attachments/1059831090451320962/1072770664127283282/IMG_2193.jpg')]"
+          }
           type="spotify"
           content={oneIdol.songs}
         />
