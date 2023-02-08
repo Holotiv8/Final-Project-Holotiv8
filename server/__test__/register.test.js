@@ -35,7 +35,7 @@ afterAll(async () => {
 
 describe("Feature Register Customer POST /users/register", () => {
   test("201 - Success create", async () => {
-    jest.spyOn(sendEmailRegis, "sendEmail").mockReturnValue("Success");
+    jest.spyOn(sendEmailRegis, "sendEmail").mockResolvedValue("Success");
     let input = {
       username: "risanto",
       email: "risanto@mail.com",
