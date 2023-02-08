@@ -23,19 +23,21 @@ const NavbarComponent = () => {
   useEffect(() => {
     const fetchSnapToken = async () => {
       try {
-        const response = await fetch("http://localhost:3000/payments", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            access_token: localStorage.getItem("access_token"),
-          },
-          body: JSON.stringify({
-            amount: 60000, // Replace with actual amount
-            order_id: "your-order-id", // Replace with actual order ID
-          }),
-        });
-        const { token } = await response.json();
-        setSnapToken(token);
+        if (localStorage.getItem("access_token")) {
+          const response = await fetch("http://localhost:3000/payments", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              access_token: localStorage.getItem("access_token"),
+            },
+            body: JSON.stringify({
+              amount: 60000, // Replace with actual amount
+              order_id: "your-order-id", // Replace with actual order ID
+            }),
+          });
+          const { token } = await response.json();
+          setSnapToken(token);
+        }
       } catch (error) {
         console.error(error);
       }

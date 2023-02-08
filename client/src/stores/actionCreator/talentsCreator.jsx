@@ -147,10 +147,10 @@ export const fetchDataDetailIdol = (id) => {
       }
 
       const idolData = await response.json();
-      // console.log(idolData, "ini videoooooooooooooooooooooooooooo");
+      console.log(idolData, "ini videoooooooooooooooooooooooooooo");
 
-      const videoResponse = await fetch(
-        `http://localhost:3000/idols/video/${idolData.youtubeId}`,
+      const videoLiveResponse = await fetch(
+        `http://localhost:3000/idols/video/live/${idolData.youtubeId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -158,31 +158,47 @@ export const fetchDataDetailIdol = (id) => {
         }
       );
 
-      if (!videoResponse.ok) {
+      if (!videoLiveResponse.ok) {
         throw new Error("notOk");
       }
 
-      const video = await videoResponse.json();
-      idolData.video = video;
+      const videoLive = await videoLiveResponse.json();
+      idolData.videoLive = videoLive;
 
-      if (idolData.spotifyId !== "") {
-        const songsResponse = await fetch(
-          `http://localhost:3000/idols/songs/${idolData.spotifyId}`,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+      // const videoResponse = await fetch(
+      //   `http://localhost:3000/idols/video/${idolData.youtubeId}`,
+      //   {
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   }
+      // );
 
-        if (!songsResponse.ok) {
-          throw new Error("notOk");
-        }
+      // if (!videoResponse.ok) {
+      //   throw new Error("notOk");
+      // }
 
-        const songs = await songsResponse.json();
-        // console.log(songs,'ini dari creatorrrrrrrrrrrrrrrr')
-        idolData.songs = songs;
-      }
+      // const video = await videoResponse.json();
+      // idolData.video = video;
+
+      // if (idolData.spotifyId !== "") {
+      //   const songsResponse = await fetch(
+      //     `http://localhost:3000/idols/songs/${idolData.spotifyId}`,
+      //     {
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //     }
+      //   );
+
+      //   if (!songsResponse.ok) {
+      //     throw new Error("notOk");
+      //   }
+
+      //   const songs = await songsResponse.json();
+      //   // console.log(songs,'ini dari creatorrrrrrrrrrrrrrrr')
+      //   idolData.songs = songs;
+      // }
 
       dispatch(actionSetDetailIdol(idolData));
     } catch (error) {
@@ -190,7 +206,6 @@ export const fetchDataDetailIdol = (id) => {
     }
   };
 };
-
 
 export const fectMembersVideo = () => {
   return async (dispatch, getState) => {
@@ -203,13 +218,13 @@ export const fectMembersVideo = () => {
           },
         }
       );
-  
+
       if (!videoResponse.ok) {
         throw new Error("notOk");
       }
-  
+
       const video = await videoResponse.json();
-      console.log(video,'|||||||||||||||')
+      console.log(video, "|||||||||||||||");
       dispatch(actionSetDetailIdol(video));
     } catch (error) {
       console.error(error);

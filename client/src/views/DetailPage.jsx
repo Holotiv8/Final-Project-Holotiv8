@@ -2,7 +2,8 @@ import React, { Component, useEffect, useState } from "react";
 import cx from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 // offline API
-// import { fetchDataDetailIdol } from "../stores/actionCreator/talentsCreator";
+import { CiStreamOff, CiStreamOn } from "react-icons/ci";
+import { fetchDataDetailIdol } from "../stores/actionCreator/talentsCreator";
 import { useParams } from "react-router-dom";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import AllFooterPage from "../components/AllFooterPage";
@@ -28,18 +29,13 @@ const DetailPage = () => {
     fetchOneIdol();
   }, []);
 
-  const generateGradient = (colors) => {
-    const [via, to] = colors.split(' ')
-    return [
-      'bg-gradient-to-b',
-      'from-white',
-      via,
-      to
-    ]
-  }
+  console.log(oneIdol.videoLive);
 
-  
-  
+  const generateGradient = (colors) => {
+    const [via, to] = colors.split(" ");
+    return ["bg-gradient-to-b", "from-white", via, to];
+  };
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -96,17 +92,32 @@ const DetailPage = () => {
             <div id="description" className="text-sm text-justify w-9/12">
               {oneIdol.content}
             </div>
-            <iframe
-              className="w-[360px]  h-[200px] rounded-md"
-              src="https://www.youtube.com/embed/68KV7JnrvDo/autoplay=1&rel=0"
-              allow="autoplay"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+            {oneIdol.videoLive.length == 1 ? (
+              <div>
+                <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[70px] bg-[#cc0000e6] text-white">
+                  <CiStreamOn className="font-bold" />{" "}
+                  <div className="text-xs">Live</div>
+                </div>
+                <iframe
+                  className="w-[360px]  h-[200px] rounded-md mt-2"
+                  src={`https://www.youtube.com/embed/${oneIdol.videoLive[0].video.videoId}/autoplay=1&rel=0`}
+                  allow="autoplay"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            ) : (
+              <iframe
+                className="w-[360px]  h-[200px] rounded-md"
+                src="https://www.youtube.com/embed/fRsjv-JKyf8"
+                allow="autoplay"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            )}
           </div>
         </div>
       </section>
-
 
       {/* NYALAIN BIAR GK ERROR */}
       {/* <Carousel

@@ -6,13 +6,12 @@ const youtubeLiveFunction = async (youtubeId) => {
     url: "https://youtube138.p.rapidapi.com/channel/videos/",
     params: { id: youtubeId, filter: "live_now", hl: "en", gl: "US" },
     headers: {
-      "X-RapidAPI-Key": "37f62bd33cmshc44f509dac943b4p140114jsn4a30c69863c7",
+      "X-RapidAPI-Key": "4d7ec34579msh01e41d823cb9416p13d6e6jsne35744429b63",
       "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
   };
-    const {data} = await axios
-    .request(options)
-    return data.contents
-}
+  const { data } = await axios.request(options);
+  return data.contents;
+};
 
-module.exports = youtubeLiveFunction
+module.exports = youtubeLiveFunction;
