@@ -9,7 +9,7 @@ export const actionSetProduct = (payload) => {
 
 export const fetchDataProduct = () => {
   return (dispatch, getState) => {
-    fetch("http://122.248.218.60/products", {
+    fetch("https://nihon-no-live.foxhub.space/products", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -35,7 +35,7 @@ export const actionSetProductDetail = (payload) => {
 
 export const fetchDetailProduct = (id) => {
   return (dispatch) => {
-    fetch(`http://122.248.218.60/products/${id}`, {
+    fetch(`https://nihon-no-live.foxhub.space/products/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -47,7 +47,7 @@ export const fetchDetailProduct = (id) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data,"||||||||||||||||||||||||||||||||||||||||")
+        console.log(data, "||||||||||||||||||||||||||||||||||||||||");
         dispatch(actionSetProductDetail(data));
       });
   };

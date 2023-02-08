@@ -14,7 +14,7 @@ export const actionSetTalents = (payload) => {
 
 export const fetchDataTalents = () => {
   return (dispatch, getState) => {
-    fetch("http://122.248.218.60/idols", {
+    fetch("https://nihon-no-live.foxhub.space/idols", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,7 +40,7 @@ export const actionSetBranches = (payload) => {
 
 export const fetchDataBranches = () => {
   return (dispatch, getState) => {
-    fetch("http://122.248.218.60/idols/branches", {
+    fetch("https://nihon-no-live.foxhub.space/idols/branches", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -59,7 +59,7 @@ export const fetchDataBranches = () => {
 
 export const addFavorite = (IdolId) => {
   return (dispatch, getState) => {
-    fetch(`http://122.248.218.60/favorites/${IdolId}`, {
+    fetch(`https://nihon-no-live.foxhub.space/favorites/${IdolId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export const actionSetFavorites = (payload) => {
 
 export const fetchFavorites = () => {
   return (dispatch, getState) => {
-    fetch("http://122.248.218.60/favorites", {
+    fetch("https://nihon-no-live.foxhub.space/favorites", {
       headers: {
         "Content-Type": "application/json",
         access_token: localStorage.getItem("access_token"),
@@ -108,7 +108,7 @@ export const fetchFavorites = () => {
 
 export const deleteFavorite = (id) => {
   return (dispatch, getState) => {
-    fetch(`http://122.248.218.60/favorites/${id}`, {
+    fetch(`https://nihon-no-live.foxhub.space/favorites/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -136,11 +136,14 @@ export const actionSetDetailIdol = (payload) => {
 export const fetchDataDetailIdol = (id) => {
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(`http://122.248.218.60/idols/${id}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://nihon-no-live.foxhub.space/idols/${id}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error("notOk");
@@ -150,7 +153,7 @@ export const fetchDataDetailIdol = (id) => {
       console.log(idolData, "ini idollllllllllllllllllllllllllllll");
 
       const videoLiveResponse = await fetch(
-        `http://122.248.218.60/idols/video/live/${idolData.youtubeId}`,
+        `https://nihon-no-live.foxhub.space/idols/video/live/${idolData.youtubeId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -166,7 +169,7 @@ export const fetchDataDetailIdol = (id) => {
       idolData.videoLive = videoLive;
 
       const videoResponse = await fetch(
-        `http://122.248.218.60/idols/video/${idolData.youtubeId}`,
+        `https://nihon-no-live.foxhub.space/idols/video/${idolData.youtubeId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -183,7 +186,7 @@ export const fetchDataDetailIdol = (id) => {
 
       if (idolData.spotifyId !== "") {
         const songsResponse = await fetch(
-          `http://122.248.218.60/idols/songs/${idolData.spotifyId}`,
+          `https://nihon-no-live.foxhub.space/idols/songs/${idolData.spotifyId}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -211,7 +214,7 @@ export const fectMembersVideo = () => {
   return async (dispatch, getState) => {
     try {
       const videoResponse = await fetch(
-        `http://122.248.218.60/idols/video/UCJFZiqLMntJufDCHc6bQixg`,
+        `https://nihon-no-live.foxhub.space/idols/video/UCJFZiqLMntJufDCHc6bQixg`,
         {
           headers: {
             "Content-Type": "application/json",

@@ -33,17 +33,20 @@ const NavbarComponent = () => {
           localStorage.getItem("access_token") &&
           localStorage.getItem("isSubscribed") == "false"
         ) {
-          const response = await fetch("http://122.248.218.60/payments", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              access_token: localStorage.getItem("access_token"),
-            },
-            body: JSON.stringify({
-              amount: 60000, // Replace with actual amount
-              order_id: "your-order-id", // Replace with actual order ID
-            }),
-          });
+          const response = await fetch(
+            "https://nihon-no-live.foxhub.space/payments",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                access_token: localStorage.getItem("access_token"),
+              },
+              body: JSON.stringify({
+                amount: 60000, // Replace with actual amount
+                order_id: "your-order-id", // Replace with actual order ID
+              }),
+            }
+          );
           const { token } = await response.json();
           setSnapToken(token);
         }
@@ -56,7 +59,7 @@ const NavbarComponent = () => {
 
   const updateStatus = async () => {
     try {
-      await fetch("http://122.248.218.60/users/subscribe", {
+      await fetch("https://nihon-no-live.foxhub.space/users/subscribe", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
