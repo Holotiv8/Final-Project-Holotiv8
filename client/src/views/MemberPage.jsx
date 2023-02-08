@@ -190,12 +190,12 @@ const MemberPage = () => {
               <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
                   className="rounded-full shadow-lg"
-                  src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/moona_hoshinova_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090978351"
+                  src="https://ik.imagekit.io/bintangtopup/profilIcon.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675859950877"
                   alt="Bonnie image"
                 />
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-white ">
-                Moona Hoshinova{" "}
+                Shirakami Fubuki{" "}
                 <span className="bg-blue-500 text-White text-sm font-medium mr-2 px-2.5 py-0.5 rounded  ml-3">
                   Now
                 </span>
@@ -207,21 +207,21 @@ const MemberPage = () => {
                 <img
                   className="rounded-md"
                   width={200}
-                  src="https://i.ytimg.com/vi/sp-aDdSqIac/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLALjAE7P7iVdM_hBFpKpbFWuz_f5w"
+                  src="https://ik.imagekit.io/bintangtopup/tamnel.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1675859626404"
                   alt=""
                 />
                 <div>
                   <div>
-                    【Movie Night】Let's watch a movie! and talk!!!!【Moona】
+                      Lats Pew Pew ?【Shirakami Fubuki】
                   </div>
                   <div className="flex gap-2 mb-3 items-center mt-3">
                     <img
                       width={25}
                       className="rounded-3xl"
-                      src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/moona_hoshinova_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090978351"
+                      src="https://ik.imagekit.io/bintangtopup/profilIcon.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675859950877"
                       alt="img"
                     />
-                    <div className="text-xs">Moona Hoshinova</div>
+                    <div className="text-xs">Shirakami Fubuki</div>
                   </div>
                   <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[70px] bg-[#cc0000e6] text-white">
                     <CiStreamOn className="font-bold" />{" "}

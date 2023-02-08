@@ -17,7 +17,7 @@ const ProductCard = ({ el }) => {
     //   </div>
     // </div>
     <>
-      <div className="card bg-white w-[200px] h-full m-2 rounded-lg shadow-2xl">
+      <div className="card bg-white w-[200px] h-[350px] m-2 rounded-lg shadow-2xl">
         <div className="top">
           <img
             className="w-[200px] h-[200px] object-cover rounded-md p-2"
