@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../stores/actionCreator/usersCreator";
 import { FaBookmark, FaCamera, FaCompactDisc, FaPlay } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const NavbarComponent = () => {
+  const { pathname } = useLocation();
   const dispatcher = useDispatch();
   const movePage = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -14,8 +16,12 @@ const NavbarComponent = () => {
     event.preventDefault();
     dispatcher(logout());
     movePage("/");
+    toast.success('Successfully Logout')
   };
 
+  const activeStlye = {
+    color: "rgb(86, 153, 225)",
+  };
   /// PAYMENT ///
 
   const [snapToken, setSnapToken] = useState("");
@@ -23,7 +29,7 @@ const NavbarComponent = () => {
   useEffect(() => {
     const fetchSnapToken = async () => {
       try {
-        if (localStorage.getItem("access_token")) {
+        if (localStorage.getItem("access_token") && localStorage.getItem("isSubscribed") == "false") {
           const response = await fetch("http://localhost:3000/payments", {
             method: "POST",
             headers: {
@@ -103,33 +109,69 @@ const NavbarComponent = () => {
             alt="logo"
           />
         </Link>
-        <div className="flex text-sm gap-5 text-gray-400 font-semibold">
-          <Link to="/talents" className="hover:text-blue-500">
-            Talent
-          </Link>
-          <Link to="/about" className="hover:text-blue-500">
-            About
-          </Link>
-          <Link to="/favorites" className="hover:text-blue-500">
-            Favorites
-          </Link>
-          {/* <Link to="#" className="hover:text-blue-500">
-            Videos
-          </Link>
-          <Link to="#" className="hover:text-blue-500">
-            Music
-          </Link> */}
-          <Link to="/products" className="hover:text-blue-500">
-            Merch
-          </Link>
-          {localStorage.getItem("isSubscribed") === "true" ? (
-            <Link to="/membership" className="hover:text-blue-500">
-              Member
+        {localStorage.getItem("access_token") ? (
+          <div className="flex text-sm gap-5 text-gray-400 font-semibold">
+            <Link
+              to="/talents"
+              className="hover:text-blue-500"
+              style={pathname === "/talents" ? activeStlye : {}}
+            >
+              Talent
             </Link>
-          ) : (
-            ""
-          )}
-        </div>
+            <Link
+              to="/about"
+              className="hover:text-blue-500"
+              style={pathname === "/about" ? activeStlye : {}}
+            >
+              About
+            </Link>
+            <Link
+              to="/favorites"
+              className="hover:text-blue-500"
+              style={pathname === "/favorites" ? activeStlye : {}}
+            >
+              Favorites
+            </Link>
+            <Link
+              to="/products"
+              className="hover:text-blue-500"
+              style={pathname === "/products" ? activeStlye : {}}
+            >
+              Merch
+            </Link>
+            {localStorage.getItem("isSubscribed") === "true" ? (
+              <Link to="/membership" className="hover:text-blue-500">
+                Membership
+              </Link>
+            ) : (
+              ""
+            )}
+          </div>
+        ) : (
+          <div className="flex text-sm gap-5 text-gray-400 font-semibold">
+            <Link
+              to="/talents"
+              className="hover:text-blue-500"
+              style={pathname === "/talents" ? activeStlye : {}}
+            >
+              Talent
+            </Link>
+            <Link
+              to="/about"
+              className="hover:text-blue-500"
+              style={pathname === "/about" ? activeStlye : {}}
+            >
+              About
+            </Link>
+            <Link
+              to="/products"
+              className="hover:text-blue-500"
+              style={pathname === "/products" ? activeStlye : {}}
+            >
+              Merch
+            </Link>
+          </div>
+        )}
         {localStorage.getItem("access_token") ? (
           <div className="flex gap-4">
             {localStorage.getItem("isSubscribed") === "false" ? (

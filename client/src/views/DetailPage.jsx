@@ -29,7 +29,7 @@ const DetailPage = () => {
     fetchOneIdol();
   }, []);
 
-  console.log(oneIdol.videoLive);
+  console.log(oneIdol,'<<<<<<<<<<<<<<<<<<<<<<');
 
   const generateGradient = (colors) => {
     const [via, to] = colors.split(" ");
@@ -78,6 +78,8 @@ const DetailPage = () => {
             <div id="description" className="text-sm text-justify w-9/12">
               {oneIdol.content}
             </div>
+
+            {/* Live stream */}
             {oneIdol.videoLive.length == 1 ? (
               <div>
                 <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[70px] bg-[#cc0000e6] text-white">
@@ -101,6 +103,7 @@ const DetailPage = () => {
                 allowfullscreen
               ></iframe>
             )}
+            {/* Live stream */}
           </div>
         </div>
       </section>

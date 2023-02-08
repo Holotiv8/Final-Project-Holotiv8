@@ -220,14 +220,14 @@ const HomePage = () => {
               look here <span className="text-yellow-400">🗲</span>
             </div>
             <div className="flex gap-6">
-              <form class="flex items-center">
-                <label for="simple-search" class="sr-only">
+              <form className="flex items-center">
+                <label for="simple-search" className="sr-only">
                   Search
                 </label>
-                <div class="relative w-full">
-                  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <div className="relative w-full">
+                  <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                     <svg
-                      class="w-5 h-5 text-gray-500 "
+                      className="w-5 h-5 text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -241,17 +241,17 @@ const HomePage = () => {
                   </div>
                   <input
                     type="text"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
                     placeholder="search your question"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  class="p-2.5 ml-4 text-sm font-medium text-white bg-[#D61C4E] hover:bg-[#C21010] rounded-lg "
+                  className="p-2.5 ml-4 text-sm font-medium text-white bg-[#D61C4E] hover:bg-[#C21010] rounded-lg "
                 >
                   <svg
-                    class="w-5 h-5"
+                    className="w-5 h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
