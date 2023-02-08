@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { CiStreamOff, CiStreamOn } from "react-icons/ci";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 // import { fectMembersVideo } from "../stores/actionCreator/talentsCreator";
+import { Link } from "react-router-dom";
 import AllNavbarComponent from "../components/AllNavbarPage";
 import AllFooterPage from "../components/AllFooterPage";
 import MemberCard from "../components/MemberCard";
-
 const MemberPage = () => {
   const { oneIdol } = useSelector((state) => state.idols);
   const dispatcher = useDispatch();
@@ -15,7 +15,7 @@ const MemberPage = () => {
   const fetchOneIdol = async () => {
     try {
       await dispatcher(fectMembersVideo());
-      console.log("masukkkkk")
+      console.log("masukkkkk");
     } catch (error) {
     } finally {
       setTimeout(() => {
@@ -27,10 +27,6 @@ const MemberPage = () => {
   useEffect(() => {
     fetchOneIdol();
   }, []);
-
-
-
-
 
   const ScrollbarHide = () => {
     return (
@@ -63,7 +59,53 @@ const MemberPage = () => {
     );
   };
 
+  // COUNTOWN
 
+  const [days, setDays] = useState("00");
+  const [hours, setHours] = useState("00");
+  const [minutes, setMinutes] = useState("00");
+  const [seconds, setSeconds] = useState("00");
+  const [countdown, setCountdown] = useState(null);
+  const beerTime = new Date("May 17, 2023 00:00:00").getTime();
+  const now = new Date().getTime();
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentTime = new Date().getTime();
+      const distance = beerTime - currentTime;
+
+      setDays(padNum(Math.floor(distance / (1000 * 60 * 60 * 24))));
+      setHours(
+        padNum(
+          Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        )
+      );
+      setMinutes(
+        padNum(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
+      );
+      setSeconds(padNum(Math.floor((distance % (1000 * 60)) / 1000)));
+
+      if (distance < 0) {
+        clearInterval(countdown);
+        setDays("00");
+        setHours("00");
+        setMinutes("00");
+        setSeconds("00");
+      }
+    }, 100);
+    setCountdown(intervalId);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const padNum = (num) => {
+    let zero = "";
+    for (let i = 0; i < 2; i++) {
+      zero += "0";
+    }
+    return (zero + num).slice(-2);
+  };
+
+  // COUNDOWN  END
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -94,32 +136,79 @@ const MemberPage = () => {
     <>
       <AllNavbarComponent />
 
+      {/* COUNT DOWN */}
+
+      <section id="coundwond" className="">
+        {/* <div>username, </div> */}
+        <div className="flex flex-col items-center translate-x-[-1%] ">
+        <h1 class="text-3xl text-blue-500 text-center mb-3 font-extralight">Hi {localStorage.getItem("username")}, Live streaming will start in</h1>
+          <div className="text-6xl text-center flex w-full items-center justify-center">
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+              <div className="font-mono leading-none" x-text="days">
+                {days}
+              </div>
+              <div className="font-mono uppercase text-sm leading-none">Days</div>
+            </div>
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+              <div className="font-mono leading-none" x-text="hours">
+                {hours}
+              </div>
+              <div className="font-mono uppercase text-sm leading-none">Hours</div>
+            </div>
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+              <div className="font-mono leading-none" x-text="minutes">
+                {minutes}
+              </div>
+              <div className="font-mono uppercase text-sm leading-none">
+                Minutes
+              </div>
+            </div>
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+              <div className="font-mono leading-none" x-text="seconds">
+                {seconds}
+              </div>
+              <div className="font-mono uppercase text-sm leading-none">
+                Seconds
+              </div>
+            </div>
+          </div>
+            <Link
+              to="/Live"
+              className="bg-[#D61C4E] rounded-lg px-5 py-1.5 mt-12 text-sm text-white cursor-pointer"
+            >
+              Stream Now
+            </Link>
+        </div>
+      </section>
+
+      {/* COUNT DOWN */}
+
       <div id="schecdule" className="w-10/12 my-28 font-display">
         <ScrollbarHide />
-        <div class="flex flex-col items-center mb-12 ml-40">
-          <h2 class="title-name font-semibold text-3xl">Schedule</h2>
-          <span class="py-0.5 mt-2 px-[105px] rounded-full bg-blue-500"></span>
+        <div className="flex flex-col items-center mb-12 ml-40">
+          <h2 className="title-name font-semibold text-xl">Schedule</h2>
+          <span className="py-0.5 mt-2 px-[105px] rounded-full bg-blue-500"></span>
         </div>
         <div
           id="schecdule_stream"
           className="bg-gray-800 relative flex flex-col mx-28 rounded-2xl drop-shadow-2xl h-[500px] w-full p-16 overflow-scroll shadow-inner"
         >
-          <ol class="relative border-l border-gray-200">
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+          <ol className="relative border-l border-gray-200">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/moona_hoshinova_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090978351"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-white ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-white ">
                 Moona Hoshinova{" "}
-                <span class="bg-blue-500 text-White text-sm font-medium mr-2 px-2.5 py-0.5 rounded  ml-3">
+                <span className="bg-blue-500 text-White text-sm font-medium mr-2 px-2.5 py-0.5 rounded  ml-3">
                   Now
                 </span>
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -142,25 +231,25 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Moona Hoshinova</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[70px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[70px] bg-[#cc0000e6] text-white">
                     <CiStreamOn className="font-bold" />{" "}
                     <div className="text-xs">Live</div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/kobo_kanaeru_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090975077"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
                 Kobo Kanaeru{" "}
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -184,25 +273,25 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Kobo Kanaeru</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
                     <CiStreamOff className="font-bold" />{" "}
                     <div className="text-xs">Pending</div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/gawr_gura_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090973690"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
                 Gawr Gura{" "}
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -226,25 +315,25 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Gawr Gura</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
                     <CiStreamOff className="font-bold" />{" "}
                     <div className="text-xs">Pending</div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/gawr_gura_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090973690"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
                 Gawr Gura{" "}
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -267,25 +356,25 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Gawr Gura</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
                     <CiStreamOff className="font-bold" />{" "}
                     <div className="text-xs">Pending</div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/amelia_watson_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090973746"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
                 Watson Amelia{" "}
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -306,25 +395,25 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Watson Amelia</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
                     <CiStreamOff className="font-bold" />{" "}
                     <div className="text-xs">Pending</div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/sakura_miko_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675090970471"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
                 Sakura Miko{" "}
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -348,25 +437,25 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Sakura Miko</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
                     <CiStreamOff className="font-bold" />{" "}
                     <div className="text-xs">Pending</div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="mb-10 ml-6">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+            <li className="mb-10 ml-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
                 <img
-                  class="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg"
                   src="https://ik.imagekit.io/Holotiv8/Final_Project/Profile/tokino_sora_profile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675005825239"
                   alt="Bonnie image"
                 />
               </span>
-              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-100 ">
                 Tokino Sora{" "}
               </h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-200 ">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-200 ">
                 12:00 WIB 21 Okt, 2023
               </time>
               <div className="flex gap-5 w-9/12 bg-slate-200 p-2 rounded-md">
@@ -389,7 +478,7 @@ const MemberPage = () => {
                     />
                     <div className="text-xs">Tokino Sora</div>
                   </div>
-                  <div class="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
+                  <div className="flex gap-1 rounded-sm py-[5px] px-[10px] w-[90px] bg-[#cc0000e6] text-white">
                     <CiStreamOff className="font-bold" />{" "}
                     <div className="text-xs">Pending</div>
                   </div>
@@ -401,14 +490,13 @@ const MemberPage = () => {
       </div>
 
       <div id="video_member">
-        <div class="flex flex-col items-center mb-12 ml-30">
-          <h2 class="title-name font-semibold text-3xl">Exclusive videos</h2>
-          <span class="py-0.5 mt-2 px-[190px] rounded-full bg-blue-500"></span>
+        <div className="flex flex-col items-center mb-12 ml-30">
+          <h2 className="title-name font-semibold text-3xl">Exclusive videos</h2>
+          <span className="py-0.5 mt-2 px-[190px] rounded-full bg-blue-500"></span>
         </div>
 
         <div id="videos_carousel" className="bg-gray-500">
           <div className={`relative h-[320px] pt-9`}>
-          
             <div className="absolute right-0 translate-y-[-60%] ">
               <>
                 <button
@@ -441,6 +529,8 @@ const MemberPage = () => {
           </div>
         </div>
       </div>
+
+      {/* ttttttttttttessssssssss */}
       <AllFooterPage />
     </>
   );

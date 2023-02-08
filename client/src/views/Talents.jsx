@@ -50,9 +50,10 @@ const Talents = () => {
 
       <div className="flex flex-col min-h-screen">
         <section>
-          <div className="title-name">
-            <h1>Our Talents</h1>
-          </div>
+        <div class="flex flex-col items-center mb-12">
+          <h2 class="title-name font-semibold text-lg">Our Talents</h2>
+          <span class="py-0.5 mt-2 px-[145px]  rounded-full bg-blue-500"></span>
+        </div>
         </section>
 
         <section>

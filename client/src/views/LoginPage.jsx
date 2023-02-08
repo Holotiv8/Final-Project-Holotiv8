@@ -83,29 +83,6 @@ export default function LoginPage() {
 								<a href=''>Forgot password?</a>
 							</div>
 						</div>
-						<div className='  text-[10px] flex justify-center mb-4 text-slate-400  '>
-							or Log In with
-						</div>
-						<div className=' flex flex-row justify-between'>
-							<div className='z-20 h-[30px] w-[118px] flex justify-center items-center rounded border border-gray-300 '>
-								<a href=''>
-									<img
-										src='https://ik.imagekit.io/pfdt0wwx5/final_project/google-logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675358307580'
-										className='w-[17.5px] '
-										alt='google logo'
-									/>
-								</a>
-							</div>
-							<div className=' h-[30px] w-[118px] flex justify-center items-center  rounded border border-gray-300'>
-								<a href=''>
-									<img
-										className='w-[17.5px]'
-										src='https://ik.imagekit.io/pfdt0wwx5/final_project/facebook-logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675358609072'
-										alt='facebook logo'
-									/>
-								</a>
-							</div>
-						</div>
 						<div className='  text-[10px] font-medium text-slate-400 my-4'>
 							<Link to={"/register"} >
 								Create my <span className="text-blue-500"> Nihon no Live account! </span>

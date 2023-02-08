@@ -76,7 +76,7 @@ const About = () => {
           <div class="mx-4 relative gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg hover:scale-105 duration-300">
             <div class="relative flex gap-4">
               <img
-                src="https://i.pinimg.com/564x/76/42/df/7642df2fea0a6cdf6946a56ed414bc3c.jpg"
+                src="https://ik.imagekit.io/bintangtopup/bintangtopup/bintangtopup.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673482886682"
                 class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20"
                 alt=""
                 loading="lazy"
@@ -84,7 +84,7 @@ const About = () => {
               <div class="flex flex-col w-full">
                 <div class="flex flex-row justify-between">
                   <p class="relative text-xl whitespace-nowrap truncate overflow-hidden">
-                    Ricko Wijaya
+                    Bintang Mochamad
                   </p>
                 </div>
                 <p class="text-gray-500 text-sm">10 Januari 2023, 10:09 PM</p>
@@ -138,7 +138,7 @@ const About = () => {
                     Rayhan Qowi
                   </p>
                 </div>
-                <p class="text-gray-500 text-sm">9 Januari 2022, 14:08 PM</p>
+                <p class="text-gray-500 text-sm">23 Januari 2023, 14:08 PM</p>
               </div>
             </div>
             <p class="mt-2 text-blue-700 text-justify">
@@ -160,10 +160,10 @@ const About = () => {
               <div class="flex flex-col w-full">
                 <div class="flex flex-row justify-between">
                   <p class="relative text-xl whitespace-nowrap truncate overflow-hidden">
-                    Dian Aditya
+                     Ricko Wijaya
                   </p>
                 </div>
-                <p class="text-gray-500 text-sm">10 Januari 2023, 10:09 PM</p>
+                <p class="text-gray-500 text-sm">10 Maret 2022, 12:09 PM</p>
               </div>
             </div>
             <p class="mt-2 text-blue-700 text-justify">
@@ -185,10 +185,10 @@ const About = () => {
               <div class="flex flex-col w-full">
                 <div class="flex flex-row justify-between">
                   <p class="relative text-xl whitespace-nowrap truncate overflow-hidden">
-                    Muhammad Bintang
+                  Dian Aditya
                   </p>
                 </div>
-                <p class="text-gray-500 text-sm">1 Januari 2023, 20:12 PM</p>
+                <p class="text-gray-500 text-sm">1 Desember 2022, 07:12 PM</p>
               </div>
             </div>
             <p class="mt-2 text-blue-700 text-justify">
