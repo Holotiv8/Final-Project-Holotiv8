@@ -31,7 +31,7 @@ const AllNavbarComponent = () => {
     const fetchSnapToken = async () => {
       try {
         if (localStorage.getItem("access_token") && localStorage.getItem("isSubscribed") == "false") {
-          const response = await fetch("http://localhost:3000/payments", {
+          const response = await fetch("http://122.248.218.60/payments", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const AllNavbarComponent = () => {
 
   const updateStatus = async () => {
     try {
-      await fetch("http://localhost:3000/users/subscribe", {
+      await fetch("http://122.248.218.60/users/subscribe", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

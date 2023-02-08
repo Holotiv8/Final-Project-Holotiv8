@@ -16,11 +16,11 @@ const NavbarComponent = () => {
     event.preventDefault();
     dispatcher(logout());
     movePage("/");
-    toast.success('Successfully Logout')
+    toast.success("Successfully Logout");
   };
 
   const activeStlye = {
-    color: "#3b82f6"
+    color: "#3b82f6",
   };
   /// PAYMENT ///
 
@@ -29,8 +29,11 @@ const NavbarComponent = () => {
   useEffect(() => {
     const fetchSnapToken = async () => {
       try {
-        if (localStorage.getItem("access_token") && localStorage.getItem("isSubscribed") == "false") {
-          const response = await fetch("http://localhost:3000/payments", {
+        if (
+          localStorage.getItem("access_token") &&
+          localStorage.getItem("isSubscribed") == "false"
+        ) {
+          const response = await fetch("http://122.248.218.60/payments", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -53,7 +56,7 @@ const NavbarComponent = () => {
 
   const updateStatus = async () => {
     try {
-      await fetch("http://localhost:3000/users/subscribe", {
+      await fetch("http://122.248.218.60/users/subscribe", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
