@@ -2,9 +2,9 @@ const nodemailer = require("nodemailer");
 
 const sendEmailRegis = {
   sendEmail: async (email, uniqueString) => {
-    console.log('luar try');
+    console.log("luar try");
     try {
-      console.log('dalam try');
+      console.log("dalam try");
       const transTest = {
         host: "smtp.ethereal.email",
         port: 587,
@@ -37,7 +37,13 @@ const sendEmailRegis = {
         from: "tweetwar2022@gmail.com",
         to: email,
         subject: "Email Confirmation",
-        html: `Press <a href = http://localhost:3000/users/verify/${uniqueString}> here </a> to verify`,
+        html: `
+        <center>
+        <img src="https://ik.imagekit.io/ftti7xeyu/Final/verif_img2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675837980143" width=500">
+        <div style="margin-top: 30px; font-size: large;">
+        Click <a href = http://localhost:3000/users/verify/${uniqueString}> here </a> to verify
+        </div>
+        </center>`,
       };
 
       // // // return new Promise((resolve, reject) => {
@@ -56,10 +62,7 @@ const sendEmailRegis = {
       let info = await transporter.sendMail(option);
       console.log("Message sent: %s", info.messageId);
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   },
 };
 
