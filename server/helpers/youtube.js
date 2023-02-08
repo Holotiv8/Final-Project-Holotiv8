@@ -6,7 +6,7 @@ const youtubeFunction = async (youtubeId) => {
     url: "https://youtube138.p.rapidapi.com/channel/videos/",
     params: { id: youtubeId, filter: "streams_latest", hl: "en", gl: "US" },
     headers: {
-      "X-RapidAPI-Key": "4d7ec34579msh01e41d823cb9416p13d6e6jsne35744429b63",
+      "X-RapidAPI-Key": "cca1deff66mshb630dfb5df4a4cfp13d61cjsn01b1cc2f9813",
       "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
   };
