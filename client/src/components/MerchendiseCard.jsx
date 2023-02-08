@@ -11,7 +11,7 @@ const MerchandiseCard = ({ el }) => {
 
       <div className="textright-merch">
         <h3>{el.name}</h3>
-        <p className="font-Montserrat text-xs">From {el.fanName}! Please click my image to see my product</p>
+        <p className="font-display text-xs">From {el.fanName}! Please click my image to see my product</p>
       </div>
     </div>
   );

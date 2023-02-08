@@ -51,7 +51,7 @@ const DetailPage = () => {
   // Ternary => One Line Condition
 
   return (
-    <>
+    <div className="font-display">
       <AllNavbarComponent />
       <section
         id=""
@@ -158,7 +158,7 @@ const DetailPage = () => {
       </section> */}
       {/* </section> */}
       <AllFooterPage />
-    </>
+    </div>
   );
 };
 

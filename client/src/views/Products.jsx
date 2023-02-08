@@ -29,18 +29,18 @@ const Products = () => {
     );
   }
   return (
-    <div>
+    <div className="font-display">
       <AllNavbarComponent />
       <div>
         <section>
           <div className="container-product">
             <div className="title-product">
               <h1>
-                <center>Talent's Products</center>
+                <center className="font-display">Talent's Products</center>
               </h1>
             </div>
 
-            <div className="product_row">
+            <div className="product_row font-display">
               {product.map((el) => {
                 return <ProductCard key={el.id} el={el} />;
               })}

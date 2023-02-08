@@ -48,11 +48,11 @@ const Talents = () => {
     <>
       <AllNavbarComponent />
 
-      <div className="flex flex-col min-h-screen">
+      <div className="font-display flex flex-col min-h-screen">
         <section>
         <div class="flex flex-col items-center mb-12">
-          <h2 class="title-name font-semibold text-lg">Our Talents</h2>
-          <span class="py-0.5 mt-2 px-[145px]  rounded-full bg-blue-500"></span>
+          <h2 class="text-5xl font-semibold">Our Talents</h2>
+          <span class="py-0.5 px-[145px]  rounded-full bg-blue-500"></span>
         </div>
         </section>
 
@@ -64,7 +64,7 @@ const Talents = () => {
                   key={el.id}
                   onClick={() => handleActive(el.from, el.id)}
                   style={active === el.from ? activeStyle : {}}
-                  class="text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 font-medium px-4 py-2 inline-flex space-x-1 items-center"
+                  class="font-display text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 font-medium px-4 py-2 inline-flex space-x-1 items-center"
                 >
                   <span>{el.from}</span>
                 </button>

@@ -119,7 +119,7 @@ const MemberPage = () => {
   }
 
   return (
-    <>
+    <div className="font-display">
       <AllNavbarComponent />
 
       {/* COUNT DOWN */}
@@ -129,19 +129,19 @@ const MemberPage = () => {
         <div className="flex flex-col items-center translate-x-[-1%] ">
         <h1 class="text-3xl text-blue-500 text-center mb-3 font-normal font-display">Hi {localStorage.getItem("username")}, {localStorage.getItem("role") == "Admin" ? " your stream will start in" : "Live streaming will start in"}</h1>
           <div className="text-6xl text-center flex w-full items-center justify-center">
-            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="days">
                 {days}
               </div>
               <div className="font-mono uppercase text-sm leading-none">Days</div>
             </div>
-            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="hours">
                 {hours}
               </div>
               <div className="font-mono uppercase text-sm leading-none">Hours</div>
             </div>
-            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="minutes">
                 {minutes}
               </div>
@@ -149,7 +149,7 @@ const MemberPage = () => {
                 Minutes
               </div>
             </div>
-            <div className="w-24 mx-1 p-2 bg-gray-700 text-blue-500 rounded-lg">
+            <div className="w-24 mx-1 p-2 bg-gray-700 text-white rounded-lg">
               <div className="font-mono leading-none" x-text="seconds">
                 {seconds}
               </div>
@@ -178,7 +178,7 @@ const MemberPage = () => {
       <div id="schecdule" className="w-10/12 my-16 font-display">
         <ScrollbarHide />
         <div className="flex flex-col items-center mb-12 ml-44">
-          <h2 className="title-name font-semibold text-xl">Schedule</h2>
+          <h2 className=" font-semibold text-5xl">Schedule</h2>
           <span className="py-0.5 mt-2 px-[105px] rounded-full bg-blue-500"></span>
         </div>
         <div
@@ -483,7 +483,7 @@ const MemberPage = () => {
 
       <div id="video_member">
         <div className="flex flex-col items-center mb-12 ml-30">
-          <h2 className="title-name font-semibold text-3xl">Exclusive videos</h2>
+          <h2 className=" font-semibold text-5xl">Exclusive videos</h2>
           <span className="py-0.5 mt-2 px-[190px] rounded-full bg-blue-500"></span>
         </div>
 
@@ -524,7 +524,7 @@ const MemberPage = () => {
 
       {/* ttttttttttttessssssssss */}
       <AllFooterPage />
-    </>
+    </div>
   );
 };
 
