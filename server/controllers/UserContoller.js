@@ -17,6 +17,7 @@ class UserController {
         isValid,
       });
       await user.save();
+      console.log('userController');
       sendEmail(email, uniqueString);
       res.status(201).json({ id: user.id, email: user.email });
     } catch (error) {

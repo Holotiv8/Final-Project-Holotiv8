@@ -28,7 +28,6 @@ beforeAll(async () => {
         access_token2 = response2.body.access_token
         
     } catch (error) {
-        console.log(error,'<<<<<<<<<<<<<<<<<<<<')
     }
 })
 
@@ -63,7 +62,7 @@ jest.mock("../helpers/payment", () => {
 
 describe('Feature Generate Token Midtrans /payments', () => {
     test('200 - Success Generate Token Midtrans', async () => {
-        jest.spyOn(sendEmailObj, "sendEmailSubs").mockReturnValue("Success")
+        jest.spyOn(sendEmailObj, "sendEmailSubs").mockResolvedValue("Success")
         try {
             const response = await request(app)
             .post('/payments')

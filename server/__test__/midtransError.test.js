@@ -48,7 +48,7 @@ jest.mock("../helpers/payment", () => {
 
 describe('Feature Failed Generate Token Midtrans /payments', () => {
     test('500 - Failed Failed Generate Token', async () => {
-        jest.spyOn(sendEmailObj, "sendEmailSubs").mockReturnValue("Error")
+        jest.spyOn(sendEmailObj, "sendEmailSubs").mockRejectedValue("Error")
         const response = await request(app)
             .post('/payments')
             .set('access_token', access_token)
